@@ -14,7 +14,7 @@
               </div>
             </div>
             <div class="col-sm-4 clearfix">
-              <a href="#" class="pull-left linkButtons">Sponsor us</a>
+              <a href="" class="pull-left linkButtons">Sponsor us</a>
             </div>
           </div>
         </div>
@@ -23,9 +23,11 @@
   <section class="social">
       <div class="container">
             <h1>Coming soon</h1>
-            <p>We're working on our website &amp; it won't be long until we're up and running. <br>
-                Please don't forget to check our tweets, posts &amp; blog entries.
+            <p>We're working hard on our website &amp; it won't be long until we're up with full functionality
             </p>
+
+            <p>Meanwhile, please proceed to login, registration &amp; talk submission, or check out sponsorship opportunities. </p>
+            <p>Also, don't forget to check our tweets, posts &amp; blog entries for news.</p>
             <h3>Join the YAPC::EUROPE 2016 mailing list.</h3>
             <h4>We'll keep you posted!</h4>
 

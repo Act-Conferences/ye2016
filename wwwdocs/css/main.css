@@ -477,6 +477,7 @@ a:hover, a:focus {
 .info {
   font-size: 16px;
   color: #d8ceaf;
+  margin-top: 12px;
 }
 
 .successRegister {
@@ -489,6 +490,11 @@ a:hover, a:focus {
   max-width: 300px;
   display: block;
   margin: auto;
+  height: 45px;
+  text-align: center;
+  background-color: #f2a01f;
+  color: #891826;
+  line-height: 45px;
 }
 
 /* end register */
