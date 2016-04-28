@@ -1,3 +1,6 @@
 [% WRAPPER ui title = loc("Registered!") %]
-<p>[% loc('Congratulations, you are now registered', login, clear_passwd) %]</p>
+<div class="successRegister">
+  <p>[% loc('Congratulations, you are now registered', login, clear_passwd) %]</p>
+</div>
+<a href="[% make_uri %]" class="sendLink goTo">Go to website now</a>
 [% END %]

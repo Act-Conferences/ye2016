@@ -16,7 +16,7 @@ $(function () {
             // local helpers:
             // ajax saver for data:
             var save_inversion = function(talk_id, state, ok_callback) {
-                $.post(act.make_uri('ye2015', 'updatemytalks_a'), {talk_id: talk_id, state: state},
+                $.post(act.make_uri('ye2016', 'updatemytalks_a'), {talk_id: talk_id, state: state},
                     ok_callback);
             };
             // this one was proposed with modifications into Act handlers:
@@ -46,7 +46,7 @@ $(function () {
                 save_inversion(cb.data('talkid'), 0, function(e){
                     update_tooltip(cb);
                     cb.data('talkfav','0');
-                    cb.find('img').attr('src', '/ye2015/img/no-fav-3.png');
+                    cb.find('img').attr('src', '/ye2016/img/no-fav-3.png');
                     if(cb.data('needreload'))
                         setTimeout(function(){ location.reload(); }, 300);
                 });
@@ -54,7 +54,7 @@ $(function () {
                 save_inversion(cb.data('talkid'), 1, function(e){
                     update_tooltip(cb);
                     cb.data('talkfav','1');
-                    cb.find('img').attr('src', '/ye2015/img/fav-3.png');
+                    cb.find('img').attr('src', '/ye2016/img/fav-3.png');
                     if(cb.data('needreload'))
                         setTimeout(function(){ location.reload(); }, 300);
                 });

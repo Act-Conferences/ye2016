@@ -46,7 +46,7 @@
   <div class="col-md-6">
     [% PROCESS 'user/forms/new_user' %]
   </div>
-  <div class="col-md-6">
+  <div class="col-md-6 info">
 
   <p>[% loc("To register, you first need to create an account on the site.", make_uri('main')) %]</p>
   <p>[% loc("The personal data that will be gathered here will be used to create", make_uri('search')) %]</p>

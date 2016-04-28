@@ -1,39 +1,38 @@
 [% INCLUDE js/mytalks.js %]
 
-<div class="row">
+<div class="row register show-talk">
   <div class="panel panel-default">
     <div class="panel-body">
 
     [% IF global.request.user.has_registered %]
 
         <div class="text-right">
-          <a href="/ye2015/talk/[% talk_id %]"
+          <a href="/ye2016/talk/[% talk_id %]" style="margin-right:5px"
           [% IF global.request.user.is_my_talk(talk_id) %]
               title="{{remove from personal schedule}}"
               data-toggle="tooltip" data-placement="top"
               class="talk-checkbox" data-needreload="1"
               data-talkfav="1" data-talkid="[% talk_id %]"
               data-titlerev="{{add to personal schedule}}">
-            <img src="/ye2015/img/fav-3.png" width="20px">
+            <img src="/ye2016/img/fav-3.png" width="20px">
           [% ELSE %]
               title="{{add to personal schedule}}"
               data-toggle="tooltip" data-placement="top"
               class="talk-checkbox" data-needreload="1"
               data-talkfav="0" data-talkid="[% talk_id %]"
               data-titlerev="{{remove from personal schedule}}">
-            <img src="/ye2015/img/no-fav-3.png" width="20px">
+            <img src="/ye2016/img/no-fav-3.png" width="20px">
           [% END %]
           </a>
         </div>
-
       [% END %]
 
 
 
       <div class="col-md-6 form-horizontal">
         <div class="form-group">
-          <label class="col-xs-3 control-label">{{By}}:</label>
-          <div class="col-xs-9">
+          <label class="col-xs-4 control-label">{{By}}:</label>
+          <div class="col-xs-8">
             <p class="form-control-static">
               [% user_info(user) %]
               [% IF global.request.user.is_talks_admin || global.request.user.user_id == user_id %]
@@ -45,8 +44,8 @@
 
         [% IF user.pm_group %]
           <div class="form-group">
-            <label class="col-xs-3 control-label">[% loc('from').ucfirst %]:</label>
-            <div class="col-xs-9 ">
+            <label class="col-xs-4 control-label">[% loc('from').ucfirst %]:</label>
+            <div class="col-xs-8 ">
               <p class="form-control-static">
                 [% IF user.pm_group_url %]
                   <a href="[% user.pm_group_url %]">[% user.pm_group %]</a>
@@ -59,8 +58,8 @@
         [% END %]
 
         <div class="form-group">
-          <label class="col-xs-3 control-label">{{Date:}}</label>
-          <div class="col-xs-9 ">
+          <label class="col-xs-4 control-label">{{Date:}}</label>
+          <div class="col-xs-8 ">
             <p class="form-control-static">
               [% IF datetime && ( global.config.talks_show_schedule || global.request.user.is_talks_admin ) %]
                 <a href="[% make_uri( 'schedule?day=' _ date_format(datetime, 'date_iso') ) %]" >
@@ -75,8 +74,8 @@
         </div>
 
         <div class="form-group">
-          <label class="col-xs-3 control-label">{{Duration:}}</label>
-          <div class="col-xs-9 ">
+          <label class="col-xs-4 control-label">{{Duration:}}</label>
+          <div class="col-xs-8 ">
             <p class="form-control-static">
               [% IF lightning %]
                 {{Lightning talk}}
@@ -89,8 +88,8 @@
 
         [% IF global.config.talks_levels %]
           <div class="form-group">
-            <label class="col-xs-3 control-label">{{Target audience:}}</label>
-            <div class="col-xs-9 ">
+            <label class="col-xs-4 control-label">{{Target audience:}}</label>
+            <div class="col-xs-8 ">
               <p class="form-control-static">
                 [% level %]
               </p>
@@ -100,8 +99,8 @@
 
         [% IF global.config.talks_languages %]
           <div class="form-group">
-            <label class="col-xs-3 control-label">{{Language:}}</label>
-            <div class="col-xs-9 ">
+            <label class="col-xs-4 control-label">{{Language:}}</label>
+            <div class="col-xs-8 ">
               <p class="form-control-static">
                 [% global.config.talks_languages.$lang %]&nbsp;
               </p>
@@ -111,8 +110,8 @@
 
         [% IF ( global.request.user.is_talks_admin || global.request.user.user_id == user_id) AND comment %]
           <div class="form-group">
-            <label class="col-xs-3 control-label">{{Comment:}}</label>
-            <div class="col-xs-9 ">
+            <label class="col-xs-4 control-label">{{Comment:}}</label>
+            <div class="col-xs-8 ">
               <p class="form-control-static">
                 [% comment %]
               </p>
@@ -121,8 +120,8 @@
         [% END %]
 
         <div class="form-group">
-          <label class="col-xs-3 control-label">{{Abstract:}}</label>
-          <div class="col-xs-9 ">
+          <label class="col-xs-4 control-label">{{Abstract:}}</label>
+          <div class="col-xs-8 ">
             <p class="form-control-static">
               [% expand(chunked_abstract) | html_line_break %]&nbsp;
             </p>
@@ -131,34 +130,38 @@
 
         [% IF url_abstract || url_talk %]
           <div class="form-group">
-            <div class="col-xs-9 col-xs-offset-3">
-              [
-              [% IF url_abstract %]
-                <a href="[% url_abstract %]">{{abstract (link)}}</a>
-              [% END %]
-              [% IF url_abstract && url_talk %]-[% END %]
-              [% IF url_talk %]
-                <a href="[% url_talk %]">{{talk (link)}}</a>
-              [% END %]
-              ]
+            <div class="col-xs-8 col-xs-offset-4">
+              <p class="form-control-static">
+                [
+                [% IF url_abstract %]
+                  <a href="[% url_abstract %]">{{abstract (link)}}</a>
+                [% END %]
+                [% IF url_abstract && url_talk %]-[% END %]
+                [% IF url_talk %]
+                  <a href="[% url_talk %]">{{talk (link)}}</a>
+                [% END %]
+                ]
+              </p>
             </div>
           </div>
         [% END %]
 
         <div class="form-group">
-          <label class="col-xs-3 control-label">{{Tags:}}</label>
-          <div class="col-xs-9 ">
+          <label class="col-xs-4 control-label">{{Tags:}}</label>
+          <div class="col-xs-8 ">
             <p class="form-control-static">
+              <span class="tags">
               [% showtags(tags, 'talks') %]
+              </span>
             </p>
           </div>
-          <div class="col-xs-9 col-xs-offset-3">
+          <div class="col-xs-8 col-xs-offset-4">
             [% IF global.request.user %]
               <form  method="POST" action="[% global.request.r.uri %]">
                   <div class="input-group">
                       <input type="text" class="form-control" name="newtags" value="" length="12" maxlength="64" />
                       <span class="input-group-btn">
-                        <button type="submit" class="btn btn-default" id="ok" name="ok" value="{{Add}}">
+                        <button type="submit" class="btn btn-default addTag" id="ok" name="ok" value="{{Add}}">
                           <i class="fa fa-plus"></i>
                         </button>
                       </span>
@@ -186,6 +189,6 @@
 
       </div>
     </div>
-    <div class="panel-footer"><a href="[% make_uri('talks') %]">&laquo; {{List of talks}}</a></div>
+    <div> <a href="[% make_uri('talks') %]">&laquo; {{List of talks}}</a></div>
   </div>
 </div>

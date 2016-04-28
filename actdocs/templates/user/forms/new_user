@@ -1,31 +1,28 @@
-<form method="POST" action="[% global.request.r.uri %]">
+<form method="POST" action="[% global.request.r.uri %]" class="register userRegister">
   <div class="panel panel-default">
     <div class="panel-body">
-      <div class="col-md-6">
+
+      <div class="col-sm-12">
         <div class="form-group">
-          <label for="login">{{Login}}</label>
-          <input type="text" class="form-control" name="login" value="[% login %]" maxlength="60" />
+          <input type="text" class="form-control" name="login" value="[% login %]" maxlength="60" placeholder="Username"/>
         </div>
 
         <div class="form-group">
-          <label for="first_name">{{First Name}}</label>
-          <input type="text" class="form-control" name="first_name" value="[% first_name %]" maxlength="256" />
+          <input type="email" class="form-control" name="email" value="[% email %]" maxlength="256" placeholder="Email"/>
         </div>
 
         <div class="form-group">
-          <label for="last_name">{{Last Name}}</label>
-          <input type="text" class="form-control" name="last_name" value="[% last_name %]" maxlength="256" />
+          <input type="text" class="form-control" name="first_name" value="[% first_name %]" maxlength="256" placeholder="First Name"/>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" name="last_name" value="[% last_name %]" maxlength="256" placeholder="Last Name"/>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-sm-6">
         <div class="form-group">
-          <label for="email">{{Email}}</label>
-          <input type="email" class="form-control" name="email" value="[% email %]" maxlength="256" />
-        </div>
-
-        <div class="form-group">
-          <label for="country">{{Country}}</label>
-          <select name="country" class="form-control">
+          <select name="country" class="form-control" >
+          <option value="" default selected>Country</option>
             [% country = global.config.general_default_country UNLESS country %]
             [% IF topten.size %]
               [% FOREACH c = topten %]
@@ -39,22 +36,23 @@
             [% END %]
           </select>
         </div>
-
+      </div>
+      <div class="col-sm-6">
         <div class="form-group">
-          <label for="tshirt">{{T-Shirt}}</label>
           <select name="tshirt" class="form-control">
+
             [% FOREACH t = ['', 'XS', 'XS (W)', 'S', 'S (W)', 'M', 'M (W)',
                             'L', 'L (W)', 'XL', 'XL (W)', 'XLT', 'XXL',
                             'XXL (W)', 'XXLT', 'XXXL', '4XL', '5XL', '6XL'  ] %]
               <option value="[% t %]"[% ' selected="selected"' IF t == tshirt %]>[% t %]</option>
             [% END %]
+            <option value="" default selected>T-shirt</option>
           </select>
         </div>
       </div>
-    </div>
-
-    <div class="panel-footer text-right">
-      <input type="submit" name="join" class="btn btn-primary btn-lg" value="{{Join!}}" />
+      <div class="col-sm-12">
+        <input type="submit" name="join" class="btn btn-primary btn-lg sendLink" value="{{Join!}}" />
+      </div>
     </div>
   </div>
 

@@ -6,16 +6,19 @@
   END;
 %]
 [% WRAPPER ui title = title %]
+<div class="register listTalks">
   <div class="panel panel-default">
     <div class="panel-body">
-      <p>
         [% IF talks_total == 0 %]
           {{No talk was submitted yet.}}
         [% ELSE %]
-          {{Submitted talks:}} [% talks_total %]<br />
-          {{Accepted talks:}} [% talks_accepted %]
+          <div class="talksNumber"><span class="accepted">[% talks_accepted %]</span>
+            <div class="talksStatus">{{Accepted talks:}}</div>
+          </div>
+          <div class="talksNumber"><span class="submitted">[% talks_total %]</span>
+            <div class="talksStatus">{{Submitted talks:}}</div>
+          </div>
         [% END %]
-      </p>
 
       [% IF global.request.user.is_talks_admin || global.request.user.has_talk %]
         <p>
@@ -36,6 +39,7 @@
       [% END %]
     </div>
   </div>
+</div>
 
   [% IF !tag AND tagcloud %]
     <h2>{{Tags}}</h2>

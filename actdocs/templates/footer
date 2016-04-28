@@ -1,4 +1,4 @@
-<div id="page-footer">
+<div id="page-footer 1">
   [% PROCESS footers/conferences %]
   <div class="holder">
     <div class="frame">
