@@ -21,7 +21,7 @@ $(function () {
             };
             // this one was proposed with modifications into Act handlers:
             // var save_inversion = function(talk_id, state, ok_callback) {
-            //     $.post(act.make_uri('ye2015', 'updatemytalks_as'), {talk_id: talk_id, state: state},
+            //     $.post(act.make_uri('ye2016', 'updatemytalks_as'), {talk_id: talk_id, state: state},
             //         ok_callback);
             // };
 
