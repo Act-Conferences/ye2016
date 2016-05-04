@@ -228,7 +228,6 @@ body {
   height: 50px !important;
   background-color: #f2a01f !important;
   color: #891826 !important;
-  width: 100% !important;
   border: 0 !important;
   border-radius: 2px !important;
   font-weight: 800 !important;
@@ -465,6 +464,7 @@ a:hover, a:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height : 100% !important;
 }
 
@@ -632,11 +632,22 @@ a:hover, a:focus {
   border: 1px solid #bb5053;
 }
 
-
-
 /* end submit talk */
 
+.position p {
+  font-size: 16px;
+  color: #d8ceaf;
+}
 
+
+/* CHANGE PASSWORD */
+
+.register.password label {
+  font-size: 16px;
+  color: #d8ceaf;
+}
+
+/* END CHANGE PASSWORD */
 
 
 
