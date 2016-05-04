@@ -1,6 +1,6 @@
 [% WRAPPER ui  title = loc('Un-Registration') %]
   <div class="text-center">
-    <h3>
+    <h3 class="unregister">
      [% loc('To unregister from <conference>,', global.conference.name) %]
     </h3>
     <br /><br />

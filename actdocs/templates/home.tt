@@ -22,12 +22,14 @@
 
   <section class="social">
       <div class="container">
-            <h1>Coming soon</h1>
+           <br/>
+            <h1>24-26 August 2016</h1><br/><br/>
             <p>We're working hard on our website &amp; it won't be long until we're up with full functionality
             </p>
 
             <p>Meanwhile, please proceed to login, registration &amp; talk submission, or check out sponsorship opportunities. </p>
             <p>Also, don't forget to check our tweets, posts &amp; blog entries for news.</p>
+            <br/>
             <h3>Join the YAPC::EUROPE 2016 mailing list.</h3>
             <h4>We'll keep you posted!</h4>
 
