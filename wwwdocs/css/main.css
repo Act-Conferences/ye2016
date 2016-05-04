@@ -11,7 +11,7 @@ body {
   display: block;
   background-image: url("../img2016/back.jpg");
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -597,6 +597,7 @@ a:hover, a:focus {
 
 .listTalks .talksNumber {
   display: inline-block;
+  margin-bottom: 30px;
 }
 
 .listTalks .talksNumber span {
@@ -622,7 +623,7 @@ a:hover, a:focus {
 }
 
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-  border: 1px solid #bb5053;
+  border: 0;
 }
 
 .table-bordered {
@@ -639,7 +640,7 @@ a:hover, a:focus {
 
 .table>thead>tr>th,.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
   color: #d8ceaf;
-  border: 1px solid #bb5053;
+  border-top: 1px solid #bb5053;
 }
 
 /* end submit talk */
@@ -664,7 +665,8 @@ a:hover, a:focus {
 }
 
 .register.change .control-label {
-  color: #d8ceaf;
+  color: #cc8a7b;
+  font-weight: 500;
 }
 
 .register.change {
@@ -703,7 +705,22 @@ a:hover, a:focus {
   color: #d8ceaf;
 }
 
+.sendLink.table {
+  width: auto;
+  margin-bottom: 50px;
+  background-color: #f2a01f;
+  color: #891826;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 12px 35px;
+}
 
+.alert {
+  font-weight: 800;
+  text-align: center;
+}
 
 
 
