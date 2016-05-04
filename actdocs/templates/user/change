@@ -19,7 +19,7 @@
   }
 %]
 
-<form class="form-horizontal" role="form" method="POST" action="[% global.request.r.uri %]">
+<form class="form-horizontal register change" role="form" method="POST" action="[% global.request.r.uri %]">
   <div class="col-md-6">
     <div class="form-group">
       <label for="form-salutation" class="col-sm-4 control-label">{{Salutation}}</label>
@@ -300,7 +300,7 @@
   <div class="col-md-12">
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10 text-right">
-        <input class="btn btn-lg btn-primary" type="submit" name="join" value="{{Update info}}" />
+        <input class="btn btn-lg btn-primary sendLink" type="submit" name="join" value="{{Update info}}" />
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 [% WRAPPER ui title = loc('User rights') %]
-  <form method="POST" action="[% global.request.r.uri %]">
-    <div class="panel panel-default">
+  <form method="POST" action="[% global.request.r.uri %]" class="register rights clearfix">
+    <div class="">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -35,12 +35,13 @@
           </tr>
         </tbody>
       </table>
-      <div class="panel-footer text-right">
-        <input class="btn btn-primary" type="submit" name="ok" value="{{Submit}}" />
+      <div class="">
+        <input class="btn btn-primary pull-right sendLink" type="submit" name="ok" value="{{Submit}}" />
       </div>
     </div>
   </form>
 
+<div class="rightsMap">
   <h3>
    {{The recognised rights are:}}
   </h3>
@@ -68,4 +69,5 @@
       <tt>admin</tt> - {{Administrator (rights management)}}
     </li>
   </ul>
+</div>
 [% END %]
