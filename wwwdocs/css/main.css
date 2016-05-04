@@ -357,7 +357,8 @@ body {
 }
 
 .login .panel .form-control,
-.register .panel .form-control {
+.register .panel .form-control,
+.register .form-control {
   text-align: center;
   height: 50px;
   background-color: #d8ceaf;
@@ -528,6 +529,15 @@ a:hover, a:focus {
   margin-top: 0;
 }
 
+.register.submitTalk label {
+  color: #d8ceaf;
+  text-align: left;
+}
+
+.register.submitTalk .form-group {
+  color: #d8ceaf;
+}
+
 @media all and (max-width: 991px) {
 
   .submitTalk .col-sm-offset-3 {
@@ -648,6 +658,52 @@ a:hover, a:focus {
 }
 
 /* END CHANGE PASSWORD */
+
+.text-center .unregister {
+  color: #d8ceaf;
+}
+
+.register.change .control-label {
+  color: #d8ceaf;
+}
+
+.register.change {
+  text-align: left;
+}
+
+.register.change label {
+  color: #d8ceaf;
+}
+
+.register.change .form-control-static {
+  color: #d8ceaf;
+}
+
+.register.change {
+  color: #d8ceaf;
+}
+
+.register.change textarea {
+  height: auto;
+}
+
+.register.change .input-group-addon {
+  height: 50px;
+  background-color: #891826;
+  color: #d8ceaf;
+}
+
+.register.change .sendLink,
+.register.rights .sendLink {
+  width: auto;
+}
+
+.rightsMap h3,
+.rightsMap ul {
+  color: #d8ceaf;
+}
+
+
 
 
 

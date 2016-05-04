@@ -28,7 +28,7 @@
           [% IF talk_id %]
             <input type="hidden" name="talk_id" value="[% talk_id %]" />
             <div class="form-group">
-              <div class="col-xs-12 text-right">
+              <div class="col-xs-12 text-center">
                 <p>
                   {{View}}
                   <a href="[% make_uri_info('talk', talk_id) %]" >[% title %]</a>
@@ -57,7 +57,7 @@
 
           <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
-              <input type="text" class="form-control" name="title" value="[% title %]" maxlength="100" placeholder="Title"/>
+              <input type="text" class="form-control" name="title" value="[% title %]" maxlength="100" placeholder="{{Title}} *"/>
             </div>
           </div>
 
@@ -65,9 +65,9 @@
             <label for="status" class="col-sm-3 col-sm-offset-3 control-label">{{Status}} :</label>
             <div class="col-sm-6">
               [% IF global.request.user.is_talks_admin %]
-                <label><input type="checkbox" name="accepted"[% ' checked' IF accepted %] />
-                {{accepted}}</label><br />
-                <label><input type="checkbox" name="confirmed"[% ' checked' IF confirmed %] />
+                <label class="col-sm-12"><input type="checkbox" name="accepted"[% ' checked' IF accepted %] />
+                {{accepted}}</label>
+                <label class="col-sm-12"><input type="checkbox" name="confirmed"[% ' checked' IF confirmed %] />
                 {{confirmed}}</label><br />
               [% ELSE %]
                 <div class="form-control-static labelStatus">
@@ -87,7 +87,7 @@
               <div class="col-sm-9 col-sm-offset-3">
                 <select name="lang" class="form-control" size="1">
                   <option value=""[% ' selected="selected"' UNLESS lang %] />
-                   <option value="" default selected>Language</option>
+                   <option value="" default selected> {{Language}} *</option>
                   [% FOREACH lg = global.config.talks_languages.keys.sort %]
                     <option value="[% lg %]"[% ' selected="selected"' IF lang==lg %]>[% global.config.talks_languages.$lg %]</option>
                   [% END %]
@@ -104,7 +104,7 @@
                     <div class="form-group">
                       <div class="col-sm-12">
                         <select name="level" class="form-control">
-                          <option value="" default selected>Target Audience</option>
+                          <option value="" default selected>Target Audience *</option>
                           [% FOREACH levelname = global.config.talks_levels_names %]
                             <option value="[% loop.count %]"[% ' selected="selected"' IF level == loop.count %]>[% levelname %]</option>
                           [% END %]
@@ -132,7 +132,7 @@
                       <div class="col-sm-12">
                         <select class="form-control" name="duration">
                          <option value=""[% ' selected="selected"' UNLESS duration %] />
-                         <option value="" default selected>Duration</option>
+                         <option value="" default selected>Duration *</option>
                          <option value="lightning"[% ' selected="selected"' IF lightning %]>
                             {{Lightning talk}}
                          </option>
@@ -150,19 +150,19 @@
 
           <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
-              <input type="text" class="form-control" name="tags" value="[% tags %]" maxlength="100" placeholder="Tags"/>
+              <input type="text" class="form-control" name="tags" value="[% tags %]" maxlength="100" placeholder="{{Tags}} *"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
-              <input type="text" class="form-control" name="url_talk" value="[% url_talk %]" maxlength="256" placeholder="Talk URL"/>
+              <input type="text" class="form-control" name="url_talk" value="[% url_talk %]" maxlength="256" placeholder="{{Talk URL}} *"/>
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-9 col-sm-offset-3">
-              <input type="text" class="form-control" name="url_abstract" value="[% url_abstract %]" maxlength="256" placeholder="Abstract URL"/>
+              <input type="text" class="form-control" name="url_abstract" value="[% url_abstract %]" maxlength="256" placeholder="{{Abstract URL}} *"/>
             </div>
           </div>
         </div>
@@ -170,10 +170,10 @@
         <div class="col-md-6">
           [% IF global.request.user.is_talks_admin %]
             <div class="form-group">
-              <label for="date" class="col-sm-3 control-label">{{Date}}</label>
               <div class="col-sm-9">
                 <select name="date" class="form-control">
                   <option value=""[% ' selected="selected"' UNLESS datetime %] />
+                  <option value="" default selected>{{Date}}</option>
                   [% FOREACH d=dates %]
                     <option value="[% d.ymd %]"[% ' selected="selected"' IF datetime.ymd == d.ymd %]>[% d.ymd %]</option>
                   [% END %]
@@ -182,17 +182,16 @@
             </div>
 
             <div class="form-group">
-              <label for="time" class="col-sm-3 control-label">{{Time}}</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" name="time" value="[% datetime.strftime('%H:%M') %]" size="5" maxlength="5" />
+                <input type="text" class="form-control" name="time" value="[% datetime.strftime('%H:%M') %]" size="5" maxlength="5" placeholder="{{Time}}" />
               </div>
             </div>
 
             <div class="form-group">
-              <label for="room" class="col-sm-3 control-label">{{Room}}</label>
               <div class="col-sm-9">
                 <select name="room" class="form-control">
                   <option value=""[% ' selected="selected"' UNLESS room %] />
+                  <option value="" default selected>{{Room}}</option>
                   [% FOREACH r = rooms.keys.sort %]
                     <option value="[% r %]"[% ' selected="selected"' IF room == r %]>[% rooms.$r %]</option>
                   [% END %]
@@ -221,13 +220,13 @@
 
           <div class="form-group">
             <div class="col-sm-9">
-              <textarea class="form-control text" name="abstract" rows="5" placeholder="Abstract (plain text)">[% abstract | form_unescape %]</textarea>
+              <textarea class="form-control text" name="abstract" rows="5" placeholder="{{Abstract}} (plain text) *">[% abstract | form_unescape %]</textarea>
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-sm-9">
-              <textarea class="form-control text" name="comment" rows="5" placeholder="Comments">[% comment | form_unescape %]</textarea>
+              <textarea class="form-control text" name="comment" rows="5" placeholder="{{Comments}} *">[% comment | form_unescape %]</textarea>
             </div>
           </div>
 
