@@ -295,6 +295,39 @@
       </div>
     [% END %]
 
+<!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="changeImg" tabindex="-1" role="dialog" aria-labelledby="changeImgLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="changeImgLabel">Change Photo</h4>
+      </div>
+      <div class="modal-body clearfix">
+       
+     [% PROCESS user/photo %]
+
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="save-img btn btn-primary">Save</button>
+        <button type="button" class="cancel-img btn btn-default">Undo</button>
+        <button type="button" class="delete-img btn">Delete Photo</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Modal -->
+
+<button type="button" class="btn change-pic" data-toggle="modal" data-target="#changeImg">Change photo
+              </button>
+
+
+
   </div>
 
   <div class="col-md-12">
@@ -305,5 +338,7 @@
     </div>
   </div>
 </form>
+
+
 
 [% END %]
