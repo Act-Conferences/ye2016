@@ -34,15 +34,52 @@ body {
 
 .logo .logos .second {
   position: absolute;
-  top: 64px;
-  left: 123px;
+  top: 60px;
+  left: 131px;
 }
 
 .logo .logos .third {
   position: absolute;
-  top: 74px;
-  left: 133px;
+  top: 98px;
+  left: 169px;
 }
+
+.toggleDays {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 27%;
+}
+
+.toggleDays .daysRemain {
+  font-size: 100px;
+  color: #f2a01f;
+  font-weight: 800;
+}
+
+.toggleDays .daysText {
+  color: #d3c6a8;
+  margin-top: -25px;
+}
+
+@media all and (max-width: 415px) {
+  .toggleDays .daysRemain {
+    font-size: 60px;
+  }
+  .toggleDays {
+    top:33%;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .toggleDays .daysRemain {
+    font-size: 50px;
+  }
+  .toggleDays {
+    top:27%;
+  }
+}
+
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
@@ -153,6 +190,10 @@ body {
   margin-bottom: 30px;
 }
 
+.social hr {
+  margin-top: 3%;
+}
+
  hr {
   margin-top: 10%;
   margin-bottom: 30px;
@@ -169,7 +210,7 @@ body {
   text-align: center;
   display: block;
   line-height: 51px;
-  margin-top: 90px;
+  margin-top: 165px;
 }
 
 .logo .linkButtons:hover {
@@ -241,25 +282,25 @@ body {
 
 @media all and (max-width: 1199px) {
   .logo .logos .second {
-    left: 90px;
+    left: 81px;
   }
 
   .logo .logos .third {
-    left: 100px;
+    left: 120px;
   }
 }
 
 @media all and (max-width: 991px) {
   .logo .logos .second {
-    width: 104px;
+    width: 214px;
     top: 58px;
     left: 58px;
   }
 
   .logo .logos .third {
-    width: 90px;
-    top: 65px;
-    left: 65px;
+    width: 154px;
+    top: 86px;
+    left: 88px;
   }
 }
 
@@ -276,14 +317,14 @@ body {
 
   .logo .logos .second {
     width: inherit;
-    top: 65px;
+    top: 61px;
     left: 0;
     right: 0;
   }
 
   .logo .logos .third {
     width: inherit;
-    top: 75px;
+    top: 99px;
     left: 0;
     right: 0;
   }
@@ -293,11 +334,35 @@ body {
   }
 }
 
+@media all and (max-width: 475px) {
+  .logo .logos .second {
+    width: 68%;
+    top: 16%;
+  }
+
+  .logo .logos .third {
+    width: 48%;
+    top:26%;
+  }
+
+  .toggleDays .daysText {
+    margin-top: -10px;
+  }
+}
+
+
 /* navbar */
 
 /* .comming-soon .navbar-brand {
   display: none;
 } */
+.comming-soon {
+  padding-top: 30px;
+}
+
+.comming-soon .navbar-header {
+  height: 64px;
+}
 
 .comming-soon .dropdown a {
   color: #ee9a20;
@@ -462,6 +527,7 @@ a:hover, a:focus {
 /* test */
 
 .position {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -722,7 +788,28 @@ a:hover, a:focus {
   text-align: center;
 }
 
+/* test table */
 
+@media all and (max-width: 767px){
+  .table-mobile thead { 
+    display: none;
+  }
+  .table-mobile tbody tr td {
+    display: block !important;
+  }
+  .table-mobile tbody tr td:not(:first-child) {
+    border: 0;
+  }
+  .table .act-description label {
+    display: inline;
+  }
+  .table-striped>tbody>tr:nth-child(odd) {
+    background-color: rgba(187, 80, 83, 0.4);
+  }
+}
+
+
+/* end test table */
 
 
 

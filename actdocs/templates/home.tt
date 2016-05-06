@@ -1,37 +1,41 @@
 
 
   <section class="logo">
-        <div class="container">
           <div class="row">
-            <div class="col-sm-4 clearfix">
+            <div class="col-sm-3 clearfix">
               <a href="[% make_uri('newtalk') %]" class="pull-right linkButtons">Submit a Talk</a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <div class="logos">
-                <img src="[% make_uri_info('img2016', '1_logo_rotate_static.png') %]" alt="rotate-logo-img" class="img-responsive first">
-                <img src="[% make_uri_info('img2016', '2_logo_rotate_left.png') %]" alt="rotate-logo-img" class="img-responsive second">
-                <img src="[% make_uri_info('img2016', '3_logo_rotate_right.png') %]" alt="rotate-logo-img" class="img-responsive third">
+                <img src="[% make_uri_info('img2016', '11_logo_rotate_static.png') %]" alt="rotate-logo-img" class="img-responsive first">
+                <img src="[% make_uri_info('img2016', '22_logo_rotate_left.png') %]" alt="rotate-logo-img" class="img-responsive second">
+                <img src="[% make_uri_info('img2016', '33_logo_rotate_right.png') %]" alt="rotate-logo-img" class="img-responsive third">
+                <div class="toggleDays" style="display:none">
+                  <div class="daysRemain" id="counter">50</div>
+                  <div class="daysText">days remaining</div>
+                </div>
               </div>
             </div>
-            <div class="col-sm-4 clearfix">
-              <a href="https://drive.google.com/file/d/0B2wAA002oxoCaXRRaDBsZTB5X0U/view" class="pull-left linkButtons">Sponsor us</a>
+            <div class="col-sm-3 clearfix">
+              <a href="/ye2016/img2016/sponsorUS.pdf" class="pull-left linkButtons">Sponsor us</a>
             </div>
           </div>
-        </div>
   </section>
 
   <section class="social">
-      <div class="container">
-           <br/>
+        <br/>
+        <br/>
+        <br/>
+           <!-- <br/>
             <h1>24-26 August 2016</h1><br/><br/>
             <p>We're working hard on our website &amp; it won't be long until we're up with full functionality
             </p>
-
+           
             <p>Meanwhile, please proceed to login, registration &amp; talk submission, or check out sponsorship opportunities. </p>
             <p>Also, don't forget to check our tweets, posts &amp; blog entries for news.</p>
             <br/>
             <h3>Join the YAPC::EUROPE 2016 mailing list.</h3>
-            <h4>We'll keep you posted!</h4>
+            <h4>We'll keep you posted!</h4> -->
 
             <div id="mc_embed_signup">
               <form action="//cluj.us10.list-manage.com/subscribe/post?u=d13652c3b977008dc16f7904e&amp;id=8dd8b2af24" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -43,7 +47,7 @@
                   </div>
               </form>
             </div>
-            <hr align="center" width="50%">
+            <hr align="center" width="30%">
             <div class="socialFooter">
                <a target="_blank" href="https://www.facebook.com/yapceu2016">
                   <i class="fa fa-facebook circle"></i>
@@ -61,6 +65,5 @@
                   <i class="fa fa-envelope-o circle"></i>
                </a>
             </div>
-        </div>
   </section>
 
