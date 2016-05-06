@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="[% global.request.language %]" xml:lang="[% global.request.language %]">
   <head>
     <link rel="shortcut icon" type="image/png" href="[% make_uri_info('img', 'favicon.png') %]" />
-    <link rel="shortcut icon" href="[% make_uri_info('img2016', 'favicon.ico') %]" type="image/x-icon">
-    <link rel="icon" href="[% make_uri_info('img2016', 'favicon.ico') %]" type="image/x-icon">
+    <link rel="shortcut icon" href="[% make_uri_info('img2016', 'yapcfav.png') %]" type="image/x-icon">
+    <link rel="icon" href="[% make_uri_info('img2016', 'yapcfav.png') %]" type="image/x-icon">
     <link rel="alternate" type="application/atom+xml" title="[% global.conference.name %]" href="[% global.request.base_url %][% make_uri_info( 'atom', global.request.language ) %].xml" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'bootstrap.min.css') %]" />
     <link rel="stylesheet" type="text/css" href="[% make_uri_info('css', 'font-awesome.min.css') %]" />
