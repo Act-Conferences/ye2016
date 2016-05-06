@@ -358,6 +358,19 @@ body {
 } */
 .comming-soon {
   padding-top: 30px;
+
+}
+
+.navbar-fixed-top {
+    background-image: url("../img2016/back.jpg");
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 94px;
+    padding: 15px 15px 0 15px;
 }
 
 .comming-soon .navbar-header {
@@ -527,7 +540,7 @@ a:hover, a:focus {
 /* test */
 
 .position {
-  margin-top: 30px;
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
