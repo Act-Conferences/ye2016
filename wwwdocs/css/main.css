@@ -7,6 +7,12 @@ body {
   height: 100%;
 }
 
+.row-fluid {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
 .wrapper {
   display: block;
   background-image: url("../img2016/back.jpg");
@@ -59,7 +65,7 @@ body {
 
 .toggleDays .daysText {
   color: #d3c6a8;
-  margin-top: -25px;
+  margin-top: -19px;
 }
 
 @media all and (max-width: 415px) {

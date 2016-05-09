@@ -13,6 +13,16 @@
     </a>
   </div>
   <div class="collapse navbar-collapse" id="nav-menu-options">
+    <ul class="nav navbar-nav">
+      <li data-target="#myCarousel" data-slide-to="1" class="active"><a href="#">About</a></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="active"><a href="#">Tickets</a></li>
+      <li data-target="#myCarousel" data-slide-to="3" class="active"><a href="#">Schedule</a></li>
+      <li data-target="#myCarousel" data-slide-to="4" class="active"><a href="#">Speakers</a></li>
+      <li data-target="#myCarousel" data-slide-to="5" class="active"><a href="#">Sponsors</a></li>
+      <li data-target="#myCarousel" data-slide-to="6" class="active"><a href="#">Convince Your Bo$$</a></li>
+      <li data-target="#myCarousel" data-slide-to="7" class="active"><a href="#">Venue</a></li>
+      <li data-target="#myCarousel" data-slide-to="8" class="active"><a href="#">Contact</a></li>
+    </ul>
     <ul class="nav navbar-nav navbar-right">
       [% PROCESS menus/language %]
       [% PROCESS menus/user %]

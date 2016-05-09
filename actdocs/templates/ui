@@ -54,14 +54,12 @@
         [% PROCESS menu %]
       </div>
       <div class="position">
-        <div class="container">
           [% IF title %]
               <h1 class="page-header">[% title %]</h1>
           [% END %]
           <div class="col-xs-12">
               [% content %]
           </div>
-        </div>
       </div>
     </div>
     <script src="[% make_uri_info('js', 'bootstrap.min.js') %]"></script>
