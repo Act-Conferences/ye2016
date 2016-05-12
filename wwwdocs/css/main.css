@@ -7,8 +7,10 @@ body {
   height: 100%;
 }
 
-.no-padding {
-  padding: 0;
+.row-fluid {
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
 
 .wrapper {
@@ -411,28 +413,6 @@ body {
 .dropdown-menu .divider {
   background-color: #f2a01f;
 }
-
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-}
-
-.navbar .navbar-collapse {
-    text-align: center;
-}
-
-.nav>li>a {
-  color: #d8ceaf;
-}
-
-.nav>li.active a {
-  color: #ee9a20;
-}
-
-.nav>li>a:hover, .nav>li>a:focus {
-  background: transparent;
-}
-
 
 /* end navbar */
 
@@ -853,7 +833,7 @@ a:hover, a:focus {
 
 /*our sponsors - START*/
 .our-sponsors {
-	background-color: #ffffff;
+	background-color: #d8ceaf;
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
@@ -896,7 +876,7 @@ a:hover, a:focus {
 	float: left;
 	max-width: 200px;
 }
-.linkButton {
+.our-sponsors .linkButton {
     display: block;
     margin: 0 auto 50px auto;
     max-width: 210px;
@@ -921,260 +901,5 @@ a:hover, a:focus {
 	}
 }
 /*our sponsors - END*/
-
-/* Venue Start */
-
-.back {
-  background-color: #d8ceaf;
-  text-align: center;
-}
-
-.venue h1,
-.about h1 {
-  font-size: 39px;
-  font-weight: 900;
-  color: #a71d2f;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.venue p {
-  max-width: 400px;
-  margin: auto;
-  font-size: 16px;
-  font-weight: 300;
-  color: #a71d2f;
-}
-
-.venue img {
-  margin: 30px auto;
-  max-width: 400px;
-}
-
-.linkButton {
-  display: block;
-  margin: 0 auto 50px auto;
-  max-width: 160px;
-  padding: 15px 30px;
-  background-color: #f2a01f;
-  color: #891826;
-}
-
-.linkButton:hover {
-  color: #a71d2f;
-}
-
-.venue iframe {
-  height: 631px;
-}
-
-.fill {
-  background-color: #d8ceaf;
-}
-
-
-/* Venue End */
-
-/* About Start */
-
-.about {
-  text-align: center;
-  background-color: #d3ae5b;
-}
-
-.about p {
-  padding: 45px 0 44px 0;
-  max-width: 400px;
-  font-size: 16px;
-  font-weight: 300;
-  color: #a71d2f;
-  text-align: left;
-}
-
-.about a {
-  display: block;
-  text-decoration: underline;
-  color: #a71d2f;
-}
-
-.left {
-  margin: 0 auto 0 0;
-}
-
-.right {
-  margin: 0 0 0 auto;
-}
-
-.camels {
-  width: 100%;
-  overflow: hidden;
-}
-
-.camels img {
-  margin: auto;
-  position: relative;
-}
-
-.aboutInfo {
-  background-color: #dfc589;
-  padding-bottom: 30px;
-}
-
-.aboutInfo .col-xs-3{
-  color: #a71d2f;
-  font-size: 16px;
-}
-
-.aboutInfo .number {
-  font-size: 80px;
-  font-weight: 800;
-}
-
-.about h1 {
-  margin-top: 90px;
-}
-
-@media all and (max-width: 767px) {
-  .aboutInfo .number {
-    font-size: 30px;
-  }
-  .aboutInfo .labels {
-    font-size: 14px;
-  }
-}
-
-/* About End */
-
-/* Tickest and Events Start */
-.tickets h1 {
-  margin: 110px 0 60px;
-  font-size: 39px;
-  font-weight: 900;
-  color: #d8ceaf;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.tickets {
-  background-color: #362f2d;
-  text-align: center;
-}
-
-.tickets .box {
-  margin-bottom: 30px;
-} 
-
-.tickets .box .front,
-.tickets .box .back {
-  border: 1px solid #635b51;
-}
-
-.tickets .box p {
-  font-size: 16px; 
-  color: #1f82f2;
-  margin-bottom: 3px;
-}
-
-.tickets .box .ticketInfo.oneday,
-.tickets .box .ticketInfo.threeday{
-  margin-top: 30px;
-}
-
-.tickets .box .threeday {
-  color: #f2a01f;
-}
-
-.tickets .box .price span {
-  color: #d8ceaf;
-  font-size: 90px;
-  font-weight: 800;
-}
-
-.tickets .box .price span:first-child {
-  font-weight: 300;
-  font-size: 29px;
-  line-height: 158px;
-  vertical-align: top;
-}
-
-.tickets .box .priceFor {
-  margin-top: -40px;
-  padding-bottom: 30px;
-  font-size: 16px; 
-  color: #d8ceaf;
-  font-weight: 500;
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000;
-  transform-style: preserve-3d;
-}
-
-/* flip the pane when hovered */
-.flip-container:hover .back {
-    transform: rotateY(0deg);
-}
-
-.flip-container:hover .front {
-      transform: rotateY(180deg);
-}
-
-.flip-container, .box .front, .box .back {
-  width: 100%;
-  height: 100%;
-  min-height: 240px;
-}
-
-/* flip speed */
-.flipper {
-  transition: 0.7s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.box .front, .box .back {
-  backface-visibility: hidden;
-  transition: 0.7s;
-  transform-style: preserve-3d;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/*  front pane, placed above back */
-.box .front {
-  z-index: 2;
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.box .back {
-  transform: rotateY(-180deg);
-  background-color: #362f2d;
-}
-
-.box .back ul {
-  padding: 0;
-  list-style-type: none;
-  height: 100%;
-}
-
-.box .back ul li {
-  font-size: 16px;
-  color: #d8ceaf;
-  min-height: 25%;
-}
-
-.box .back ul li:nth-child(odd) {
-  background: #a71d2f;
-}
-
-
-/* Tickest and Events End */
-
 
 
