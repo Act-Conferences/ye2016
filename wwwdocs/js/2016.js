@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   if (window.location.href.indexOf("about") > -1 ||
        window.location.href.indexOf("venue") > -1 ||
-       window.location.href.indexOf("Tickets&Events") > -1) ||
+       window.location.href.indexOf("Tickets&Events") > -1 ||
        window.location.href.indexOf("our_sponsors") > -1) {
     $('.changejs').css('width', '100%');
     $('.changejs').css('padding', '0');
