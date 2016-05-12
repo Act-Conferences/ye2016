@@ -10,7 +10,8 @@ $(document).ready(function() {
   if (window.location.href.indexOf("about") > -1 ||
        window.location.href.indexOf("venue") > -1 ||
        window.location.href.indexOf("Tickets&Events") > -1 ||
-       window.location.href.indexOf("our_sponsors") > -1) {
+       window.location.href.indexOf("our_sponsors") > -1 || 
+       window.location.href.indexOf("conferenceInfo") > -1 ) {
     $('.changejs').css('width', '100%');
     $('.changejs').css('padding', '0');
     $('.changesjs').css('padding', '0');
@@ -28,6 +29,11 @@ $(document).ready(function() {
          })    
      i++;
    }, 3000)
+
+    $('.nav-tabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    });
 
 
 
