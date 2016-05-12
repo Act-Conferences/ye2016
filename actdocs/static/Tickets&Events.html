@@ -1,0 +1,187 @@
+[% WRAPPER ui %]
+<script>
+$.get("http://localhost:8080/ye2016/talks", function(response) { 
+    var n = response.search("talksSteal");
+    var numb = response.slice(n+12, n+14)
+    console.log(n);
+    console.log(numb);
+    var nonumber = numb.search("<");
+    console.log(nonumber);
+    var isZecimal;
+    if (nonumber !== -1) {
+      isZecimal = numb.slice(0,2);
+    } else {
+      isZecimal = numb;
+    }
+    console.log(isZecimal);
+
+    //$( "h1" ).replaceWith( "<h1>"+isZecimal+"</h1>" );
+
+ });
+</script>
+<div class="container-fluid col-xs-12 tickets">
+  <div class="row">
+    <div class="container">
+        <h1>Tickets &amp; Events</h1>
+        <div class="col-sm-4">
+          <div class="box">
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                        <p class="ticketInfo oneday">
+                        1-day training
+                        </p>
+                        <p>
+                        with Dave Cross
+                        </p>
+                        <div class="price">
+                            <span>&euro;</span>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                      <ul>
+                        <li class="description-item">Access to three days of conference</li>
+                        <li class="description-item">Conference dinner on the 1st conference evening</li>
+                        <li class="description-item">Conference kit (e.g. name tag, t-shirt, event prints)</li>
+                        <li class="description-item">Access to all meals throughout the 3 days (2 x coffee breaks/day, 1 x lunch/day)</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box">
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                        <p class="ticketInfo oneday">
+                        1-day training
+                        </p>
+                        <p>
+                        with Dave Cross
+                        </p>
+                        <div class="price">
+                            <span>&euro;</span>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                      <ul>
+                        <li class="description-item">Access to three days of conference</li>
+                        <li class="description-item">Conference dinner on the 1st conference evening</li>
+                        <li class="description-item">Conference kit (e.g. name tag, t-shirt, event prints)</li>
+                        <li class="description-item">Access to all meals throughout the 3 days (2 x coffee breaks/day, 1 x lunch/day)</li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box">
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                        <p class="ticketInfo oneday">
+                        1-day training
+                        </p>
+                        <p>
+                        with Dave Cross
+                        </p>
+                        <div class="price">
+                            <span>&euro;</span>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <div class="back">
+                      <!-- back content -->
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box">
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                        <p class="ticketInfo threeday">
+                        1-day training
+                        </p>
+                        <p class="threeday">
+                        with Dave Cross
+                        </p>
+                        <div class="price">
+                            <span>&euro;</span>
+                            <span>15</span>
+                        </div>
+                        <div class="priceFor">
+                            <span>Early Bird</span>
+                          </div>
+                    </div>
+                    <div class="back">
+                      <!-- back content -->
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box">
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                        <p class="ticketInfo threeday">
+                        1-day training
+                        </p>
+                        <p class="threeday">
+                        with Dave Cross
+                        </p>
+                        <div class="price">
+                            <span>&euro;</span>
+                            <span>15</span>
+                        </div>
+                        <div class="priceFor">
+                            <span>Regular</span>
+                          </div>
+                    </div>
+                    <div class="back">
+                      <!-- back content -->
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="box">
+             <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                    <div class="front">
+                        <p class="ticketInfo threeday">
+                        1-day training
+                        </p>
+                        <p class="threeday">
+                        with Dave Cross
+                        </p>
+                        <div class="price">
+                            <span>&euro;</span>
+                            <span>15</span>
+                        </div>
+                        <div class="priceFor">
+                            <span>Student</span>
+                          </div>
+                    </div>
+                    <div class="back">
+                      <!-- back content -->
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+[% END %]
