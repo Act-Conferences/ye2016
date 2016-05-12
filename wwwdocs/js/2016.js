@@ -3,6 +3,7 @@ $(document).ready(function() {
   $('div:has(a)').removeClass('hidden');
   $('.position').css('height',$(".wrapper").outerHeight(true) - $(".comming-soon").outerHeight(true));
   $('.fill').css('height',$(".wrapper").outerHeight(true) - 94);
+  $('.filltab').css('height',$(".wrapper").outerHeight(true) - 149);
   $('.tickets').css('height',$(".wrapper").outerHeight(true) - 94);
   $('.our-sponsors').css('height', $(".wrapper").height() - 94);
   $('.sponsors-cat').css('height', $(".sponsors-list").height());

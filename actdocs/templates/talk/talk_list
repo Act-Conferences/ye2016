@@ -72,4 +72,4 @@
 
     [% END %]
 </table>
-<div class="talksSteal">[% talks_accepted %]  </div>
+<div class="talksSteal">[% talks_total %]  </div>

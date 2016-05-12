@@ -973,7 +973,8 @@ a:hover, a:focus {
   height: 631px;
 }
 
-.fill {
+.fill,
+.filltab {
   background-color: #d8ceaf;
 }
 
@@ -1177,6 +1178,7 @@ a:hover, a:focus {
 .box .back ul li:nth-child(odd) {
   background: #a71d2f;
 }
+
 /* Tickest and Events End */
 
 
@@ -1186,3 +1188,51 @@ a:hover, a:focus {
 }
 
 /*TAB CONTENT - tabs style END*/
+
+
+/* Conference Info Tabs Bar -- Start */
+
+.nav-tabs {
+  background-color: #9a1b29;
+  border: 0;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.nav-tabs>li {
+  display: inline-block;
+  float: none;
+}
+
+.nav-tabs>li.active a,
+.nav-tabs>li.active a:hover,
+.nav-tabs>li.active a:focus {
+  color: #d3ae5b;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.nav-tabs>li>a:hover {
+  border-color: transparent;
+}
+
+.nav-tabs>li>a {
+  padding: 16px 46px;
+}
+
+
+/* Conference Info Tabs Bar -- End */
+
+/* TAbs about start */
+
+.about.filltab p {
+  padding: 45px 0 0;
+}
+
+.about.filltab .col-xs-6 a {
+  margin-top: 50px;
+}
+
+/* TAbs about end */
+
