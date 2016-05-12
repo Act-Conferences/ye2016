@@ -1177,6 +1177,12 @@ a:hover, a:focus {
 .box .back ul li:nth-child(odd) {
   background: #a71d2f;
 }
- 
-
 /* Tickest and Events End */
+
+
+/*TAB CONTENT - tabs style START*/
+.tab-content #Sponsors .our-sponsors{
+	height: 100% !important;
+}
+
+/*TAB CONTENT - tabs style END*/
