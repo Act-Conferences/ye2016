@@ -7,6 +7,8 @@ $(document).ready(function() {
   $('.tickets').css('height',$(".wrapper").outerHeight(true) - 94);
   $('.our-sponsors').css('height', $(".wrapper").height() - 94);
   $('.sponsors-cat').css('height', $(".sponsors-list").height());
+  $('.carousel.speaker').css('height',$(window).height() - 149);
+
 
   if (window.location.href.indexOf("about") > -1 ||
        window.location.href.indexOf("venue") > -1 ||
@@ -36,6 +38,10 @@ $(document).ready(function() {
       $(this).tab('show')
     });
 
+    $('.carousel').carousel({
+        interval: false
+    })
+
 
 
   $(window).resize(function(){
@@ -43,6 +49,7 @@ $(document).ready(function() {
        $('.position').css('height', $(".wrapper").outerHeight(true) - $(".comming-soon").outerHeight(true));
        $('.our-sponsors').css('height', $(".wrapper").height() - 94);
        $('.sponsors-cat').css('height', $(".sponsors-list").height());
+       $('.carousel.speaker').css('height',$(window).height() - 149);
   });
 
   $(".nav a").on("click", function(){

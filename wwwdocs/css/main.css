@@ -1236,3 +1236,51 @@ a:hover, a:focus {
 
 /* TAbs about end */
 
+/* TAbs Speakers start */
+
+#carousel-speakers .col-xs-4 img {
+  width: 300px;
+  margin: auto;
+}
+
+#carousel-speakers .carousel-caption {
+    position: relative;
+    right: 0;
+    left: 0;
+}
+
+.speakersTitle {
+  margin: 60px 0;
+  font-size: 39px;
+  font-weight: 900;
+  color: #a71d2f;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.speakersback {
+  background-image: url("../img2016/speakers.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#carousel-speakers h4 {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+#carousel-speakers h4,
+#carousel-speakers p {
+  color: #a71d2f;
+}
+
+#carousel-speakers .glyphicon {
+  color: #a71d2f;
+}
+
+/* TAbs Speakers end */
