@@ -59,7 +59,7 @@ $(document).ready(function() {
       $( ".changesjs ul" ).first().css( "paddingTop", "30px" );
       $( "p" ).last().addClass( "otherAct" );
       $('.changesjs').addClass( "transition" );
-      $('.col-xs-12.changesjs.transition').css('min-height',$('ul').last().outerHeight(true) + 220 );
+      $('.col-xs-12.changesjs.transition').css('min-height',$('ul').last().outerHeight(true) + 120 );
 
 
       $( "ul" ).last().addClass( "otherActUl" );

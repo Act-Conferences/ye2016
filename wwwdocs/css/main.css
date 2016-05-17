@@ -1411,6 +1411,7 @@ a:hover, a:focus {
    top: 3%; 
   right: 4%;
   font-size: 30px;
+  cursor: pointer;
 }
 
 
