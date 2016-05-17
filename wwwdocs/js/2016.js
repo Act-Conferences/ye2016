@@ -45,6 +45,63 @@ $(document).ready(function() {
     })
 
 
+    var text = $( ".page-header" ).text();
+    var main = (text.match(/Main private page/)||[]).length;
+
+    if ((window.location.href.indexOf("main") > -1) && (main === 1)) {
+        console.log("hey");
+      $( "p" ).each(function() {
+        $( this ).addClass( "text-center" );
+      });
+      $( ".changesjs ul" ).each(function() {
+        $( this ).addClass( "jsUl" );
+      });
+      $( ".changesjs ul" ).first().css( "paddingTop", "30px" );
+      $( "p" ).last().addClass( "otherAct" );
+      $('.changesjs').addClass( "transition" );
+
+
+      $( "ul" ).last().addClass( "otherActUl" );
+      $('ul').last().append( "<h1 class=\"page-header\">act conferences</h1>" );
+      $('ul').last().css( "display", "none" );
+      $('ul').last().css('height',$(".changesjs").outerHeight(true) );
+
+      $('ul').last().click(function(){
+        $('.changesjs').toggleClass("halfWidth");
+        $( "p" ).last().delay( 1000 ).fadeIn( "slow" );
+      });
+
+  
+
+      $( "p" ).last().click(function() {
+        $('.changejs').css('overflow', 'hidden');
+        $('ul').last().addClass( "test" );
+        $('.changesjs').toggleClass("halfWidth");
+        $('ul').last().css( "display", "block" );
+        $( "p" ).last().fadeOut( "slow" );
+      });
+    }
+
+  $(document).on('change', '.btn-file :file', function() {
+      var input = $(this),
+          numFiles = input.get(0).files ? input.get(0).files.length : 1,
+          label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+      input.trigger('fileselect', [numFiles, label]);
+  });
+
+  $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
+      console.log("test");
+      var input_label = $(this).closest('.input-group').find('.file-input-label'),
+        log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+      if( input_label.length ) {
+        input_label.text(log);
+      } else {
+        if( log ) alert(log);
+      }
+  });
+
+
 
   $(window).resize(function(){
        $('.fill').css('height',$(".wrapper").outerHeight(true) - 94);

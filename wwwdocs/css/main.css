@@ -1347,3 +1347,150 @@ a:hover, a:focus {
   padding-top: 55px;
 }
 /* TAbs Speakers end */
+
+.nav-tabs {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+}
+
+.tab-content {
+  padding-top: 55px;
+}
+
+
+/* Main page start*/
+
+.jsUl {
+  list-style-type: none;
+  padding: 0;
+}
+
+.jsUl li {
+  padding: 4px 0px;
+  text-align: center;
+  color: #ee9a20;
+  text-transform: capitalize;
+}
+
+/* .otherAct b {
+  background-color: #ee9a20;
+  padding: 15px 90px;
+  cursor: pointer;
+} */
+
+.changesjs.transition {
+  transition: all 2s ease-in-out;
+}
+
+.jsUl.otherActUl.test h1 {
+  font-size: 29px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.test {
+/*     height: 100px; */
+    width: 97%;
+    background: #d8ceaf;
+/*     padding: 100px; */
+    position: absolute;
+    right: -100%;
+    top: 0;
+}
+
+.halfWidth {
+  width: 50%;
+}
+
+.text-center.otherAct {
+  cursor: pointer;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  position: absolute;
+  top: 72%;
+  right: -35%;
+  font-size: 42px;
+}
+
+
+
+/* Main page end*/
+
+/* Change photo start */
+
+.changePhoto {
+  margin-top: 40px;
+}
+
+.changePhoto .photo img {
+  border: 5px solid #ffffff;
+  margin: 9px 0 0 auto;
+}
+
+.changePhoto .btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.changePhoto .btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+.changePhoto .file-input-label {
+  height: 50px;
+  padding: 0px 10px;
+  display: table-cell;
+  background-color: #d8ceaf;
+  color: #891826;
+  vertical-align: middle;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.changePhoto input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+
+.changePhoto .btn-uploadFile {
+  background-color: #d3ae5b;
+  color: #891826;
+  font-size: 16px;
+  padding: 13px 28px;
+  font-weight: 600;
+}
+
+.changePhoto .file .input-group {
+  margin-bottom: 10px;
+}
+
+.changePhoto .sendLink {
+    width: 100%;
+    background-color: #f2a01f;
+    color: #891826;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 12px 35px;
+}
+
+.changePhoto .deleteImg {
+  width: 100%;
+  background-color: transparent;
+  color: #d3ae5b;
+  font-weight: 800;
+}
+/* Change photo end */
