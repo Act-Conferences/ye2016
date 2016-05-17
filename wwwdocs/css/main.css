@@ -1182,12 +1182,67 @@ a:hover, a:focus {
 /* Tickest and Events End */
 
 
-/*TAB CONTENT - tabs style START*/
+/*TAB Sponsors START*/
 .tab-content #Sponsors .our-sponsors{
-	height: 100% !important;
+/*	height: 100% !important;*/
 }
-
-/*TAB CONTENT - tabs style END*/
+.sponsors-title {
+  margin: 60px 0;
+  font-size: 39px;
+  font-weight: 900;
+  color: #a71d2f;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  text-align: center;
+}
+.sponsors-tab {
+  background-image: url("../img2016/speakers.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+	height: 100%;
+}
+.sponsors-tab img {
+	width: 170px;
+	margin: 22px 22px;
+}
+.sponsors-tab .sponsors-levels {
+	margin: 0 auto;
+	width: 95%;
+	text-align: center;
+}
+.sponsors-tab .levels-details {
+	text-align: center;
+	margin-top: 15px;
+}
+.sponsors-tab .levels-details .linkButton {
+	max-width: 240px !important;
+	margin: 15px auto 0 auto;
+}
+.sponsors-tab .levels-details .linkButton.red-btn {
+	color: #f2a01f;
+	background-color: #891826;
+}
+.sponsors-tab .levels-details .levels-text {
+	color: #A71D2F;
+	font-weight: 800;
+	width: 39%;
+	margin: 40px auto;
+}
+@media all and (max-width: 1450px) {
+	#Sponsors {
+		height: 100% !important;
+	}
+}
+@media all and (max-width: 768px){
+	.sponsors-tab .levels-details .levels-text {
+		width: 100%;
+	}
+}
+/*TAB Sponsors END*/
 
 
 /* Conference Info Tabs Bar -- Start */
@@ -1282,5 +1337,13 @@ a:hover, a:focus {
 #carousel-speakers .glyphicon {
   color: #a71d2f;
 }
+.nav-tabs {
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+}
 
+.tab-content {
+  padding-top: 55px;
+}
 /* TAbs Speakers end */
