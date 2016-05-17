@@ -63,9 +63,9 @@ $(document).ready(function() {
 
 
       $( "ul" ).last().addClass( "otherActUl" );
-      $('ul').last().append( "<h1 class=\"page-header\">act conferences</h1>" );
+      $('ul').last().prepend( "<h1 class=\"page-header\">act conferences</h1>" );
       $('ul').last().css( "display", "none" );
-      $('ul').last().css('min-height',$(".changesjs").outerHeight(true) );
+      $('ul').last().css('min-height',$(".changesjs").outerHeight(true) + 40 );
 
       $('ul').last().click(function(){
         $('.changesjs').toggleClass("halfWidth");
