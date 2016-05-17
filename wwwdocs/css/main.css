@@ -1482,6 +1482,7 @@ a:hover, a:focus {
   vertical-align: middle;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
+  word-break: break-all;
 }
 
 .changePhoto input[readonly] {
@@ -1510,6 +1511,7 @@ a:hover, a:focus {
     font-weight: 800;
     font-size: 16px;
     padding: 12px 35px;
+    margin-bottom: 10px;
 }
 
 .changePhoto .deleteImg {
@@ -1517,5 +1519,11 @@ a:hover, a:focus {
   background-color: transparent;
   color: #d3ae5b;
   font-weight: 800;
+}
+
+@media all and (max-width: 767px) {
+  .changePhoto .photo img {
+    margin: 0px auto 10px auto;
+  }
 }
 /* Change photo end */
