@@ -1397,10 +1397,15 @@ a:hover, a:focus {
     position: absolute;
     right: -100%;
     top: 0;
+    cursor: pointer;
 }
 
 .halfWidth {
   width: 50%;
+}
+
+.fullWidth {
+  width: 100% !important;
 }
 
 .text-center.otherAct {
@@ -1411,8 +1416,26 @@ a:hover, a:focus {
    top: 3%; 
   right: 4%;
   font-size: 30px;
-  cursor: pointer;
+  margin: 0;
 }
+
+@media all and (max-width: 710px){
+  .jsUl.otherActUl {
+    display: block !important;
+    margin: 0;
+  }
+  .text-center.otherAct {
+    display: none !important;
+  }
+  .test {
+    background: transparent;
+    position: relative;
+    cursor: auto;
+    right: 0;
+    width: 100%;
+  }
+}
+
 
 
 

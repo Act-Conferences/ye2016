@@ -72,7 +72,6 @@ $(document).ready(function() {
         $( "p" ).last().delay( 1000 ).fadeIn( "slow" );
       });
 
-  
 
       $( "p" ).last().click(function() {
         $('.changejs').css('overflow', 'hidden');
@@ -80,6 +79,18 @@ $(document).ready(function() {
         $('.changesjs').toggleClass("halfWidth");
         $('ul').last().css( "display", "block" );
         $( "p" ).last().fadeOut( "slow" );
+      });
+
+      if ($(window).width() <= 710){
+        $('.changesjs').addClass("fullWidth");
+      }
+
+      $(window).resize(function(){
+        if ($(window).width() <= 710){
+          $('.changesjs').addClass("fullWidth");
+        } else {
+          $('.changesjs').removeClass("fullWidth");
+        }
       });
     }
 
