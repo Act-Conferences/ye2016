@@ -59,13 +59,13 @@ $(document).ready(function() {
       $( ".changesjs ul" ).first().css( "paddingTop", "30px" );
       $( "p" ).last().addClass( "otherAct" );
       $('.changesjs').addClass( "transition" );
-      $('.col-xs-12.changesjs.transition').css('min-height',$('ul').last().outerHeight(true) );
+      $('.col-xs-12.changesjs.transition').css('min-height',$('ul').last().outerHeight(true) + 120 );
 
 
       $( "ul" ).last().addClass( "otherActUl" );
       $('ul').last().prepend( "<h1 class=\"page-header\">act conferences</h1>" );
       $('ul').last().css( "display", "none" );
-      $('ul').last().css('min-height',$(".changesjs").outerHeight(true) + 90 );
+      $('ul').last().css('min-height',$(".changesjs").outerHeight(true) + 40 );
 
       $('ul').last().click(function(){
         $('.changesjs').toggleClass("halfWidth");

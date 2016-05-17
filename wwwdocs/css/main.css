@@ -1406,10 +1406,10 @@ a:hover, a:focus {
 .text-center.otherAct {
   cursor: pointer;
   transform: rotate(-90deg);
-  transform-origin: -73% 30% 0;
+  transform-origin: top right;
   position: absolute;
- /*  top: 72%; */
-  right: -47%;
+   top: 3%; 
+  right: 4%;
   font-size: 30px;
 }
 
