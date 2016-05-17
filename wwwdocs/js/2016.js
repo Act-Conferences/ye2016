@@ -82,7 +82,9 @@ $(document).ready(function() {
       });
 
       if ($(window).width() <= 710){
-        $('.changesjs').addClass("fullWidth");
+        $('ul').last().click(function(){
+         $('.changesjs').removeClass("halfWidth");
+        });
       }
 
       $(window).resize(function(){

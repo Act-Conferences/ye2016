@@ -1423,6 +1423,7 @@ a:hover, a:focus {
   .jsUl.otherActUl {
     display: block !important;
     margin: 0;
+    min-height: auto !important;
   }
   .text-center.otherAct {
     display: none !important;
