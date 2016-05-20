@@ -73,23 +73,6 @@
     [% END %]
 </table>
 
-<div style="display:none;" class="talksTotalSteal">[% talks_total %]  </div>
-<div style="display:none;" class="talksAcceptedSteal">[% talks_accepted %]  </div>
-<div style="display:none;" class="talksDuration">
-      <div>
-          <p>Total duration of accepted talks:</p>
-          <p>
-            <span>[% talks_duration div 60 %]</span> hours
-            <span>[% talks_duration % 60 %]</span> minutes
-          </p>
-      </div>
-</div>
-<div style="display:none;" class="talksLightning">
-        <p>
-          Accepted lightning talks:
-          <span>[% talks_lightning %]</span>
-        </p>
-</div>
 
 
 
