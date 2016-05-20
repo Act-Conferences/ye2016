@@ -1,5 +1,9 @@
 [% WRAPPER ui title = loc('<conf name> Statistics', global.conference.name) %]
 
+<p style="display:none;" class="attendees">
+ [%  stats.users %]
+</p>
+
 <p>
  [% loc('There are n registered people', stats.users, stats.countries.size, stats.pm.size, stats.committed) %]
 </p>

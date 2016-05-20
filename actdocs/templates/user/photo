@@ -1,6 +1,6 @@
 [% WRAPPER ui title = loc("Your photo") %]
 <form method="POST" enctype="multipart/form-data">
-  <div class="col-md-offset-3 col-md-6">
+  <div class="col-md-12 changePhoto">
     [% IF error;
          WRAPPER error_ui;
            loc("Image couldn't be read. Please upload your picture in one of the following formats:");
@@ -9,34 +9,47 @@
        END
     %]
 
-    <div class="panel panel-default">
-      <div class="panel-heading text-center">
-        [%- IF global.request.user.photo_name %]
-           <img class="img-thumbnail" src="[% photo_uri %]" border="0">
-        [%- ELSE %]
-           <img class="img-thumbnail" src="img/default-avatar.png" border="0">
-        [% END %]
+    <div>
+      <div class="col-sm-6 photo">
+          [%- IF global.request.user.photo_name %]
+             <img class=" img-responsive" src="[% photo_uri %]" border="0">
+          [%- ELSE %]
+             <img class=" img-responsive" src="img/default-avatar.png" border="0">
+          [% END %]
       </div>
-      <div class="panel-body">
+      <div class="col-sm-6">
+      <div class="file">
         <p>
           {{This photo will probably end up on the conference who's who,}}
           <tt>;-)</tt>
         </p>
-        <input class="btn btn-default btn-lg" type="file" name="photo" size="40" />
+
+
+        <div class="input-group">
+              <span class="input-group-btn">
+                <label class="btn btn-uploadFile btn-file" for="multiple_input_group">
+                  <div class="input required"><input id="multiple_input_group" type="file" name="photo" size="40" /></div> Choose file
+                </label>
+              </span>
+              <span class="file-input-label"></span>
+        </div>
       </div>
-      <div class="panel-footer">
+      <div>
         <div class="row">
-          <div class="col-lg-6 ">
+          <div class="col-lg-12 ">
             [%- IF global.request.user.photo_name %]
-              <input type="submit" name="delete" class="btn btn-block btn-danger btn-lg" value="{{Delete Photo}}" />
+              <input type="submit" name="delete" class="btn btn-block btn-danger btn-lg deleteImg" value="{{Delete Photo}}" />
             [% END %]
           </div>
-          <div class="col-lg-6">
-            <input type="submit" name="update" class="btn btn-block btn-primary btn-lg" value="{{Update Photo}}" />
+          <div class="col-lg-12">
+            <input type="submit" name="update" class="btn btn-block btn-primary btn-lg sendLink" value="{{Update Photo}}" />
           </div>
         </div>
       </div>
+      </div>
     </div>
+
+
   </div>
 </form>
 [% END %]

@@ -1,4 +1,5 @@
-<div class="container">
+<nav class="navbar navbar-fixed-top">
+<div class="container-fluid">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu-options">
@@ -11,10 +12,18 @@
       <img src="[% make_uri_info('img2016', 'logo.png') %]" alt="yapcLogo" class="img-responsive navLogo">
     </a>
   </div>
-  <div class="collapse navbar-collapse" id="nav-menu-options">
-    <ul class="nav navbar-nav navbar-right">
-      [% PROCESS menus/language %]
-      [% PROCESS menus/user %]
-    </ul>
-  </div>
+    <div class="collapse navbar-collapse" id="nav-menu-options">
+      <ul class="nav navbar-nav middle">
+          <li><a href="img2016/convinceyourbo$$.pdf" >Convince Your Bo$$</a></li>
+          <li><a href="conferenceInfo.html" >Conference Info</a></li>
+          <!-- <li><a href="#" >Buy Tickets</a></li>
+          <li><a href="#" >User Info</a></li> -->
+      </ul>
+
+    </div>
+    <ul class="userNav">
+        [% PROCESS menus/language %]
+        [% PROCESS menus/user %]
+      </ul>
 </div>
+</nav>
