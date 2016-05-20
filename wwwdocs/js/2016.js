@@ -8,7 +8,7 @@ $(document).ready(function() {
   $('.our-sponsors').css('height', $(".wrapper").height() - 94);
   $('.sponsors-cat').css('height', $(".sponsors-list").height());
   $('.carousel.speaker').css('min-height',$(window).height() - 149);
-  $('#Sponsors').css('min-height',$(window).height() - 149);
+  $('.sponsors-tab').css('min-height',$(window).height() - 149);
   $('.organizers-tab').css('min-height',$(window).height() - 149);
   $('.talks-tab').css('min-height',$(window).height() - 149);
 
@@ -173,10 +173,9 @@ $(window).resize(function(){
        $('.our-sponsors').css('height', $(".wrapper").height() - 94);
        $('.sponsors-cat').css('height', $(".sponsors-list").height());
        $('.carousel.speaker').css('height',$(window).height() - 149);
-       $('#Sponsors').css('min-height',$(window).height() - 149);
+       $('.sponsors-tab').css('min-height',$(window).height() - 149);
   		 $('.organizers-tab').css('min-height',$(window).height() - 149);
 
-  });
 
  if (wwidth <= 848) {
 
