@@ -1026,6 +1026,7 @@ a:hover, a:focus {
   max-width: 400px;
 }
 
+
 .linkButton {
   display: block;
   margin: 0 auto 50px auto;
@@ -1045,6 +1046,10 @@ a:hover, a:focus {
 
 .fill,
 .filltab {
+  background-color: #d8ceaf;
+}
+
+.fills {
   background-color: #d8ceaf;
 }
 
