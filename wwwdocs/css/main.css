@@ -1014,7 +1014,8 @@ a:hover, a:focus {
 }
 
 .venue p {
-  max-width: 400px;
+  text-align: left;
+  padding: 0 40px;
   margin: auto;
   font-size: 16px;
   font-weight: 300;
@@ -1041,7 +1042,7 @@ a:hover, a:focus {
 }
 
 .venue iframe {
-  height: 758px;
+  height: 637px;
 }
 
 .fill,
@@ -1051,6 +1052,11 @@ a:hover, a:focus {
 
 .fills {
   background-color: #d8ceaf;
+}
+
+#Venue .venue h5 {
+    color: #a71d2f;
+    margin: 10px;
 }
 
 
