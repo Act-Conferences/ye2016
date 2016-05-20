@@ -5,11 +5,12 @@
 		var m = response.search("talksAcceptedSteal");
 		var numb = response.slice(n + 17, n + 19);
 		var numb2 = response.slice(m + 20, m + 22);
-			//console.log(n);
-			//console.log(numb2);
+			console.log(n);
+			console.log("response", response.slice(n, n + 19));
+			console.log(numb);
 		var nonumber = numb.search("<");
 		var nonumber2 = numb2.search("<");
-		//console.log(nonumber);
+		console.log(nonumber);
 		var total;
 		if (nonumber !== -1) {
 			total = numb.slice(0, 2);
@@ -36,8 +37,8 @@
 		var duration = live_str.find('.talksDuration').html();
 		var lightning = live_str.find('.talksLightning').html();
 		//var s = $('div').html();
-		//console.log(duration);
-		//console.log(lightning);
+		console.log("duration", duration);
+		console.log("lightning", lightning);
 
 		$('#duration').html(duration);
 		$('#lightning').html(lightning);
