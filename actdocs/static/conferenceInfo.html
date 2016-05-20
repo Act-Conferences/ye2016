@@ -1,26 +1,62 @@
 [% WRAPPER ui %]
 <script>
-	$.get("http://localhost:8080/ye2016/talks", function (response) {
-		var n = response.search("talksSteal");
-		var numb = response.slice(n + 12, n + 14)
+	$.get("/ye2016/talks", function (response) {
+		var n = response.search("talksTotalSteal");
+		var m = response.search("talksAcceptedSteal");
+		var numb = response.slice(n + 17, n + 19);
+		var numb2 = response.slice(m + 20, m + 22);
 			//console.log(n);
-			//console.log(numb);
+			//console.log(numb2);
 		var nonumber = numb.search("<");
+		var nonumber2 = numb2.search("<");
 		//console.log(nonumber);
-		var isZecimal;
+		var total;
 		if (nonumber !== -1) {
-			isZecimal = numb.slice(0, 2);
+			total = numb.slice(0, 2);
 		} else {
-			isZecimal = numb;
+			total = numb;
 		}
-		console.log(isZecimal);
-		$('.talksJs').text(isZecimal);
+
+		var accepted;
+		if (nonumber !== -1) {
+			accepted = numb2.slice(0, 2);
+		} else {
+			accepted = numb2;
+		}
+
+		//console.log("total talks", total);
+		//console.log("accepted talks", accepted);
+
+		$('.talksJs').text(total);
+		$('#aceptedT').text(accepted);
+		$('#submittedT').text(total);
+
+		var live_str = $('<div>',{html:response});
+
+		var duration = live_str.find('.talksDuration').html();
+		var lightning = live_str.find('.talksLightning').html();
+		//var s = $('div').html();
+		//console.log(duration);
+		//console.log(lightning);
+
+		$('#duration').html(duration);
+		$('#lightning').html(lightning);
+
+	});
+	$.get("/ye2016/stats", function (stats) {
+
+		var live_str = $('<div>',{html:stats});
+		var attendees = live_str.find('.attendees').html();
+		$('#attendees').html(attendees);
+		//console.log(attendees);
+
 
 	});
 </script>
+
 <div class="conferenceInfo">
 	<!-- Nav tabs -->
-	<ul class="nav nav-tabs" role="tablist">
+	<ul class="nav nav-tabs" role="tablist" id="tablist">
 		<li role="presentation" class="active"><a href="#About" aria-controls="About" role="tab" data-toggle="tab">About</a></li>
 		<li role="presentation"><a href="#Speakers" aria-controls="Speakers" role="tab" data-toggle="tab">Speakers</a></li>
 		<li role="presentation"><a href="#Talks" aria-controls="Talks" role="tab" data-toggle="tab">Talks</a></li>
@@ -41,14 +77,19 @@
 					<h1 class="col-xs-12">About Yapc</h1>
 					<div class="col-xs-6">
 						<p class="right">
-							The annual Perl Conference of Europe, YAPC::EUROPE is back on 24-26 August 2016, to bring you the most passionate Perl people from the community we love. YAPC::Europe 2016 is the place to be if you’re in the Perl business. Whether you’re a developer, tester, designer, UX professional, marketer, student, geek or manager, this is where you’ll hear &amp; test the latest Perl trends &amp; meet the most amazing Perl people. And every year, the event is held in a different city.In 2016, the Cluj Perl Mongers managed to make YAPC::EUROPE happen in their beloved city, Cluj-Napoca,in Transylvania. No worries, Dracula’s off duty during summer (too much light, sun &amp; joy).
+							The annual Perl Conference of Europe, YAPC::EUROPE is back on 24-26 August 2016, to bring you the most passionate Perl people from the community we love.
+							<br><br>
+							 YAPC::Europe 2016 is the place to be if you’re in the Perl business. Whether you’re a developer, tester, designer, UX professional, marketer, student, geek or manager, this is where you’ll hear &amp; test the latest Perl trends &amp; meet the most amazing Perl people.
+
 						</p>
 					</div>
 					<div class="col-xs-6">
 						<p class="left">
+							And every year, the event is held in a different city.In 2016, the Cluj Perl Mongers managed to make YAPC::EUROPE happen in their beloved city, Cluj-Napoca,in Transylvania. No worries, Dracula’s off duty during summer (too much light, sun &amp; joy).
+							<br><br>
 							Who knows,maybe we’ll be your guests next summer? Join us at YAPC::Europe to shape the future of Perl-based applications!
 						</p>
-						<a href="/ye2016/about.html" class="pull-left">More about the conference</a>
+			<!-- 			<a href="/ye2016/about.html" class="pull-left">More about the conference</a> -->
 					</div>
 					<div class="col-xs-12 camels">
 						<img class="img-responsive" src="img2016/camels.png">
@@ -59,7 +100,7 @@
 							<div class="labels">Speakers</div>
 						</div>
 						<div class="Attendees col-xs-3">
-							<span class="number">300</span>
+							<span id="attendees" class="number">300</span>
 							<div class="labels">Attendees</div>
 						</div>
 						<div class="Talks col-xs-3">
@@ -154,7 +195,30 @@
 		<!--Speakers-tab END-->
 
 		<!--Talks-tab START-->
-		<div role="tabpanel" class="tab-pane fade" id="Talks">.3..</div>
+		<div role="tabpanel" class="tab-pane fade" id="Talks">
+			<div class="talks-tab">
+				<div class="container">
+					<h1 class="talks-title">Talks</h1>
+					<div class="col-sm-6">
+						<div class="infoTalks">
+							<span id="aceptedT" class="number">11</span>
+							<div class="labels">Accepted Talks</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="infoTalks">
+							<span id="submittedT" class="number">214</span>
+							<div class="labels">Submitted Talks</div>
+						</div>
+					</div>
+					<hr align="center" width="90%">
+					<div class="moreInfoTalsk">
+						<div id="duration"></div>
+						<div id="lightning"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!--Talks-tab END-->
 
 		<!--Schedule-tab START-->

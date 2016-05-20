@@ -420,6 +420,7 @@ body {
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
+    margin-left: -12%;
 }
  
  .navbar .navbar-collapse {
@@ -438,6 +439,68 @@ body {
    background: transparent;
  }
 
+.position.opend {
+  margin-top: 274px;
+}
+.position.closed {
+  margin-top: 64px;
+}
+
+@media all and (max-width: 864px) {
+  .navbar-nav>li>a {
+    font-size: 13px;
+  }
+  .navbar-fixed-top {
+    padding: 15px 0 0;
+  }
+  .nav>li>a {
+    padding: 16px 11px;
+  }
+ }
+
+@media all and (max-width: 767px) {
+  .navbar .navbar-nav {
+ /*    display: block; */
+    margin: 0;
+  }
+
+  .navbar .navbar-collapse {
+    background: #C02334;
+    padding-bottom: 16px;
+  }
+
+  .navbar-fixed-top .nav>li>a {
+      color: #d3ae5b;
+    }
+
+  .navbar-toggle {
+    margin-right: 110px;
+    padding: 7px 10px;
+  }
+}
+
+.navbar-fixed-top .container-fluid {
+  position: relative;
+}
+
+@media all and (max-width: 390px) {
+  .navbar-brand>img {
+    width: 115px;
+  }
+}
+
+.userNav {
+  position: absolute;
+  top:13px;
+  right: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.userNav .dropdown-menu {
+  left: -87px;
+  background: #C02334;
+}
 
 /* end navbar */
 
@@ -1369,6 +1432,27 @@ a:hover, a:focus {
   padding: 16px 25px;
 }
 
+.conferenceInfo .nav.nav-tabs {
+  height: 56px;
+}
+
+@media all and (max-width: 1314px) {
+  .nav-tabs>li>a {
+     padding: 16px 16px;
+  }
+}
+
+@media all and (min-width: 848px) {
+  .nav.nav-tabs li a {
+    opacity: 1 !important;
+  }
+}
+
+@media all and (max-width: 395px) {
+  .nav.nav-tabs li a {
+    font-size: 12px;
+  }
+}
 
 /* Conference Info Tabs Bar -- End */
 
@@ -1389,6 +1473,7 @@ a:hover, a:focus {
 #carousel-speakers .col-xs-4 img {
   width: 300px;
   margin: auto;
+  border-radius: 50%;
 }
 
 #carousel-speakers .carousel-caption {
@@ -1620,3 +1705,61 @@ a:hover, a:focus {
   }
 }
 /* Change photo end */
+
+/* Talks tab start */
+
+.talks-tab {
+    background-image: url("../img2016/speakers.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    text-align: center;
+}
+
+.talks-title {
+    margin: 60px 0 0;
+    font-size: 39px;
+    font-weight: 900;
+    color: #a71d2f;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+.talks-tab .moreInfoTalsk p {
+  color: #a71d2f;
+}
+
+.talks-tab .moreInfoTalsk p span{
+  font-weight: 900;
+}
+
+.talks-tab hr {
+  display: inline-block;
+  margin: 60px 0;
+  border-top: 2px solid #d3ae5b;
+}
+
+.talks-tab .moreInfoTalsk #lightning p {
+  margin-top: 20px;
+}
+
+.talks-tab .infoTalks {
+  color: #a71d2f;
+  margin-top: -35px;
+}
+
+.talks-tab .infoTalks .number {
+  font-size: 16em;
+  font-weight: 900;
+}
+
+.talks-tab .infoTalks .labels {
+  margin-top: -45px;
+}
+
+/* Talks tab end */

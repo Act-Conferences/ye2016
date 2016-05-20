@@ -19,10 +19,11 @@
           <li><a href="#" >Buy Tickets</a></li>
           <li><a href="#" >User Info</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+
+    </div>
+    <ul class="userNav">
         [% PROCESS menus/language %]
         [% PROCESS menus/user %]
       </ul>
-    </div>
 </div>
 </nav>

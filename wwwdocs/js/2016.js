@@ -3,13 +3,15 @@ $(document).ready(function() {
   $('div:has(a)').removeClass('hidden');
   $('.position').css('height',$(".wrapper").outerHeight(true) - $(".comming-soon").outerHeight(true));
   $('.fill').css('height',$(".wrapper").outerHeight(true) - 94);
-  $('.filltab').css('height',$(".wrapper").outerHeight(true) - 149);
+  $('.filltab').css('min-height',$(".wrapper").outerHeight(true) - 149);
   $('.tickets').css('height',$(".wrapper").outerHeight(true) - 94);
   $('.our-sponsors').css('height', $(".wrapper").height() - 94);
   $('.sponsors-cat').css('height', $(".sponsors-list").height());
-  $('.carousel.speaker').css('height',$(window).height() - 149);
+  $('.carousel.speaker').css('min-height',$(window).height() - 149);
   $('#Sponsors').css('min-height',$(window).height() - 149);
   $('.organizers-tab').css('min-height',$(window).height() - 149);
+  $('.talks-tab').css('min-height',$(window).height() - 149);
+
 
 
   if (window.location.href.indexOf("about") > -1 ||
@@ -21,6 +23,25 @@ $(document).ready(function() {
     $('.changejs').css('padding', '0');
     $('.changesjs').css('padding', '0');
   }
+
+
+  $(".navbar-toggle").on("click", function(){
+    var menu = $('.collapse');
+    if (menu.is(":visible")) {
+      $('.position').removeClass("opend");
+      $('.position').addClass("closed");
+      var delay = 300;
+      setTimeout(function() {
+        $('.position').css('transition', 'none');
+      }, delay);
+    } else {
+      //$('.position').css('transition', 'none');
+      $('.position').css('transition', 'all 0.23s linear');
+      $('.position').removeClass("closed");
+      $('.position').addClass("opend");
+ 
+    }
+  });
 
   var i=0;
    setInterval(function(){
@@ -96,6 +117,27 @@ $(document).ready(function() {
       });
     }
 
+    if ($(window).width() <= 848) {
+
+      $('#tablist li a').css("display", "none");
+      $( "#tablist .active a" ).fadeIn( "slow" );
+      $( "#tablist .active" ).prev().children().fadeIn( "slow" );
+      $( "#tablist .active" ).next().children().fadeIn( "slow" );
+      $(".nav.nav-tabs li ").click(function() {
+              $(".nav.nav-tabs").css("transition", "all 2s ease-in-out")
+              $('#tablist li a').css("display", "none");
+              $( "#tablist .active a" ).fadeIn( "slow" );
+              $( "#tablist .active" ).prev().children().fadeIn( "slow" );
+              $( "#tablist .active" ).next().children().fadeIn( "slow" );
+      });
+    } else if ($(window).width() > 848) {
+      $(".nav.nav-tabs").css("transition", "none");
+      $(".nav.nav-tabs li ").click(function() {
+              $(".nav.nav-tabs").css("transition", "none")
+              $('#tablist li a').css("display", "inline-block");
+      });
+    }
+
   $(document).on('change', '.btn-file :file', function() {
       var input = $(this),
           numFiles = input.get(0).files ? input.get(0).files.length : 1,
@@ -116,8 +158,16 @@ $(document).ready(function() {
   });
 
 
+  $(".nav a").on("click", function(){
+   $(".nav").find(".active").removeClass("active");
+   $(this).parent().addClass("active");
+  });
 
-  $(window).resize(function(){
+}); 
+
+
+$(window).resize(function(){
+      var wwidth = $(window).width();
        $('.fill').css('height',$(".wrapper").outerHeight(true) - 94);
        $('.position').css('height', $(".wrapper").outerHeight(true) - $(".comming-soon").outerHeight(true));
        $('.our-sponsors').css('height', $(".wrapper").height() - 94);
@@ -128,9 +178,32 @@ $(document).ready(function() {
 
   });
 
-  $(".nav a").on("click", function(){
-   $(".nav").find(".active").removeClass("active");
-   $(this).parent().addClass("active");
-  });
+ if (wwidth <= 848) {
 
-}); 
+      $('#tablist li a').css("display", "none");
+      $( "#tablist .active a" ).fadeIn( "slow" );
+      $( "#tablist .active" ).prev().children().fadeIn( "slow" );
+      $( "#tablist .active" ).next().children().fadeIn( "slow" );
+      $(".nav.nav-tabs li ").click(function() {
+              $(".nav.nav-tabs").css("transition", "all 2s ease-in-out")
+              $('#tablist li a').css("display", "none");
+              $( "#tablist .active a" ).fadeIn( "slow" );
+              $( "#tablist .active" ).prev().children().fadeIn( "slow" );
+              $( "#tablist .active" ).next().children().fadeIn( "slow" );
+
+      });
+    } else {
+
+      $('#tablist li a').css("display", "inline-block");
+      $(".nav.nav-tabs li ").click(function() {
+              $(".nav.nav-tabs").css("transition", "none")
+              $('#tablist li a').css("display", "inline-block");
+              $( "#tablist .active a" ).css("display", "inline-block");
+              $( "#tablist .active a" ).css("opacity", "1 !important");
+
+
+      });
+    }
+
+
+  });
