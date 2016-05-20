@@ -8,8 +8,8 @@ $(document).ready(function() {
   $('.our-sponsors').css('height', $(".wrapper").height() - 94);
   $('.sponsors-cat').css('height', $(".sponsors-list").height());
   $('.carousel.speaker').css('height',$(window).height() - 149);
-  $('#Sponsors').css('height',$(window).height() - 149);
-//  $('.sponsors-tab').css('height',$(window).height() - 149);
+  $('#Sponsors').css('min-height',$(window).height() - 149);
+  $('.organizers-tab').css('min-height',$(window).height() - 149);
 
 
   if (window.location.href.indexOf("about") > -1 ||
@@ -123,8 +123,9 @@ $(document).ready(function() {
        $('.our-sponsors').css('height', $(".wrapper").height() - 94);
        $('.sponsors-cat').css('height', $(".sponsors-list").height());
        $('.carousel.speaker').css('height',$(window).height() - 149);
-       $('#Sponsors').css('height',$(window).height() - 149);
-//			 $('.sponsors-tab').css('height',$(window).height() - 149);
+       $('#Sponsors').css('min-height',$(window).height() - 149);
+  		 $('.organizers-tab').css('min-height',$(window).height() - 149);
+
   });
 
   $(".nav a").on("click", function(){
