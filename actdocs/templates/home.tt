@@ -80,7 +80,7 @@ $(document).ready(function() {
                   </div>
               </form>
             </div>
-            <hr align="center" width="30%">
+            <hr align="center" width="30%" style="display:none;">
             <div class="socialFooter">
                <a target="_blank" href="https://www.facebook.com/yapceu2016">
                   <i class="fa fa-facebook circle"></i>
@@ -97,6 +97,7 @@ $(document).ready(function() {
                <a target="_blank" href="mailto:yapc@cluj.pm">
                   <i class="fa fa-envelope-o circle"></i>
                </a>
+               <p>Powered by Act</p>
             </div>
   </section>
 

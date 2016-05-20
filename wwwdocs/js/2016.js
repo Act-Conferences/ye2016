@@ -7,7 +7,7 @@ $(document).ready(function() {
   $('.tickets').css('height',$(".wrapper").outerHeight(true) - 94);
   $('.our-sponsors').css('height', $(".wrapper").height() - 94);
   $('.sponsors-cat').css('height', $(".sponsors-list").height());
-  $('.carousel.speaker').css('min-height',$(window).height() - 149);
+  $('.speaker').css('min-height',$(window).height() - 149);
   $('.sponsors-tab').css('min-height',$(window).height() - 149);
   $('.organizers-tab').css('min-height',$(window).height() - 149);
   $('.talks-tab').css('min-height',$(window).height() - 149);
@@ -172,7 +172,7 @@ $(window).resize(function(){
        $('.position').css('height', $(".wrapper").outerHeight(true) - $(".comming-soon").outerHeight(true));
        $('.our-sponsors').css('height', $(".wrapper").height() - 94);
        $('.sponsors-cat').css('height', $(".sponsors-list").height());
-       $('.carousel.speaker').css('height',$(window).height() - 149);
+       $('.speaker').css('min-height',$(window).height() - 149);
        $('.sponsors-tab').css('min-height',$(window).height() - 149);
   		 $('.organizers-tab').css('min-height',$(window).height() - 149);
 

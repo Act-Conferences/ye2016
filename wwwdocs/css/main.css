@@ -228,7 +228,7 @@ body {
 
 .social .socialFooter {
   font-size: 20px;
-  margin-bottom: 30px;
+  margin:20px 0 30px;
 }
 
 
@@ -245,6 +245,13 @@ body {
 .social .socialFooter a:hover,
 .social .socialFooter a:focus {
   text-decoration: none;
+}
+
+.social .socialFooter p {
+  border-top: 1px solid #d8ceaf;
+  margin: 20px auto;
+  padding: 10px;
+  max-width: 320px;
 }
 
 /* mailchimp  */
@@ -1033,7 +1040,7 @@ a:hover, a:focus {
 }
 
 .venue iframe {
-  height: 631px;
+  height: 758px;
 }
 
 .fill,
@@ -1060,11 +1067,11 @@ a:hover, a:focus {
   text-align: left;
 }
 
-.about a {
+/* .about a {
   display: block;
   text-decoration: underline;
   color: #a71d2f;
-}
+} */
 
 .left {
   margin: 0 auto 0 0;
@@ -1100,7 +1107,7 @@ a:hover, a:focus {
 }
 
 .about h1 {
-  margin-top: 90px;
+  margin-top: 60px;
 }
 
 @media all and (max-width: 767px) {
@@ -1292,7 +1299,7 @@ a:hover, a:focus {
 .sponsors-tab .levels-details .levels-text {
 	color: #A71D2F;
 	font-weight: 800;
-	width: 39%;
+/*   width: 39% */;
 	margin: 40px auto;
 }
 @media all and (max-width: 1450px) {
@@ -1349,7 +1356,7 @@ a:hover, a:focus {
 }
 .organizers-tab p {
 	color: #9A1B29;
-	width: 350px;
+/*   width: 350px; */
 	margin: 0 auto;
 }
 .organizer-wrapper {
@@ -1763,3 +1770,75 @@ a:hover, a:focus {
 }
 
 /* Talks tab end */
+
+/* Social footer for tabs */
+
+.tab-pane .social .socialFooter i {
+  color: #d8ceaf;
+  background-color: #891826;
+}
+
+.tab-pane .social .socialFooter p {
+  border-top: 1px solid #891826;
+  color: #891826;
+  text-align: center;
+}
+
+#Schedule .social .socialFooter p {
+  color: #d8ceaf;
+}
+
+#Contact .social .socialFooter p {
+  color: #d8ceaf;
+}
+
+.about.filltab .socialFooter p {
+  padding: 10px;
+}
+
+.tab-pane .social .socialFooter {
+  margin-top: 45px;
+}
+/* Social footer for tabs */
+
+#Schedule .schedule-title {
+  margin: 60px 0;
+    font-size: 39px;
+    font-weight: 900;
+    color: #F2A01F;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .container .v2 {
+    width: 850px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container .v2 {
+    width: 850px;
+  }
+}
+
+#Speakers .becomeSpeaker,
+#Talks .submitTalk {
+  text-align: center;
+  color: #f2a01f;
+  background-color: #891826;
+  max-width: 245px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#Schedule .anounced {
+  font-size: 21px;
+  text-align: center;
+}
+
+#Venue .venue h3 {
+  color: #a71d2f;
+  margin: 10px;
+}
