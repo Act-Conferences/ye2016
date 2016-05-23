@@ -50,7 +50,7 @@ $(document).ready(function() {
               </div>
             </div>
             <div class="col-sm-3 clearfix">
-              <a href="/ye2016/img2016/sponsorUS.pdf" class="pull-left linkButtons">Sponsor us</a>
+              <a target="_blank" href="/ye2016/img2016/sponsorUS.pdf" class="pull-left linkButtons">Sponsor us</a>
             </div>
           </div>
   </section>
