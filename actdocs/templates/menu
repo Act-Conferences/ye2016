@@ -14,7 +14,7 @@
   </div>
     <div class="collapse navbar-collapse" id="nav-menu-options">
       <ul class="nav navbar-nav middle">
-          <li><a href="img2016/convinceyourbo$$.pdf" >Convince Your Bo$$</a></li>
+          <li><a target="_blank" href="img2016/convinceyourbo$$.pdf" >Convince Your Bo$$</a></li>
           <li><a href="conferenceInfo.html" >Conference Info</a></li>
           <!-- <li><a href="#" >Buy Tickets</a></li>
           <li><a href="#" >User Info</a></li> -->
