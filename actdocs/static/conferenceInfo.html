@@ -5,9 +5,9 @@
 		var m = response.search("talksAcceptedSteal");
 		var numb = response.slice(n + 17, n + 19);
 		var numb2 = response.slice(m + 20, m + 22);
-			console.log(n);
-			console.log("response", response.slice(n, n + 19));
-			console.log(numb);
+		console.log(n);
+		console.log("response", response.slice(n, n + 19));
+		console.log(numb);
 		var nonumber = numb.search("<");
 		var nonumber2 = numb2.search("<");
 		console.log(nonumber);
@@ -32,7 +32,9 @@
 		$('#aceptedT').text(accepted);
 		$('#submittedT').text(total);
 
-		var live_str = $('<div>',{html:response});
+		var live_str = $('<div>', {
+			html: response
+		});
 
 		var duration = live_str.find('.talksDuration').html();
 		var lightning = live_str.find('.talksLightning').html();
@@ -46,7 +48,9 @@
 	});
 	$.get("/ye2016/stats", function (stats) {
 
-		var live_str = $('<div>',{html:stats});
+		var live_str = $('<div>', {
+			html: stats
+		});
 		var attendees = live_str.find('.attendees').html();
 		$('#attendees').html(attendees);
 		//console.log(attendees);
@@ -78,38 +82,38 @@
 					<div class="col-xs-6">
 						<p class="right">
 							The annual Perl Conference of Europe, YAPC::EUROPE is back on 24-26 August 2016, to bring you the most passionate Perl people from the community we love.
-							<br><br>
-							 YAPC::Europe 2016 is the place to be if you’re in the Perl business. Whether you’re a developer, tester, designer, UX professional, marketer, student, geek or manager, this is where you’ll hear &amp; test the latest Perl trends &amp; meet the most amazing Perl people.
+							<br>
+							<br> YAPC::Europe 2016 is the place to be if you’re in the Perl business. Whether you’re a developer, tester, designer, UX professional, marketer, student, geek or manager, this is where you’ll hear &amp; test the latest Perl trends &amp; meet the most amazing Perl people.
 
 						</p>
 					</div>
 					<div class="col-xs-6">
 						<p class="left">
 							And every year, the event is held in a different city.In 2016, the Cluj Perl Mongers managed to make YAPC::EUROPE happen in their beloved city, Cluj-Napoca,in Transylvania. No worries, Dracula’s off duty during summer (too much light, sun &amp; joy).
-							<br><br>
-							Who knows,maybe we’ll be your guests next summer? Join us at YAPC::Europe to shape the future of Perl-based applications!
+							<br>
+							<br> Who knows,maybe we’ll be your guests next summer? Join us at YAPC::Europe to shape the future of Perl-based applications!
 						</p>
-			<!-- 			<a href="/ye2016/about.html" class="pull-left">More about the conference</a> -->
+						<!-- 			<a href="/ye2016/about.html" class="pull-left">More about the conference</a> -->
 					</div>
 					<div class="col-xs-12 camels">
-						<img class="img-responsive" src="img2016/camels.png">
+						<img class="" src="img2016/camels.png">
 					</div>
 					<div class="col-xs-12 aboutInfo">
 						<div class="Speakers col-xs-3">
-							<span class="number">21</span>
+							<span class="number">0</span>
 							<div class="labels">Speakers</div>
 						</div>
 						<div class="Attendees col-xs-3">
-							<span id="attendees" class="number">300</span>
+							<span id="attendees" class="number">0</span>
 							<div class="labels">Attendees</div>
 						</div>
 						<div class="Talks col-xs-3">
-							<span class="number talksJs">11</span>
+							<span class="number talksJs">0</span>
 							<div class="labels">Talks</div>
 						</div>
 						<div class="Trainings col-xs-3">
 							<span class="number">1</span>
-							<div class="labels">Trainings</div>
+							<div class="labels">Training</div>
 						</div>
 
 					</div>
@@ -140,75 +144,112 @@
 		<!--ABOUT-tab END-->
 
 		<!--Speakers-tab START-->
-		<div role="tabpanel" class="tab-pane fade speakersback" id="Speakers">
-		<div class="speaker clearfix">
-
-
-			<div id="carousel-speakers" class="carousel slide" data-ride="carousel">
-
-				<div class="container v2">
-					<h1 class="speakersTitle">Speakers</h1>
-					<!-- Wrapper for slides -->
-					<div class="carousel-inner" role="listbox">
-						<div class="item active">
-							<div class="col-xs-4">
-								<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive">
-								<div class="carousel-caption">
-									<h4>You</h4>
-									<p>Perl Master</p>
+		<div role="tabpanel" class="tab-pane fade speakersback clearfix" id="Speakers">
+			<div class="">
+				<div class="">
+					<div class="span12">
+						<h1 class="speakersTitle">Featured Speakers</h1>
+						<div id="carousel-speakers" class="carousel fdi-Carousel slide">
+							<div class="container">
+								<!-- Carousel items -->
+								<div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="0">
+									<div class="carousel-inner onebyone-carosel">
+										<div class="item active">
+											<div class="col-xs-4">
+												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+												<div class="carousel-caption">
+													<h4>You</h4>
+													<!-- <p>Perl Master</p> -->
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="col-xs-4">
+												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+												<div class="carousel-caption">
+													<h4>You</h4>
+													<!-- <p>Perl Master</p> -->
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="col-xs-4">
+												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+												<div class="carousel-caption">
+													<h4>You</h4>
+													<!-- <p>Perl Master</p> -->
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="col-xs-4">
+												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+												<div class="carousel-caption">
+													<h4>You</h4>
+													<!-- <p>Perl Master</p> -->
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="col-xs-4">
+												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+												<div class="carousel-caption">
+													<h4>You</h4>
+													<!-- <p>Perl Master</p> -->
+												</div>
+											</div>
+										</div>
+										<div class="item">
+											<div class="col-xs-4">
+												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+												<div class="carousel-caption">
+													<h4>You</h4>
+													<!-- <p>Perl Master</p> -->
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
+								<a class="left carousel-control" href="#eventCarousel" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#eventCarousel" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+
 							</div>
-							<div class="col-xs-4">
-								<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive">
-								<div class="carousel-caption">
-									<h4>You</h4>
-									<p>Perl Master</p>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive">
-								<div class="carousel-caption">
-									<h4>You</h4>
-									<p>Perl Master</p>
-								</div>
-							</div>
+							<!--/carousel-inner-->
 						</div>
-						<div class="item">
-							<div class="col-xs-4">
-								<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive">
-								<div class="carousel-caption">
-									<h4>You</h4>
-									<p>Perl Master</p>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive">
-								<div class="carousel-caption">
-									<h4>You</h4>
-									<p>Perl Master</p>
-								</div>
-							</div>
-							<div class="col-xs-4">
-								<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive">
-								<div class="carousel-caption">
-									<h4>You</h4>
-									<p>Perl Master</p>
-								</div>
-							</div>
-						</div>
-
+						<!--/myCarousel-->
 					</div>
 				</div>
-
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-speakers" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel-speakers" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
+			</div>
+			<div class="container">
+				<h1 class="speakersTitle">Speakers</h1>
+				<div class="moreSpeakers clearfix">
+					<div class="speakersBlock">
+						<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+						<h4>You</h4>
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+						<h4>You</h4>
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+						<h4>You</h4>
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+						<h4>You</h4>
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+						<h4>You</h4>
+					</div>
+				</div>
 			</div>
 			<div class="col-xs-12">
 				<div class="becomeSpeaker">
@@ -216,29 +257,28 @@
 				</div>
 			</div>
 			<div class="social col-xs-12">
-						<div class="socialFooter">
-							<a target="_blank" href="https://www.facebook.com/yapceu2016">
-								<i class="fa fa-facebook circle"></i>
-							</a>
-							<a target="_blank" href="https://twitter.com/yapceu">
-								<i class="fa fa-twitter circle"></i>
-							</a>
-							<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
-								<i class="fa fa-linkedin circle"></i>
-							</a>
-							<a target="_blank" href="https://medium.com/yapc-europe-2016">
-								<i class="fa fa-medium circle" aria-hidden="true"></i>
-							</a>
-							<a target="_blank" href="mailto:yapc@cluj.pm">
-								<i class="fa fa-envelope-o circle"></i>
-							</a>
-							<p>Powered by Act</p>
-						</div>
-					</div>
+				<div class="socialFooter">
+					<a target="_blank" href="https://www.facebook.com/yapceu2016">
+						<i class="fa fa-facebook circle"></i>
+					</a>
+					<a target="_blank" href="https://twitter.com/yapceu">
+						<i class="fa fa-twitter circle"></i>
+					</a>
+					<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+						<i class="fa fa-linkedin circle"></i>
+					</a>
+					<a target="_blank" href="https://medium.com/yapc-europe-2016">
+						<i class="fa fa-medium circle" aria-hidden="true"></i>
+					</a>
+					<a target="_blank" href="mailto:yapc@cluj.pm">
+						<i class="fa fa-envelope-o circle"></i>
+					</a>
+					<p>Powered by Act</p>
+				</div>
 			</div>
 
-
 		</div>
+
 		<!--Speakers-tab END-->
 
 		<!--Talks-tab START-->
@@ -246,22 +286,33 @@
 			<div class="talks-tab">
 				<div class="container">
 					<h1 class="talks-title">Talks</h1>
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<div class="infoTalks">
 							<span id="aceptedT" class="number">11</span>
 							<div class="labels">Accepted Talks</div>
 						</div>
 					</div>
-					<div class="col-sm-6">
+					<div class="moreInfoTalsk col-sm-4">
+						<div id="duration"></div>
+						<div id="lightning"></div>
+					</div>
+					<div class="col-sm-4">
 						<div class="infoTalks">
 							<span id="submittedT" class="number">214</span>
 							<div class="labels">Submitted Talks</div>
 						</div>
 					</div>
 					<hr align="center" width="90%">
-					<div class="moreInfoTalsk">
-						<div id="duration"></div>
-						<div id="lightning"></div>
+					<div class="centerText">
+						<p class="talksText">
+							Share your experience, amaze us with incredible ideas &amp; practices. We want to have our minds blown about what we had never thought could be possible with Perl. We are looking for talks focused on all parts of Perl.
+						</p>
+						<p class="talksText">
+							If you’re looking for inspiration, here it comes: hot Perl topics, hot tech topics (not limited to Perl, necessarily), trends &amp; changes, Perl fundamentals, security, networking, testing, devOps, hardware, big data, Internet of Things, crazy hacks &amp; ideas, gadgets &amp; wearables, community talks, marketing or management talks, UI &amp; UX, outreach programs, start-ups or other ideas you might have.<b> Remember, this is YOUR conference!</b>
+						</p>
+						<p class="talksText">
+							<b>Deadline to submit talks:</b> July 15th, 2016. We’re accepting proposals as we go, so the first batch of accepted talks is going to be announced by the end of May 2016.
+						</p>
 					</div>
 					<div class="col-xs-12">
 						<div class="submitTalk">
@@ -296,31 +347,37 @@
 
 		<!--Schedule-tab START-->
 		<div role="tabpanel" class="tab-pane fade" id="Schedule">
-			<h1 class="schedule-title">Coming soon</h1>
-			<br><br><br> 
-			<p class="anounced">To be anounced by end of July 2016</p>
-			<br> <br> <br>
+			<div class="verticalAl clearfix">
+				<h1 class="schedule-title">Coming soon</h1>
+				<br>
+				<br>
+				<br>
+				<p class="anounced">To be anounced by end of July 2016</p>
+				<br>
+				<br>
+				<br>
 
-			<div class="social col-xs-12">
-						<div class="socialFooter">
-							<a target="_blank" href="https://www.facebook.com/yapceu2016">
-								<i class="fa fa-facebook circle"></i>
-							</a>
-							<a target="_blank" href="https://twitter.com/yapceu">
-								<i class="fa fa-twitter circle"></i>
-							</a>
-							<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
-								<i class="fa fa-linkedin circle"></i>
-							</a>
-							<a target="_blank" href="https://medium.com/yapc-europe-2016">
-								<i class="fa fa-medium circle" aria-hidden="true"></i>
-							</a>
-							<a target="_blank" href="mailto:yapc@cluj.pm">
-								<i class="fa fa-envelope-o circle"></i>
-							</a>
-							<p>Powered by Act</p>
-						</div>
+				<div class="social col-xs-12 bottomAl">
+					<div class="socialFooter">
+						<a target="_blank" href="https://www.facebook.com/yapceu2016">
+							<i class="fa fa-facebook circle"></i>
+						</a>
+						<a target="_blank" href="https://twitter.com/yapceu">
+							<i class="fa fa-twitter circle"></i>
+						</a>
+						<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+							<i class="fa fa-linkedin circle"></i>
+						</a>
+						<a target="_blank" href="https://medium.com/yapc-europe-2016">
+							<i class="fa fa-medium circle" aria-hidden="true"></i>
+						</a>
+						<a target="_blank" href="mailto:yapc@cluj.pm">
+							<i class="fa fa-envelope-o circle"></i>
+						</a>
+						<p>Powered by Act</p>
 					</div>
+				</div>
+			</div>
 		</div>
 		<!--Schedule-tab END-->
 
@@ -330,76 +387,98 @@
 				<h1 class="sponsors-title">SPONSORSHIP LEVELS</h1>
 				<div class="col-xs-12">
 					<div class="sponsors-levels">
-						<img src="img/media_partner.png" alt="media_partner.png">
-						<img src="img/community_partner.png" alt="community_partner.png">
-						<img src="img/socialite.png" alt="socialite.png">
-						<img src="img/show-off.png" alt="show-off.png">
-						<img src="img/deal_maker.png" alt="deal_maker.png">
-						<img src="img/rockstar.png" alt="rockstar.png">
-						<img src="img/all_star.png" alt="all_star.png">
+						<img src="img2016/sponsors/media_partner.png" alt="media_partner.png">
+						<img src="img2016/sponsors/community_partner.png" alt="community_partner.png">
+						<img src="img2016/sponsors/socialite.png" alt="socialite.png">
+						<img src="img2016/sponsors/show-off.png" alt="show-off.png">
+						<img src="img2016/sponsors/deal_maker.png" alt="deal_maker.png">
+						<img src="img2016/sponsors/rockstar.png" alt="rockstar.png">
+						<img src="img2016/sponsors/all_star.png" alt="all_star.png">
 					</div>
-					<div class="levels-details col-xs-10 col-xs-offset-1">
-						<a href="/ye2016/our_sponsors.html" class="">Meet our sponsors</a>
-						<p class="levels-text">Sponsoring YAPC::Europe brings huge promotion opportunities, your support &amp; contribution will be announced on all our social channels &amp; location of the supported activity(lunch, coffee break, conference dinner, other social activityplanned) will be branded to make your company shire &amp; get all the coverage it deserves.</p>
-						<a href="/ye2016/img2016/sponsorUS.pdf" class="linkButton red-btn">Sponsorship opportunities</a>
+					<div class="levels-details container">
+						<a href="/ye2016/our_sponsors.html" class="linkButton">Meet our sponsors</a>
+						<div class="col-xs-6">
+							<p class="levels-text">We’re looking for partners, companies like yours, so together we can make YAPC::EUROPE one of the most sought-after technical event in Europe &amp; not only. It’s a wonderful programming language with a wonderful community, let’s make it THE tech event everybody’s looking forward to.</p>
+							<p class="levels-text">
+								YAPC::Europe 2016 is the place to be if you’re in the Perl business. Whether you’re a developer, tester, designer, UX professional, marketer, student, geek or manager, this is where you’ll hear &amp; test the latest Perl trends &amp; meet the most amazing Perl people. Therefore, we offer 5 sponsorship &amp; exhibition opportunities, as follows:<b> Socialite, Show-Off, Deal-Maker, Rockstar &amp; All-star.</b>
+							</p>
+							<p class="levels-text">
+								By the way, besides the 5 levels, there are some extra benefits that can be customized depending on your needs &amp; wishes.
+							</p>
+						</div>
+						<div class="col-xs-6 sponsors-text-right">
+							<p class="levels-text">
+								<b>So here’s why we should team-up:</b>
+							</p>
+							<ul class="levels-text">
+								<li> Because it’s one of the <b>best ways</b> for you to <b>create &amp; nurture</b> your <b>relationship with the Perl community.</b> Reach <b>an engaged and international audience.</b></li>
+								<li> Because it’s <b>a great way to show off.</b> Yes, with the right sponsorship level you get to have your own talk slot &amp;<b> make your Perl-based company world-famous.</b></li>
+								<li> Lure all the community to your booth &amp;<b> give away all that swag</b> your marketing team has created. Everybody there will go home with <b>something special from you, their potential service provider or employer.</b></li>
+								<li> <b>Spot real talent.</b> YAPC brings together <b>all the best engineers</b>, all those CPAN authors &amp; <b>hard-core developers</b> you look up to &amp; want to have in <b>your team.</b></li>
+							</ul>
+						</div>
+						<div class=" col-xs-12">
+							<a href="/ye2016/img2016/sponsorUS.pdf" class="linkButton red-btn">Check Out Sponsorship Levels</a>
+						</div>
 					</div>
 				</div>
 				<div class="social col-xs-12">
-						<div class="socialFooter">
-							<a target="_blank" href="https://www.facebook.com/yapceu2016">
-								<i class="fa fa-facebook circle"></i>
-							</a>
-							<a target="_blank" href="https://twitter.com/yapceu">
-								<i class="fa fa-twitter circle"></i>
-							</a>
-							<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
-								<i class="fa fa-linkedin circle"></i>
-							</a>
-							<a target="_blank" href="https://medium.com/yapc-europe-2016">
-								<i class="fa fa-medium circle" aria-hidden="true"></i>
-							</a>
-							<a target="_blank" href="mailto:yapc@cluj.pm">
-								<i class="fa fa-envelope-o circle"></i>
-							</a>
-							<p>Powered by Act</p>
-						</div>
+					<div class="socialFooter">
+						<a target="_blank" href="https://www.facebook.com/yapceu2016">
+							<i class="fa fa-facebook circle"></i>
+						</a>
+						<a target="_blank" href="https://twitter.com/yapceu">
+							<i class="fa fa-twitter circle"></i>
+						</a>
+						<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+							<i class="fa fa-linkedin circle"></i>
+						</a>
+						<a target="_blank" href="https://medium.com/yapc-europe-2016">
+							<i class="fa fa-medium circle" aria-hidden="true"></i>
+						</a>
+						<a target="_blank" href="mailto:yapc@cluj.pm">
+							<i class="fa fa-envelope-o circle"></i>
+						</a>
+						<p>Powered by Act</p>
 					</div>
+				</div>
 			</div>
 		</div>
 		<!--Sponsors-tab END-->
 
 		<!--Venue-tab START-->
 		<div role="tabpanel" class="tab-pane fade" id="Venue">
-			<div class="container-fluid col-xs-12 fills">
-			<div class="venue">
-				<h1 class="col-xs-12">Venue</h1>
-			</div>
+			<div class="container-fluid col-xs-12 fills speakersback">
+				<div class="venue">
+					<h1 class="col-xs-12">Conference venue</h1>
+				</div>
 				<div class="row">
-					<div class="col-sm-6 venue no-padding">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.1367629340093!2d23.579946315828746!3d46.762200653916395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e804a7d98f7%3A0xd66d4ecae07eb40b!2sStrada+Gheorghe+Marinescu+23%2C+Cluj-Napoca+400000!5e0!3m2!1sro!2sro!4v1462797557073" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-					</div>
-					<div class="col-sm-6 no-padding back">
+					<div class="container no-padding back">
 						<div class="venue">
 							<h3>IULIU HATIEGANU</h3>
-							<h3>UNIVERSITY OF MEDICINE & PHARMACY</h3>
+							<h3>UNIVERSITY OF MEDICINE &amp; PHARMACY</h3>
 							<h3>CLUJ NAPOCA</h3>
-							<p>All the magic will happen on 24–26 August, 2016 in Cluj-Napoca, at “Iuliu Hațieganu” University of Medicine & Pharmacy, located at 23, Gh. Marinescu street, when our city will officially become the Capital of Perl for 3 days.</p>
+							<p>All the magic will happen on 24–26 August, 2016 in Cluj-Napoca, at “Iuliu Hațieganu” University of Medicine &amp; Pharmacy, located at 23, Gh. Marinescu street, when our city will officially become the Capital of Perl for 3 days.</p>
 							<br>
 							<p>
 								Located in a central spot, not far from main square, restaurants and hotels, the venue is a good fit for the conference.
 							</p>
-							<img class="img-responsive" src="img2016/location.jpg">
-							<div class="clearfix">
+							<div class="col-sm-6 clearfix">
+								<img class="img-responsive" src="img2016/location.jpg">
 								<a target="_blank" href="https://hotelscan.com/en/search?geoid=xmmixfr24y52&sorting=4&gclid=CJXFtcyH18wCFRSeGwodoKEHzw&ref=sem:google:cpc:g&gclsrc=aw.ds" class="linkButton">Hotels nearby</a>
+							</div>
+							<div class="col-sm-6 venue no-padding">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.1367629340093!2d23.579946315828746!3d46.762200653916395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e804a7d98f7%3A0xd66d4ecae07eb40b!2sStrada+Gheorghe+Marinescu+23%2C+Cluj-Napoca+400000!5e0!3m2!1sro!2sro!4v1462797557073" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 other venue no-padding back">
-						<h1>Other Venues</h1>
-						<img class="img-responsive" src="img2016/other.png">
-						<a target="_blank" href="http://clujhub.ro/">Cluj HUB</a>
-						<h5>Training Venue - 23 August 2016</h5>
+					<div class="container no-padding back">
+						<div class="other venue no-padding back">
+							<h1>Other Venues</h1>
+							<img class="img-responsive" src="img2016/other.png">
+							<a target="_blank" href="http://clujhub.ro/">Cluj HUB</a>
+							<h5>Training Venue - 23 August 2016</h5>
+						</div>
 					</div>
 					<div class="social col-xs-12">
 						<div class="socialFooter">
@@ -432,101 +511,198 @@
 				<h1 class="sponsors-title">ORGANIZERS</h1>
 				<p>Every great event has a great team behind it!</p>
 				<div class="container">
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/ale.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/ale.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								In charge with our sponsor happiness, making sure all the stuff you signed up for when choosing a sponsorship level will happen. And something extra… Get in touch with her for any sponsorship &amp; exhibition related questions.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Alexandra</p>
 						<p class="organizer-details">Sponsors’ BFF</p>
 						<a href="mailto:alexandra@cluj.pm" target="_top">alexandra@cluj.pm</a>
+
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/andra.jpg" class="img-responsive" alt="organizer1" width="200px;">
-						<p class="organizer-name">Andra</p>
-						<p class="organizer-details">Training Overlord</p>
-						<a href="mailto:andra@cluj.pm" target="_top">andra@cluj.pm</a>
-					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/amalia.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/amalia.jpg" class="img-responsive" alt="organizer2" width="200px;">
+							<figcaption>
+								She’s just here for the food. Really! But she can answer any of your YAPC::EU 2016 related questions, no matter the topic. ;-) Oh, and she really hopes to see you in Cluj this summer.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Amalia</p>
 						<p class="organizer-details">Troublemaker</p>
 						<a href="mailto:amalia@cluj.pm" target="_top">amalia@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/bogdan.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/andra.jpg" class="img-responsive" alt="organizer3" width="200px;">
+							<figcaption>
+								She’s going to take care of trainers, trainees &amp; training course venue (coffee, food, fun breaks &amp; training related announcements to all those involved) Any questions you have, feel free to get in touch.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Andra</p>
+						<p class="organizer-details">Training Overlord</p>
+						<a href="mailto:andra@cluj.pm" target="_top">andra@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/bogdan.jpg" class="img-responsive" alt="organizer4" width="200px;">
+							<figcaption>
+								He will make all us of shine. So if you want to team up with YAPC, write about us, or interview us &amp;&amp; be our media partner, please get in touch with Bogdan. Otherwise, he’ll get in touch with you. :D
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Bogdan</p>
-						<p class="organizer-details">Media Partnerships</p>
+						<p class="organizer-details">Media Wizard</p>
 						<a href="mailto:bogdan@cluj.pm" target="_top">bogdan@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/crina.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/crina.jpg" class="img-responsive" alt="organizer5" width="200px;">
+							<figcaption>
+								Crina is our head of financial operations, handling all payments, sponsorship agreements &amp; invoices. So if you need assistance in contracts or money related issues, just get in touch with her, she’s happy to help.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Crina</p>
 						<p class="organizer-details">Invoicing Guru</p>
 						<a href="mailto:crina@cluj.pm" target="_top">crina@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/irina.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/geo.jpg" class="img-responsive" alt="organizer6" width="200px;">
+							<figcaption>
+								All hail to the Conference Party Wizard. She’s going to make sure the official Gala Dinner will be AH-MAH-ZING… she’s that good. Her latest party project was a Star Wars Themed party. Cool, huh? Get in touch with her for any concerns.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Georgiana</p>
+						<p class="organizer-details">Party Wizard</p>
+						<a href="mailto:georgiana@cluj.pm" target="_top">georgiana@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/hanna.jpg" class="img-responsive" alt="organizer7" width="200px;">
+							<figcaption>
+								Hungry people are not happy. Hanna is here to make sure we’re all happy, whether we’re meet lovers, vegetarians, or vegans. She’s taking care of coffee breaks &amp; lunches throughout the conference.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Hanna</p>
+						<p class="organizer-details">Catering Prodigy</p>
+						<a href="mailto:hanna@cluj.pm" target="_top">hanna@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/irina.jpg" class="img-responsive" alt="organizer8" width="200px;">
+							<figcaption>
+								So if you decide to bring your partner &amp;&amp; kid(s) to YAPC::Europe 2016, you should know they’re in good hands. Irina will make sure they won’t stash themselves at the hotel, but enjoy the city &amp;&amp; get plenty of action.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Irina</p>
 						<p class="organizer-details">Partners’ BFF</p>
 						<a href="mailto:irina@cluj.pm" target="_top">irina@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/mihai.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/liana.jpg" class="img-responsive" alt="organizer9" width="200px;">
+							<figcaption>
+								Need help with your slides, have issues when speaking to a big crowd, or need to test your presentation prior to your talk? Don’t worry, Liana is here to help with anything related to your speaking gig. You can email her for advice anytime.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Liana</p>
+						<p class="organizer-details">Speakers' BFF</p>
+						<a href="mailto:liana@cluj.pm" target="_top">liana@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/mihai.jpg" class="img-responsive" alt="organizer10" width="200px;">
+							<figcaption>
+								Yes, he’s in charge with all venue related stuff &amp;&amp; knows the place inside out. And more importantly, knows what goes where during YAPC. Awesome dude, don’t hesitate to get in touch for questions regarding the conference venue.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Mihai</p>
 						<p class="organizer-details">Venue Overlord</p>
 						<a href="mailto:mihai@cluj.pm" target="_top">mihai@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/ramona.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/ramona.jpg" class="img-responsive" alt="organizer11" width="200px;">
+							<figcaption>
+								Our dear Ramona is the go-to person when it comes to traveling. She’ll be guiding you in choosing the right hotel (she’s already getting discounts for YAPC attendees) &amp; even give you advice on the best way for you to get to Cluj. Don’t be shy, get in touch!
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Ramona</p>
-						<p class="organizer-details">Accomodation Master</p>
+						<p class="organizer-details">Travel Master</p>
 						<a href="mailto:ramona@cluj.pm" target="_top">ramona@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/silvia.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/silvia.jpg" class="img-responsive" alt="organizer12" width="200px;">
+							<figcaption>
+								Just like Bogdan, she’s in the media business, making all us of shine. So if you want to team up with YAPC, write about us, or interview us &amp;&amp; be our media partner, please get in touch with her. Otherwise, she’ll get in touch with you. :-D
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Silvia</p>
-						<p class="organizer-details">Media Partnerships</p>
+						<p class="organizer-details">Media Wizard</p>
 						<a href="mailto:silvia@cluj.pm" target="_top">silvia@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/paulm.jpg" class="img-responsive" alt="organizer1" width="200px;">
-						<p class="organizer-name">Paul</p>
-						<p class="organizer-details">Awesome dev</p>
-					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/fumy.jpg" class="img-responsive" alt="organizer1" width="200px;">
-						<p class="organizer-name">Fumy</p>
-						<p class="organizer-details">Smardoi/JS</p>
-					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/victor.jpg" class="img-responsive" alt="organizer1" width="200px;">
-						<p class="organizer-name">Victor</p>
-						<p class="organizer-details">Developer</p>
-					</div>
+
 					<div class="col-xs-12">
+						<br/>
+						<br/>
 						<p>They're the ones working hard to make the attendees' experience worthwhile</p>
 						<br>
-						<p>For any specific issues please contact  the organizer  in charge. They'll be happy to help!</p>
+						<p>For any specific issues please contact the organizer in charge. They'll be happy to help!</p>
+						<br/>
+						<br/>
 					</div>
-					<div class="social col-xs-12">
-						<div class="socialFooter">
-							<a target="_blank" href="https://www.facebook.com/yapceu2016">
-								<i class="fa fa-facebook circle"></i>
-							</a>
-							<a target="_blank" href="https://twitter.com/yapceu">
-								<i class="fa fa-twitter circle"></i>
-							</a>
-							<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
-								<i class="fa fa-linkedin circle"></i>
-							</a>
-							<a target="_blank" href="https://medium.com/yapc-europe-2016">
-								<i class="fa fa-medium circle" aria-hidden="true"></i>
-							</a>
-							<a target="_blank" href="mailto:yapc@cluj.pm">
-								<i class="fa fa-envelope-o circle"></i>
-							</a>
-							<p>Powered by Act</p>
+				</div>
+
+				<div class="container">
+					<h1 class="sponsors-title">Dev team</h1>
+					<div class="dev-team clearfix">
+						<div class="organizer-wrapper">
+							<img src="img2016/organizers/eugen.jpg" class="img-responsive" alt="designer-pic" width="200px;">
+							<p class="organizer-name">Eugen</p>
+							<p class="organizer-details">Designer</p>
+						</div>
+						<div class="organizer-wrapper">
+							<img src="img2016/organizers/fumy.jpg" class="img-responsive" alt="dev1-pic" width="200px;">
+							<p class="organizer-name">Fumy</p>
+							<p class="organizer-details">JS Wizard</p>
+						</div>
+						<div class="organizer-wrapper">
+							<img src="img2016/organizers/paulm.jpg" class="img-responsive" alt="dev2-pic" width="200px;">
+							<p class="organizer-name">Paul</p>
+							<p class="organizer-details">Awesome dev</p>
+						</div>
+						<div class="organizer-wrapper">
+							<img src="img2016/organizers/victor.jpg" class="img-responsive" alt="dev3-pic" width="200px;">
+							<p class="organizer-name">Victor</p>
+							<p class="organizer-details">Developer</p>
 						</div>
 					</div>
 				</div>
+
+				<div class="social col-xs-12">
+					<div class="socialFooter">
+						<a target="_blank" href="https://www.facebook.com/yapceu2016">
+							<i class="fa fa-facebook circle"></i>
+						</a>
+						<a target="_blank" href="https://twitter.com/yapceu">
+							<i class="fa fa-twitter circle"></i>
+						</a>
+						<a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+							<i class="fa fa-linkedin circle"></i>
+						</a>
+						<a target="_blank" href="https://medium.com/yapc-europe-2016">
+							<i class="fa fa-medium circle" aria-hidden="true"></i>
+						</a>
+						<a target="_blank" href="mailto:yapc@cluj.pm">
+							<i class="fa fa-envelope-o circle"></i>
+						</a>
+						<p>Powered by Act</p>
+					</div>
+				</div>
+
 			</div>
 		</div>
 		<!--Organizers-tab END-->
@@ -540,7 +716,9 @@
 					<p><a href="mailto:yapc@cluj.pm">yapc@cluj.pm</a></p>
 					<p>August 24-26, 2016</p>
 					<p>Cluj-Napoca, Romania</p>
-					<br><br><br>
+					<br>
+					<br>
+					<br>
 					<p>For specific enquiries please check out the organizers page.</p>
 					<p>They'll make sure to provide all the information you need.</p>
 					<div class="social col-xs-12">

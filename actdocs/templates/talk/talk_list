@@ -1,7 +1,7 @@
 [% RETURN UNLESS talks.size %]
 [% INCLUDE js/mytalks.js %]
 
-<table class="table table-bordered">
+<table class="talksTable table table-bordered table-striped table-mobile">
   <thead>
     <tr>
       <th>{{Speaker}}</th>
