@@ -2043,6 +2043,9 @@ a:hover, a:focus {
   color: #a71d2f;
   margin: 10px;
 }
+#Venue .other.venue a {
+	font-size: 23px;
+}
 
 /* Stats Start */
 
