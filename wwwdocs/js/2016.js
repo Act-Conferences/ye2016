@@ -153,6 +153,12 @@ $( "#confColapse" ).click(function() {
               $( "#tablist .active a" ).fadeIn( "slow" );
               $( "#tablist .active" ).prev().children().fadeIn( "slow" );
               $( "#tablist .active" ).next().children().fadeIn( "slow" );
+
+             // if ($("#tablist .active").next("li").length == 0) {
+             //     $("#tablist .fa-chevron-down").css("display", "none");
+             // } else {
+             //     $("#tablist .fa-chevron-down").css("display", "inline-block");
+             // }
       });
     } else if ($(window).width() > 848) {
       $(".nav.nav-tabs").css("transition", "none");
