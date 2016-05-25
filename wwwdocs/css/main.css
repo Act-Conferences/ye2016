@@ -1460,6 +1460,14 @@ a:hover, a:focus {
 	-moz-transition-delay: .1s;
 	transition-delay: .1s;
 }
+.organizers-tab .dev-team {
+	text-align: center;
+}
+.organizers-tab .dev-team .organizer-wrapper {
+	float: initial;
+	display: inline-block;
+}
+
 @media all and (max-width: 1200px){
 	.organizer-wrapper {
 		width: 21%;
