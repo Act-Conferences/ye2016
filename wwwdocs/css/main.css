@@ -994,6 +994,10 @@ a:hover, a:focus {
 	float: left;
 	max-width: 200px;
 }
+.sponsors-tab .sponsors-text-right {
+	border-left: 2px solid #d3ae5b;
+	padding-left: 20px;
+}
 .our-sponsors .linkButton {
     display: block;
     margin: 0 auto 50px auto;
