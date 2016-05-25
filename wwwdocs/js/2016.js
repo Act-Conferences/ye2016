@@ -12,6 +12,13 @@ $(document).ready(function() {
   $('.organizers-tab').css('min-height',$(window).height() - 149);
   $('.talks-tab').css('min-height',$(window).height() - 149);
 
+// user info colapse toggle 
+
+$( "#confColapse" ).click(function() {
+  $( ".conf" ).toggle( "slow" );
+  $("i", this).toggleClass("fa fa-chevron-up fa fa-chevron-down");
+});
+
 
 
   if (window.location.href.indexOf("about") > -1 ||
@@ -23,6 +30,8 @@ $(document).ready(function() {
     $('.changejs').css('padding', '0');
     $('.changesjs').css('padding', '0');
   }
+
+
 
 
   $(".navbar-toggle").on("click", function(){
@@ -61,9 +70,23 @@ $(document).ready(function() {
       $(this).tab('show')
     });
 
-    $('.carousel').carousel({
-        interval: false
+ $('#carousel-speakers').carousel({
+        interval: 10000000
     })
+    $('.fdi-Carousel .item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        if (next.next().length > 0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+        }
+        else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        }
+    });
 
 
     var text = $( ".page-header" ).text();
@@ -123,6 +146,9 @@ $(document).ready(function() {
       $( "#tablist .active a" ).fadeIn( "slow" );
       $( "#tablist .active" ).prev().children().fadeIn( "slow" );
       $( "#tablist .active" ).next().children().fadeIn( "slow" );
+
+      }
+
       $(".nav.nav-tabs li ").click(function() {
               $(".nav.nav-tabs").css("transition", "all 2s ease-in-out")
               $('#tablist li a').css("display", "none");

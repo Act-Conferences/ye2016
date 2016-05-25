@@ -436,6 +436,8 @@ body {
  
  .nav>li>a {
    color: #d8ceaf;
+   font-size: 16px;
+   padding-top: 21px;
  }
  
  .nav>li.active a {
@@ -451,6 +453,11 @@ body {
 }
 .position.closed {
   margin-top: 64px;
+}
+
+.userNav .dropdown-menu>li>a:hover,
+.userNav .dropdown-menu>li>a:focus {
+  color: #d8ceaf;
 }
 
 @media all and (max-width: 864px) {
@@ -482,7 +489,7 @@ body {
 
   .navbar-toggle {
     margin-right: 110px;
-    padding: 7px 10px;
+    padding: 12px 10px;
   }
 }
 
@@ -493,12 +500,13 @@ body {
 @media all and (max-width: 390px) {
   .navbar-brand>img {
     width: 115px;
+    margin-top: 5px;
   }
 }
 
 .userNav {
   position: absolute;
-  top:13px;
+  top:18px;
   right: 25px;
   padding: 0;
   list-style: none;
@@ -823,6 +831,16 @@ a:hover, a:focus {
   border-top: 1px solid #bb5053;
 }
 
+.talksTable.table-striped>tbody>tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+@media all and (max-width: 767px) {
+  .talksTable.table-striped>tbody>tr:nth-child(odd) {
+    background-color: rgba(187, 80, 83, 0.4);
+  }
+}
+
 /* end submit talk */
 
 .position p {
@@ -1112,7 +1130,7 @@ a:hover, a:focus {
 
 .aboutInfo {
   background-color: #dfc589;
-  padding-bottom: 30px;
+  padding: 0 15% 30px 15%;
 }
 
 .aboutInfo .col-xs-3{
@@ -1129,12 +1147,22 @@ a:hover, a:focus {
   margin-top: 60px;
 }
 
+
 @media all and (max-width: 767px) {
   .aboutInfo .number {
     font-size: 30px;
   }
   .aboutInfo .labels {
     font-size: 14px;
+  }
+  .aboutInfo {
+    padding:  0 15px 12px 15px;
+  }
+  .about .col-xs-6 {
+    width: 100%;
+  }
+  .about p {
+    max-width: 100%;
   }
 }
 
@@ -1535,7 +1563,7 @@ a:hover, a:focus {
 /* TAbs about start */
 
 .about.filltab p {
-  padding: 45px 0 0;
+  padding: 0 0 0;
 }
 
 .about.filltab .col-xs-6 a {
@@ -1547,7 +1575,7 @@ a:hover, a:focus {
 /* TAbs Speakers start */
 
 #carousel-speakers .col-xs-4 img {
-  width: 300px;
+  width: 260px;
   margin: auto;
   border-radius: 50%;
 }
@@ -1559,7 +1587,8 @@ a:hover, a:focus {
 }
 
 .speakersTitle {
-  margin: 60px 0;
+  padding: 60px 0;
+  margin: 0;
   font-size: 39px;
   font-weight: 900;
   color: #a71d2f;
@@ -1580,7 +1609,8 @@ a:hover, a:focus {
 
 #carousel-speakers h4 {
   margin-top: 30px;
-  font-weight: 600;
+  font-weight: 800;
+  text-shadow: none;
 }
 
 #carousel-speakers h4,
@@ -1616,6 +1646,60 @@ a:hover, a:focus {
 #carousel-speakers .carousel-control.right {
   background-image: none;
 }
+
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  top: 32%;
+}
+
+/* test crousel */
+.carousel-inner.onebyone-carosel { margin: auto; width: 90% !important;}
+.onebyone-carosel .active.left { left: -33.33% !important; }
+.onebyone-carosel .active.right { left: 33.33% !important; }
+.onebyone-carosel .next { left: 33.33% !important; }
+.onebyone-carosel .prev { left: -33.33% !important; }
+
+@media not all, (-webkit-transform-3d) {
+  .carousel-inner>.item.prev, .carousel-inner>.item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(-33%,0,0);
+    transform: translate3d(-33%,0,0);
+  }
+}
+
+@media not all, (-webkit-transform-3d){
+  .carousel-inner>.item.next, .carousel-inner>.item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(33%,0,0);
+    transform: translate3d(33%,0,0);
+  }
+}
+
+.moreSpeakers h4 {
+  text-align: center;
+  color: #a71d2f;
+  font-weight: 800;
+  margin-top: 25px;
+}
+
+.moreSpeakers img {
+  width: 200px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.moreSpeakers {
+  margin-bottom: 30px;
+}
+
+.moreSpeakers .speakersBlock {
+  width: 20%;
+  float: left;
+  padding: 15px;
+}
+
 
 /* Main page start*/
 
@@ -1707,6 +1791,8 @@ a:hover, a:focus {
 }
 
 .changePhoto .photo img {
+  width: 100%;
+  max-width: 265px;
   border: 5px solid #ffffff;
   margin: 9px 0 0 auto;
 }
@@ -1847,7 +1933,7 @@ a:hover, a:focus {
 }
 
 .talks-tab .infoTalks .labels {
-  margin-top: -45px;
+  margin-top: -25px;
 }
 
 /* Talks tab end */
@@ -1927,5 +2013,93 @@ a:hover, a:focus {
 /* Stats Start */
 
 
+
 /* Stats End */
 
+/* User info Start */
+.UserTitle h1 {
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 34px;
+    color: #891826;
+    font-weight: 800;
+    letter-spacing: 6px;
+    border: 0;
+}
+
+.userView .panel-body .glyphicon {
+  color: #d8ceaf;
+}
+
+.userView .panel-body .labelUser {
+  color: #d8ceaf;
+}
+
+.userView .panel-body .labelUser a {
+  color: #d8ceaf;
+}
+
+.otherActConf {
+  position: relative;
+  background-color: #d8ceaf;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.otherActConf .other {
+  padding: 15px 45px;
+  cursor: pointer;
+}
+
+.otherActConf .other h2 {
+  margin-bottom: 20px;
+  color: #891826;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.otherActConf .conf ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.otherActConf .conf li {
+  padding: 5px;
+  text-align: center;
+}
+
+.otherActConf .conf {
+  width: 100% !important;
+}
+
+.otherActConf i {
+  position: absolute;
+  right: 20px;
+  top: 42px;
+  color: #891826;
+  font-size: 20px;
+}
+
+@media all and (max-width: 991px) {
+  .userView .panel-body .text-right {
+    text-align: center;
+  }
+  .userView .panel-body .text-right img {
+    margin-bottom: 50px;
+  }
+}
+
+@media all and (max-width: 468px) {
+  .otherActConf .other h2 {
+    font-size: 15px;
+  }
+
+  .UserTitle h1 {
+    font-size: 31px
+  }
+}
+
+/* User info End */
