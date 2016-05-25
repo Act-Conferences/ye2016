@@ -246,22 +246,21 @@
 			<div class="talks-tab">
 				<div class="container">
 					<h1 class="talks-title">Talks</h1>
-					<div class="col-sm-6">
+					<div class="col-sm-4">
 						<div class="infoTalks">
 							<span id="aceptedT" class="number">11</span>
 							<div class="labels">Accepted Talks</div>
 						</div>
 					</div>
-					<div class="col-sm-6">
+					<div class="moreInfoTalsk col-sm-4">
+						<div id="duration"></div>
+						<div id="lightning"></div>
+					</div>
+					<div class="col-sm-4">
 						<div class="infoTalks">
 							<span id="submittedT" class="number">214</span>
 							<div class="labels">Submitted Talks</div>
 						</div>
-					</div>
-					<hr align="center" width="90%">
-					<div class="moreInfoTalsk">
-						<div id="duration"></div>
-						<div id="lightning"></div>
 					</div>
 					<div class="col-xs-12">
 						<div class="submitTalk">
@@ -338,10 +337,11 @@
 						<img src="img/rockstar.png" alt="rockstar.png">
 						<img src="img/all_star.png" alt="all_star.png">
 					</div>
-					<div class="levels-details col-xs-10 col-xs-offset-1">
-						<a href="/ye2016/our_sponsors.html" class="">Meet our sponsors</a>
-						<p class="levels-text">Sponsoring YAPC::Europe brings huge promotion opportunities, your support &amp; contribution will be announced on all our social channels &amp; location of the supported activity(lunch, coffee break, conference dinner, other social activityplanned) will be branded to make your company shire &amp; get all the coverage it deserves.</p>
+					<div class="levels-details col-xs-4 col-xs-offset-4">
+						<a href="/ye2016/our_sponsors.html" class="linkButton">Meet our sponsors</a>
 						<a href="/ye2016/img2016/sponsorUS.pdf" class="linkButton red-btn">Sponsorship opportunities</a>
+						<p class="levels-text">Sponsoring YAPC::Europe brings huge promotion opportunities, your support &amp; contribution will be announced on all our social channels &amp; location of the supported activity(lunch, coffee break, conference dinner, other social activityplanned) will be branded to make your company shire &amp; get all the coverage it deserves.</p>
+
 					</div>
 				</div>
 				<div class="social col-xs-12">
@@ -370,16 +370,12 @@
 
 		<!--Venue-tab START-->
 		<div role="tabpanel" class="tab-pane fade" id="Venue">
-			<div class="container-fluid col-xs-12 fills">
-			<div class="venue">
-				<h1 class="col-xs-12">Venue</h1>
-			</div>
+			<div class="container-fluid col-xs-12 fills speakersback">
+				<div class="venue">
+					<h1 class="col-xs-12">Venue</h1>
+				</div>
 				<div class="row">
-					<div class="col-sm-6 venue no-padding">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.1367629340093!2d23.579946315828746!3d46.762200653916395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e804a7d98f7%3A0xd66d4ecae07eb40b!2sStrada+Gheorghe+Marinescu+23%2C+Cluj-Napoca+400000!5e0!3m2!1sro!2sro!4v1462797557073" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-					</div>
-					<div class="col-sm-6 no-padding back">
+					<div class="container no-padding back">
 						<div class="venue">
 							<h3>IULIU HATIEGANU</h3>
 							<h3>UNIVERSITY OF MEDICINE & PHARMACY</h3>
@@ -389,17 +385,22 @@
 							<p>
 								Located in a central spot, not far from main square, restaurants and hotels, the venue is a good fit for the conference.
 							</p>
-							<img class="img-responsive" src="img2016/location.jpg">
-							<div class="clearfix">
+							<div class="col-sm-6 clearfix">
+								<img class="img-responsive" src="img2016/location.jpg">
 								<a target="_blank" href="https://hotelscan.com/en/search?geoid=xmmixfr24y52&sorting=4&gclid=CJXFtcyH18wCFRSeGwodoKEHzw&ref=sem:google:cpc:g&gclsrc=aw.ds" class="linkButton">Hotels nearby</a>
+							</div>
+							<div class="col-sm-6 venue no-padding">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2733.1367629340093!2d23.579946315828746!3d46.762200653916395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490e804a7d98f7%3A0xd66d4ecae07eb40b!2sStrada+Gheorghe+Marinescu+23%2C+Cluj-Napoca+400000!5e0!3m2!1sro!2sro!4v1462797557073" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-6 other venue no-padding back">
-						<h1>Other Venues</h1>
-						<img class="img-responsive" src="img2016/other.png">
-						<a target="_blank" href="http://clujhub.ro/">Cluj HUB</a>
-						<h5>Training Venue - 23 August 2016</h5>
+					<div class="container no-padding back">
+						<div class="other venue no-padding back">
+							<h1>Other Venues</h1>
+							<img class="img-responsive" src="img2016/other.png">
+							<a target="_blank" href="http://clujhub.ro/">Cluj HUB</a>
+							<h5>Training Venue - 23 August 2016</h5>
+						</div>
 					</div>
 					<div class="social col-xs-12">
 						<div class="socialFooter">
@@ -432,79 +433,164 @@
 				<h1 class="sponsors-title">ORGANIZERS</h1>
 				<p>Every great event has a great team behind it!</p>
 				<div class="container">
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/ale.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/ale.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								In charge with our sponsor happiness, making sure all the stuff you signed up for when choosing a sponsorship level will happen. And something extra… Get in touch with her for any sponsorship & exhibition related questions.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Alexandra</p>
 						<p class="organizer-details">Sponsors’ BFF</p>
 						<a href="mailto:alexandra@cluj.pm" target="_top">alexandra@cluj.pm</a>
+
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/andra.jpg" class="img-responsive" alt="organizer1" width="200px;">
-						<p class="organizer-name">Andra</p>
-						<p class="organizer-details">Training Overlord</p>
-						<a href="mailto:andra@cluj.pm" target="_top">andra@cluj.pm</a>
-					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/amalia.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/amalia.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								She’s just here for the food. Really! But she can answer any of your YAPC::EU 2016 related questions, no matter the topic. ;-) Oh, and she really hopes to see you in Cluj this summer.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Amalia</p>
 						<p class="organizer-details">Troublemaker</p>
 						<a href="mailto:amalia@cluj.pm" target="_top">amalia@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/bogdan.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/andra.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								She’s going to take care of trainers, trainees & training course venue (coffee, food, fun breaks & training related announcements to all those involved) Any questions you have, feel free to get in touch.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Andra</p>
+						<p class="organizer-details">Training Overlord</p>
+						<a href="mailto:andra@cluj.pm" target="_top">andra@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/bogdan.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								He will make all us of shine. So if you want to team up with YAPC, write about us, or interview us && be our media partner, please get in touch with Bogdan. Otherwise, he’ll get in touch with you. :D
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Bogdan</p>
-						<p class="organizer-details">Media Partnerships</p>
+						<p class="organizer-details">Media Wizard</p>
 						<a href="mailto:bogdan@cluj.pm" target="_top">bogdan@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/crina.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/crina.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								Crina is our head of financial operations, handling all payments, sponsorship agreements & invoices. So if you need assistance in contracts or money related issues, just get in touch with her, she’s happy to help.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Crina</p>
 						<p class="organizer-details">Invoicing Guru</p>
 						<a href="mailto:crina@cluj.pm" target="_top">crina@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/irina.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/geo.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								So if you decide to bring your partner && kid(s) to YAPC::Europe 2016, you should know they’re in good hands. Irina will make sure they won’t stash themselves at the hotel,  but enjoy the city && get plenty of action.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Georgiana</p>
+						<p class="organizer-details">Conference Party Wizard</p>
+						<a href="mailto:georgiana@cluj.pm" target="_top">georgiana@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/hanna.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								Hungry people are not happy. Hanna is here to make sure we’re all happy, whether we’re meet lovers, vegetarians, or vegans. She’s taking care of coffee breaks & lunches throughout the conference.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Hanna</p>
+						<p class="organizer-details">Catering Prodigy</p>
+						<a href="mailto:hanna@cluj.pm" target="_top">hanna@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/irina.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								So if you decide to bring your partner && kid(s) to YAPC::Europe 2016, you should know they’re in good hands. Irina will make sure they won’t stash themselves at the hotel, but enjoy the city && get plenty of action.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Irina</p>
 						<p class="organizer-details">Partners’ BFF</p>
 						<a href="mailto:irina@cluj.pm" target="_top">irina@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/mihai.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/liana.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								Need help with your slides, have issues when speaking to a big crowd, or need to test your presentation prior to your talk? Don’t worry, Liana is here to help with anything related to your speaking gig. You can email her for advice anytime.
+							</figcaption>
+						</figure>
+						<p class="organizer-name">Liana</p>
+						<p class="organizer-details">Speakers' BFF</p>
+						<a href="mailto:liana@cluj.pm" target="_top">liana@cluj.pm</a>
+					</div>
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/mihai.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								Yes, he’s in charge with all venue related stuff && knows the place inside out. And more importantly, knows what goes where during YAPC. Awesome dude, don’t hesitate to get in touch for questions regarding the conference venue.
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Mihai</p>
 						<p class="organizer-details">Venue Overlord</p>
 						<a href="mailto:mihai@cluj.pm" target="_top">mihai@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/ramona.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/ramona.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								Our dear Ramona is the go-to person when it comes to traveling. She’ll be guiding you in choosing the right hotel (she’s already getting discounts for YAPC attendees) & even give you advice on the best way for you to get to Cluj. Don’t be shy, get in touch!
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Ramona</p>
-						<p class="organizer-details">Accomodation Master</p>
+						<p class="organizer-details">Travel Master</p>
 						<a href="mailto:ramona@cluj.pm" target="_top">ramona@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/silvia.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+						<figure>
+							<img src="img2016/organizers/silvia.jpg" class="img-responsive" alt="organizer1" width="200px;">
+							<figcaption>
+								Just like Bogdan, she’s in the media business, making all us of shine. So if you want to team up with YAPC, write about us, or interview us && be our media partner, please get in touch with her. Otherwise, she’ll get in touch with you. :-D
+							</figcaption>
+						</figure>
 						<p class="organizer-name">Silvia</p>
-						<p class="organizer-details">Media Partnerships</p>
+						<p class="organizer-details">Media Wizard</p>
 						<a href="mailto:silvia@cluj.pm" target="_top">silvia@cluj.pm</a>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/paulm.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+							<img src="img2016/organizers/fumy.jpg" class="img-responsive" alt="organizer1" width="200px;">
+						</figure>
+						<p class="organizer-name">Fumy</p>
+						<p class="organizer-details">JS Wizard</p>
+					</div>
+					<div class="organizer-wrapper">
+							<img src="img2016/organizers/paulm.jpg" class="img-responsive" alt="organizer1" width="200px;">
 						<p class="organizer-name">Paul</p>
 						<p class="organizer-details">Awesome dev</p>
 					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/fumy.jpg" class="img-responsive" alt="organizer1" width="200px;">
-						<p class="organizer-name">Fumy</p>
-						<p class="organizer-details">Smardoi/JS</p>
-					</div>
-					<div class="organizer-wrapper ">
-						<img src="img2016/organizers/victor.jpg" class="img-responsive" alt="organizer1" width="200px;">
+					<div class="organizer-wrapper">
+							<img src="img2016/organizers/victor.jpg" class="img-responsive" alt="organizer1" width="200px;">
 						<p class="organizer-name">Victor</p>
 						<p class="organizer-details">Developer</p>
+					</div>
+					<div class="organizer-wrapper">
+							<img src="img2016/organizers/eugen.jpg" class="img-responsive" alt="organizer1" width="200px;">
+						<p class="organizer-name">Eugen</p>
+						<p class="organizer-details">Designer</p>
 					</div>
 					<div class="col-xs-12">
 						<p>They're the ones working hard to make the attendees' experience worthwhile</p>
 						<br>
-						<p>For any specific issues please contact  the organizer  in charge. They'll be happy to help!</p>
+						<p>For any specific issues please contact the organizer in charge. They'll be happy to help!</p>
 					</div>
 					<div class="social col-xs-12">
 						<div class="socialFooter">

@@ -929,12 +929,16 @@ a:hover, a:focus {
 
 /*our sponsors - START*/
 .our-sponsors {
-	background-color: #d8ceaf;
+	background-image: url("../img2016/speakers.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
-/*	background: url("../img/background-sponsors.png") no-repeat fixed center;*/
-/*	background-size: cover;*/
 }
 .our-sponsors .page-header {
 	color: #F29E21;
@@ -1001,7 +1005,6 @@ a:hover, a:focus {
  /* Venue Start */
 
 .back {
-  background-color: #d8ceaf;
   text-align: center;
 }
 
@@ -1017,7 +1020,7 @@ a:hover, a:focus {
 }
 
 .venue p {
-  text-align: left;
+  text-align: center;
   padding: 0 40px;
   margin: auto;
   font-size: 16px;
@@ -1046,7 +1049,8 @@ a:hover, a:focus {
 }
 
 .venue iframe {
-  height: 575px;
+  height: 347px;
+	margin-top: 30px;
 }
 
 .fill,
@@ -1306,10 +1310,13 @@ a:hover, a:focus {
 .sponsors-tab .levels-details .linkButton {
 	max-width: 240px !important;
 	margin: 15px auto 0 auto;
+	display: inline-block;
 }
 .sponsors-tab .levels-details .linkButton.red-btn {
 	color: #f2a01f;
 	background-color: #891826;
+	display: inline-block;
+	margin-left: 20px;
 }
 .sponsors-tab .levels-details .levels-text {
 	color: #A71D2F;
@@ -1375,15 +1382,15 @@ a:hover, a:focus {
 	margin: 0 auto;
 }
 .organizer-wrapper {
-	width: 20%;
-	height: 260px;
+	width: 17%;
+	height: 280px;
 	text-align: center;
 	float: left;
-	margin: 45px 0px 0px 0px;
+	margin: 35px 17px 0px 17px;
 }
 .organizer-wrapper img {
-	width: 80%;
-	margin: 0 auto;
+	width: 100%;
+/*	margin: 0 auto;*/
 }
 .organizer-wrapper p{
 	width: 80%;
@@ -1393,26 +1400,73 @@ a:hover, a:focus {
 	margin-top: 10px;
 	font-weight: 800;
 }
+.organizer-wrapper figure {
+	overflow: hidden;
+	position: relative;
+	display: table;
+	width: 100%;
+}
+.organizer-wrapper:hover figcaption {
+	opacity: 1;
+}
+.organizer-wrapper figcaption {
+	background: rgba(231, 76, 60, .85);
+	color: #fff;
+}
+.organizer-wrapper figcaption {
+	text-align: left;
+	font-size: 12px;
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	padding: 15px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+	-webkit-transition-delay: .1s;
+	-moz-transition-delay: .1s;
+	transition-delay: .1s;
+}
 @media all and (max-width: 1200px){
 	.organizer-wrapper {
-		width: 33%;
+		width: 21%;
 		height: 340px;
+	}
+}
+@media all and (max-width: 991px){
+	.organizer-wrapper {
+		width: 28%;
+		height: 305px;
 	}
 }
 @media all and (max-width: 720px){
 	.organizer-wrapper {
-		height: 240px;
+		height: 355px;
+		width: 43%;
 	}
 }
 @media all and (max-width: 620px){
 	.organizer-wrapper {
-		width: 50%;
+/*		width: 50%;*/
+		height: 290px;
+	}
+}
+@media all and (max-width: 562px){
+	.organizer-wrapper {
+		width: 42%;
 	}
 }
 @media all and (max-width: 500px){
 	.organizer-wrapper {
 		width: 100%;
 		height: auto;
+		margin-right: 0;
+		margin-left: 0;
 	}
 	.organizers-tab p { 
 		width: auto;
@@ -1758,6 +1812,10 @@ a:hover, a:focus {
     text-align: center;
 }
 
+.talks-tab .moreInfoTalsk {
+	margin-top: 90px;
+}
+
 .talks-tab .moreInfoTalsk p {
   color: #a71d2f;
 }
@@ -1771,7 +1829,9 @@ a:hover, a:focus {
   margin: 60px 0;
   border-top: 2px solid #d3ae5b;
 }
-
+.talks-tab .submitTalk {
+	margin-top: 50px !important;
+}
 .talks-tab .moreInfoTalsk #lightning p {
   margin-top: 20px;
 }
