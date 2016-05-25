@@ -147,8 +147,6 @@ $( "#confColapse" ).click(function() {
       $( "#tablist .active" ).prev().children().fadeIn( "slow" );
       $( "#tablist .active" ).next().children().fadeIn( "slow" );
 
-      }
-
       $(".nav.nav-tabs li ").click(function() {
               $(".nav.nav-tabs").css("transition", "all 2s ease-in-out")
               $('#tablist li a').css("display", "none");
