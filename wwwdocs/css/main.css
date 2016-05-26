@@ -994,10 +994,6 @@ a:hover, a:focus {
 	float: left;
 	max-width: 200px;
 }
-.sponsors-tab .sponsors-text-right {
-	border-left: 2px solid #d3ae5b;
-	padding-left: 20px;
-}
 .our-sponsors .linkButton {
     display: block;
     margin: 0 auto 50px auto;
@@ -1362,17 +1358,27 @@ a:hover, a:focus {
   font-size: 16px;
   text-align: left;
 }
-
+.sponsors-tab .sponsors-text-right {
+	border-left: 2px solid #d3ae5b;
+	padding-left: 20px;
+}
 @media all and (max-width: 1450px) {
 	#Sponsors {
 		height: 100% !important;
 	}
 }
-@media all and (max-width: 768px){
+@media all and (max-width: 767px){
 	.sponsors-tab .levels-details .levels-text {
 		width: 100%;
 	}
+	.sponsors-tab .sponsors-text-right {
+		border-left: none;
+		padding-left: 15px;
+		border-top: 2px solid #d3ae5b;
+		padding-top: 20px;
+	}
 }
+
 /*TAB Sponsors END*/
 
 /*TAB Contact START*/
@@ -1449,7 +1455,7 @@ a:hover, a:focus {
 	opacity: 1;
 }
 .organizer-wrapper figcaption {
-	background: rgba(231, 76, 60, .85);
+	background: rgba(192, 35, 54, 0.80);
 	color: #fff;
 }
 .organizer-wrapper figcaption {
@@ -1520,6 +1526,14 @@ a:hover, a:focus {
 	}
 	.sponsors-title {
 		font-size: 25px;
+	}
+	.organizer-wrapper figcaption {
+		font-size: 19px;
+	}
+}
+@media all and (max-width: 380px){
+	.organizer-wrapper figcaption {
+		font-size: 17px;
 	}
 }
 /*TAB Organizers END*/
