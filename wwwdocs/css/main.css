@@ -1454,6 +1454,11 @@ a:hover, a:focus {
 .organizer-wrapper:hover figcaption {
 	opacity: 1;
 }
+
+.organizer-wrapper .clickIoSActive {
+  opacity: 1 !important;
+}
+
 .organizer-wrapper figcaption {
 	background: rgba(192, 35, 54, 0.80);
 	color: #fff;
@@ -1539,6 +1544,9 @@ a:hover, a:focus {
 /*TAB Organizers END*/
 
 /* Conference Info Tabs Bar -- Start */
+.nav.nav-tabs i {
+  color: #d8ceaf;
+}
 
 .nav-tabs {
   background-color: #9a1b29;
@@ -1588,7 +1596,9 @@ a:hover, a:focus {
 @media all and (max-width: 395px) {
   .nav.nav-tabs li a {
     font-size: 12px;
+    padding: 16px 11px;
   }
+
 }
 
 /* Conference Info Tabs Bar -- End */

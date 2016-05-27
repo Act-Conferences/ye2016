@@ -93,7 +93,7 @@ $( "#confColapse" ).click(function() {
     var main = (text.match(/Main private page/)||[]).length;
 
     if ((window.location.href.indexOf("main") > -1) && (main === 1)) {
-        console.log("hey");
+        //console.log("hey");
       $( "p" ).each(function() {
         $( this ).addClass( "text-center" );
       });
@@ -140,28 +140,70 @@ $( "#confColapse" ).click(function() {
       });
     }
 
+   if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+        $(".organizer-wrapper figcaption").click(function() {
+          $(this).toggleClass("clickIoSActive");
+         });
+   }
+
     if ($(window).width() <= 848) {
 
       $('#tablist li a').css("display", "none");
-      $( "#tablist .active a" ).fadeIn( "slow" );
-      $( "#tablist .active" ).prev().children().fadeIn( "slow" );
-      $( "#tablist .active" ).next().children().fadeIn( "slow" );
+      $( "#tablist .active a" ).fadeIn( 100 );
+      $( "#tablist .active" ).prev().children().fadeIn( 100 );
+      $( "#tablist .active" ).next().children().fadeIn( 100 );
+  
+
+      $("#tablist .fa-angle-double-right").click(function() {
+          $('#tablist li a').css("display", "none");
+          $("#tablist .active").next('li').find('a').trigger('click');
+          if ($("#tablist .active").next("li").length == 0) {
+                  $("#tablist .fa-angle-double-right").css("display", "none");
+              } else {
+                  $("#tablist .fa-angle-double-right").css("display", "inline-block");
+              }
+           if ($("#tablist .active").prev("li").length !== 0) {
+                  $("#tablist .fa-angle-double-left").css("display", "inline-block");
+              }
+      });
+
+
+      $("#tablist .fa-angle-double-left").click(function() {
+          $('#tablist li a').css("display", "none");
+          $("#tablist .active").prev('li').find('a').trigger('click');
+          if ($("#tablist .active").prev("li").length == 0) {
+                  $("#tablist .fa-angle-double-left").css("display", "none");
+              } else {
+                  $("#tablist .fa-angle-double-left").css("display", "inline-block");
+              }
+          if ($("#tablist .active").next("li").length !== 0) {
+                  $("#tablist .fa-angle-double-right").css("display", "inline-block");
+              }
+      });
 
       $(".nav.nav-tabs li ").click(function() {
-              $(".nav.nav-tabs").css("transition", "all 2s ease-in-out")
+              $(".nav.nav-tabs").css("transition", "all 0.4s ease-in-out")
               $('#tablist li a').css("display", "none");
-              $( "#tablist .active a" ).fadeIn( "slow" );
-              $( "#tablist .active" ).prev().children().fadeIn( "slow" );
-              $( "#tablist .active" ).next().children().fadeIn( "slow" );
+              $( "#tablist .active a" ).fadeIn( 100 );
+              $( "#tablist .active" ).prev().children().fadeIn( 100 );
+              $( "#tablist .active" ).next().children().fadeIn( 100 );
 
-             // if ($("#tablist .active").next("li").length == 0) {
-             //     $("#tablist .fa-chevron-down").css("display", "none");
-             // } else {
-             //     $("#tablist .fa-chevron-down").css("display", "inline-block");
-             // }
+              if ($("#tablist .active").next("li").length == 0) {
+                  $("#tablist .fa-angle-double-right").css("display", "none");
+              } else {
+                  $("#tablist .fa-angle-double-right").css("display", "inline-block");
+              }
+
+              if ($("#tablist .active").prev("li").length == 0) {
+                  $("#tablist .fa-angle-double-left").css("display", "none");
+              } else {
+                  $("#tablist .fa-angle-double-left").css("display", "inline-block");
+              }
       });
+
     } else if ($(window).width() > 848) {
       $(".nav.nav-tabs").css("transition", "none");
+      $(".nav.nav-tabs i").css("display", "none");
       $(".nav.nav-tabs li ").click(function() {
               $(".nav.nav-tabs").css("transition", "none")
               $('#tablist li a').css("display", "inline-block");
@@ -207,30 +249,42 @@ $(window).resize(function(){
   		 $('.organizers-tab').css('min-height',$(window).height() - 149);
 
 
- if (wwidth <= 848) {
+   if ($(window).width() <= 848) {
 
       $('#tablist li a').css("display", "none");
-      $( "#tablist .active a" ).fadeIn( "slow" );
-      $( "#tablist .active" ).prev().children().fadeIn( "slow" );
-      $( "#tablist .active" ).next().children().fadeIn( "slow" );
+      $( "#tablist .active a" ).fadeIn( 100 );
+      $( "#tablist .active" ).prev().children().fadeIn( 100 );
+      $( "#tablist .active" ).next().children().fadeIn( 100 );
+      $('#tablist i').css("display", "inline-block");
+
+
       $(".nav.nav-tabs li ").click(function() {
-              $(".nav.nav-tabs").css("transition", "all 2s ease-in-out")
+              $(".nav.nav-tabs").css("transition", "all 0.4s ease-in-out")
               $('#tablist li a').css("display", "none");
-              $( "#tablist .active a" ).fadeIn( "slow" );
-              $( "#tablist .active" ).prev().children().fadeIn( "slow" );
-              $( "#tablist .active" ).next().children().fadeIn( "slow" );
+              $( "#tablist .active a" ).fadeIn( 100 );
+              $( "#tablist .active" ).prev().children().fadeIn( 100 );
+              $( "#tablist .active" ).next().children().fadeIn( 100 );
 
+              if ($("#tablist .active").next("li").length == 0) {
+                  $("#tablist .fa-angle-double-right").css("display", "none");
+              } else {
+                  $("#tablist .fa-angle-double-right").css("display", "inline-block");
+              }
+
+              if ($("#tablist .active").prev("li").length == 0) {
+                  $("#tablist .fa-angle-double-left").css("display", "none");
+              } else {
+                  $("#tablist .fa-angle-double-left").css("display", "inline-block");
+              }
       });
-    } else {
 
+    } else if ($(window).width() > 848) {
+      $(".nav.nav-tabs").css("transition", "none");
+      $(".nav.nav-tabs i").css("display", "none");
       $('#tablist li a').css("display", "inline-block");
       $(".nav.nav-tabs li ").click(function() {
               $(".nav.nav-tabs").css("transition", "none")
               $('#tablist li a').css("display", "inline-block");
-              $( "#tablist .active a" ).css("display", "inline-block");
-              $( "#tablist .active a" ).css("opacity", "1 !important");
-
-
       });
     }
 

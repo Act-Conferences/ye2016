@@ -5,12 +5,12 @@
 		var m = response.search("talksAcceptedSteal");
 		var numb = response.slice(n + 17, n + 19);
 		var numb2 = response.slice(m + 20, m + 22);
-		console.log(n);
-		console.log("response", response.slice(n, n + 19));
-		console.log(numb);
+		//console.log(n);
+		//console.log("response", response.slice(n, n + 19));
+		//console.log(numb);
 		var nonumber = numb.search("<");
 		var nonumber2 = numb2.search("<");
-		console.log(nonumber);
+		//console.log(nonumber);
 		var total;
 		if (nonumber !== -1) {
 			total = numb.slice(0, 2);
@@ -39,8 +39,8 @@
 		var duration = live_str.find('.talksDuration').html();
 		var lightning = live_str.find('.talksLightning').html();
 		//var s = $('div').html();
-		console.log("duration", duration);
-		console.log("lightning", lightning);
+		//console.log("duration", duration);
+		//console.log("lightning", lightning);
 
 		$('#duration').html(duration);
 		$('#lightning').html(lightning);
@@ -61,6 +61,7 @@
 <div class="conferenceInfo">
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist" id="tablist">
+	<i class="fa fa-angle-double-left" aria-hidden="true"></i>
 		<li role="presentation" class="active"><a href="#About" aria-controls="About" role="tab" data-toggle="tab">About</a></li>
 		<li role="presentation"><a href="#Speakers" aria-controls="Speakers" role="tab" data-toggle="tab">Speakers</a></li>
 		<li role="presentation"><a href="#Talks" aria-controls="Talks" role="tab" data-toggle="tab">Talks</a></li>
@@ -69,6 +70,7 @@
 		<li role="presentation"><a href="#Venue" aria-controls="Venue" role="tab" data-toggle="tab">Venue</a></li>
 		<li role="presentation"><a href="#Organizers" aria-controls="Organizers" role="tab" data-toggle="tab">Organizers</a></li>
 		<li role="presentation"><a href="#Contact" aria-controls="Contact" role="tab" data-toggle="tab">Contact</a></li>
+		<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 	</ul>
 
 	<!-- Tab panes -->
@@ -89,7 +91,7 @@
 					</div>
 					<div class="col-xs-6">
 						<p class="left">
-							And every year, the event is held in a different city.In 2016, the Cluj Perl Mongers managed to make YAPC::EUROPE happen in their beloved city, Cluj-Napoca,in Transylvania. No worries, Dracula’s off duty during summer (too much light, sun &amp; joy).
+							And every year, the event is held in a different city. In 2016, the Cluj Perl Mongers managed to make YAPC::EUROPE happen in their beloved city, Cluj-Napoca,in Transylvania. No worries, Dracula’s off duty during summer (too much light, sun &amp; joy).
 							<br>
 							<br> Who knows,maybe we’ll be your guests next summer? Join us at YAPC::Europe to shape the future of Perl-based applications!
 						</p>
