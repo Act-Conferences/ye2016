@@ -179,14 +179,12 @@ if($("#homepage-flag").length > 0) {
     }
 
     var textma = $( "#dontprint p" ).text();
-    var print = (text.match(/You can print this page: only the invoice below will be printed. /)||[]).length;
+    var print = (textma.match(/You can print this page: only the invoice below will be printed. /)||[]).length;
     if ((window.location.href.indexOf("invoice") > -1) && (print === 1)) {
        if ( $( "table" ).length ) {
         $( "table" ).addClass( "tableinPrint" );
       }
     }
-
-
 
    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
         $(".organizer-wrapper figcaption").click(function() {
