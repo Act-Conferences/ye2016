@@ -1,9 +1,10 @@
-[% WRAPPER ui title = loc("User information"), openid = 1 %]
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h2>
-        <b>
-          <span class="glyphicon glyphicon-user"></span>
+ <!-- WRAPPER ui title = loc("User information"), openid = 1  -->
+
+  [% WRAPPER ui %]
+  <div class="userView">
+         <!--  <span class="glyphicon glyphicon-user"></span> -->
+        <div class="UserTitle">
+          <h1>
           [%- IF user.pseudonymous %]
             [% user.nick_name %]
           [%- ELSE %]
@@ -12,12 +13,12 @@
             [% user.last_name %]
             [% "(&lrm;${user.nick_name}&lrm;)" IF user.nick_name %]
           [% END %]
-        </b>
-      </h2>
-    </div>
+          </h1>
+        </div>
+
 
     <div class="panel-body">
-      <div class="col-md-3 text-center">
+      <div class="col-md-5 text-right">
         [%- IF user.photo_name %]
            <img src="/[% global.config.general_dir_photos %]/[% user.photo_name %]" class="img-thumbnail" border="0" alt="Photo">
         [%- ELSE %]
@@ -25,101 +26,101 @@
         [% END %]
       </div>
 
-      <div class="col-md-9">
+      <div class="col-md-7">
         [% IF global.request.user.is_staff %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-user"></span> {{Login}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             [% login %]
           </div>
         [% END %]
 
         [%- IF user.town %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-home"></span> {{City}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             [% user.town %]
           </div>
         [% END %]
 
-        <div class="col-xs-6 col-sm-4">
+        <div class="col-xs-6 col-sm-4 labelUser">
           <strong><span class="glyphicon glyphicon-globe"></span> {{Country}}</strong>
         </div>
-        <div class="col-xs-6 col-sm-8">
+        <div class="col-xs-6 col-sm-8 labelUser">
           [% country %]
         </div>
 
         [%- IF user.pm_group %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-glass"></span> {{Perl mongers group}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             [% IF user.pm_group_url %]<a href="[% user.pm_group_url %]">[% user.pm_group %]</a>
             [% ELSE %][% user.pm_group %][% END %]
           </div>
         [% END %]
 
         [% IF user.company %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-briefcase"></span> {{Company}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             [% "<a href=\"${user.company_url}\">" IF user.company_url %][% user.company %][% '</a>' IF user.company_url %]
           </div>
         [% END %]
 
         [%- IF NOT user.email_hide OR global.request.user.is_users_admin %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-envelope"></span> {{Email}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
            <tt><a href="mailto:[% user.email %]">[% user.email %]</a></tt>
           </div>
         [% END %]
 
         [%- IF user.web_page %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-file"></span> {{Web page}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             <tt><a href="[% user.web_page %]">[% user.web_page %]</a></tt>
           </div>
         [% END %]
 
         [%- IF user.pause_id %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-info-sign"></span> <a href="https://pause.perl.org/">PAUSE</a> id</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             <a href="https://metacpan.org/author/[% user.pause_id %]/" >[% user.pause_id %]</a>
           </div>
         [% END %]
 
         [%- IF user.monk_id %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-tag"></span> Perlmonks id</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             <a href="http://perlmonks.org/index.pl?node_id=[% user.monk_id %]" >[% user.monk_name OR user.monk_id %]</a>
           </div>
         [% END %]
 
         [%- IF user.im %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-comment"></span> {{IM}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             [% user.im %]
           </div>
         [% END %]
 
         [%- IF user.gpg_key_id %]
-          <div class="col-xs-6 col-sm-4">
+          <div class="col-xs-6 col-sm-4 labelUser">
             <strong><span class="glyphicon glyphicon-lock"></span> {{GPG key ID}}</strong>
           </div>
-          <div class="col-xs-6 col-sm-8">
+          <div class="col-xs-6 col-sm-8 labelUser">
             <a href="http://pgp.mit.edu:11371/pks/lookup?op=vindex&search=0x[% user.gpg_key_id %]">0x[% user.gpg_key_id %]</a>
           </div>
         [% END %]
@@ -127,20 +128,20 @@
     </div>
   </div>
 
-  [% IF talks.size %]
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h2>
-          <b>
-            <span class="glyphicon glyphicon-bullhorn"></span>
-            [% loc('Talk', talks.size) %]
-          </b>
-        </h2>
-      </div>
 
-      <table class="table">
+  [% IF talks.size %]
+    <div class="">
+        <div class="UserTitle">
+          <h1>
+            [% loc('Talk', talks.size) %]
+          </h1>
+        </div>
+
+      <table class="table talksTable table-striped table-mobile">
         [% FOREACH t = talks %]
-          <tr class="[% IF t.confirmed %] success [% ELSIF t.accepted %] info [% ELSE %] warning [% END %]">
+          <tr>
+
+          <!-- class=" IF t.confirmed  success  ELSIF t.accepted  info  ELSE warning  END " -->
             <td>
               [% IF t.confirmed %]
                 <span class="label label-success">{{confirmed}}</span>
@@ -171,18 +172,15 @@
     </div>
   [% END %]
 
-  [%- IF bio.keys.size %]
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h2>
-          <b>
-            <span class="glyphicon glyphicon-book"></span>
+    [% IF bio.keys.size %]
+    <div class="">
+      <div class="UserTitle">
+          <h1>
             {{Bio}}
-          </b>
-        </h2>
-      </div>
+          </h1>
+        </div>
 
-      <table class="table">
+      <table class="table talksTable table-striped table-mobile">
         [% FOREACH lang = bio.keys %]
           <tr>
             <td>
@@ -197,18 +195,17 @@
     </div>
   [% END %]
 
+
+
   [% IF mytalks.size %]
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h2>
-          <b>
-            <span class="glyphicon glyphicon-star"></span>
+    <div class="">
+      <div class="UserTitle">
+          <h1>
             {{Attending talks}}
-          </b>
-        </h2>
+          </h1>
       </div>
 
-      <table class="table">
+      <table class="table talksTable table-striped table-mobile">
         [% FOREACH t = mytalks %]
           <tr>
             <td width="30">[% PROCESS talk/fav_ajax onetalk = t %]</td>
@@ -221,23 +218,25 @@
 
   [% IF conferences.size %]
   <tr>
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="otherActConf" id="confColapse">
+      <i class="fa fa-chevron-down"></i>
+      <div class="other">
         <h2>
           <b>
-            <span class="glyphicon glyphicon-plane"></span>
             {{Other Act conferences:}}
           </b>
         </h2>
       </div>
 
-      <table class="table">
-        [% FOREACH c = conferences %]
-          <tr>
-            <td><a href="[% c.url %]user/[% user.user_id %]">[% c.name %]</a></td>
-          </tr>
-        [% END %]
-      </table>
+      <div class="conf" style="display:none;">
+        <ul>
+          [% FOREACH c = conferences %]
+            <li>
+              <a href="[% c.url %]user/[% user.user_id %]">[% c.name %]</a>
+            </li>
+          [% END %]
+        </ul>
+      </div>
     </div>
   [% END %]
 [% END %]
