@@ -2495,6 +2495,7 @@ blockquote.text-center.ticketPay {
 }
 
 .text-center.ticketPay strong {
+  display: block;
   color: #69d027;
 }
 

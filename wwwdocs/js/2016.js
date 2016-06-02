@@ -170,15 +170,16 @@ if($("#homepage-flag").length > 0) {
       });
     }
 
-
-    var invoice = (text.match(/ Please make sure the billing information is correct. /)||[]).length;
+    var textm = $( "form p" ).text();
+    var invoice = (textm.match(/ Please make sure the billing information is correct. /)||[]).length;
     if ((window.location.href.indexOf("invoice") > -1) && (invoice === 1)) {
        if ( $( "form" ).length ) {
         $( "form" ).addClass( "invoicePrint" );
       }
     }
 
-    var print= (text.match(/You can print this page: only the invoice below will be printed. /)||[]).length;
+    var textma = $( "#dontprint p" ).text();
+    var print = (text.match(/You can print this page: only the invoice below will be printed. /)||[]).length;
     if ((window.location.href.indexOf("invoice") > -1) && (print === 1)) {
        if ( $( "table" ).length ) {
         $( "table" ).addClass( "tableinPrint" );
