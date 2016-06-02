@@ -55,9 +55,9 @@
   </script>
 
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 purchaseALL">
       <form method="POST" action="[% global.request.r.uri %]">
-        <div class="panel panel-default">
+        <div class="purchase">
           <table class="table">
             [% FOREACH p IN productlist %]
               [% NEXT IF p == 'registration' AND global.request.user.has_paid %]
@@ -144,17 +144,19 @@
             </tr>
           </table>
 
-          <div class="panel-footer text-right">
-            <input type="submit" name="purchase" class="btn btn-primary btn-lg" value="{{Buy now!}}"></input>
+          <div class="text-right">
+            <input type="submit" name="purchase" class="btn btn-primary btn-lg sendLink" value="{{Buy now!}}"></input>
           </div>
         </div>
       </form>
-      <p>
-      Remember that <strong>if your talk has been accepted</strong> (except for lightning talks), so that <strong>you are a speaker</strong>  the price of your ticket is 0.00€, i.e., it is completely free.
-      </p>
-      <p>
-       {{Please note that everything regarding your bank account and credit card number}}
-      </p>
+      <div class="col-xs-12 purchaseInfo">
+        <p class="col-xs-6 clearfix">
+        Remember that <strong>if your talk has been accepted</strong> (except for lightning talks), so that <strong>you are a speaker</strong>  the price of your ticket is 0.00€, i.e., it is completely free.
+        </p>
+        <p class="col-xs-6 clearfix">
+         {{Please note that everything regarding your bank account and credit card number}}
+        </p>
+      </div>
 
       [% file = "core/bank/${global.config.payment_type}" ; PROCESS $file %]
     </div>

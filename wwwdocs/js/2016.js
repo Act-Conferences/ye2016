@@ -11,6 +11,9 @@ $(document).ready(function() {
   $('.sponsors-tab').css('min-height',$(window).height() - 149);
   $('.organizers-tab').css('min-height',$(window).height() - 149);
   $('.talks-tab').css('min-height',$(window).height() - 149);
+  $('.ticketsBack').css('min-height',$(window).height() - 149);
+  $('.ticketsBack').css('min-height',$(window).height() - 149);
+
 
 // user info colapse toggle 
 
@@ -20,12 +23,34 @@ $( "#confColapse" ).click(function() {
 });
 
 
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  var target = $(e.target).attr("href") // activated tab
+  console.log(target);
+  console.log(typeof(target));
+  if (target === "#Schedule") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Schedule .verticalAl").css({'min-height' : current_height});
+  } else if (target === "#Contact") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Contact .verticalAl").css({'min-height' : current_height});
+  }
+});
+
+
+if($("#homepage-flag").length > 0) {
+   var windows_height = $(window).height();
+  var current_height = windows_height-251;
+  $(".verticalAl").css({'min-height' : current_height});
+}
 
   if (window.location.href.indexOf("about") > -1 ||
        window.location.href.indexOf("venue") > -1 ||
        window.location.href.indexOf("Tickets&Events") > -1 ||
        window.location.href.indexOf("our_sponsors") > -1 || 
-       window.location.href.indexOf("conferenceInfo") > -1 ) {
+       window.location.href.indexOf("conferenceInfo") > -1 ||
+       window.location.href.indexOf("ticketsInfo") > -1 ) {
     $('.changejs').css('width', '100%');
     $('.changejs').css('padding', '0');
     $('.changesjs').css('padding', '0');
@@ -88,7 +113,6 @@ $( "#confColapse" ).click(function() {
         }
     });
 
-
     var text = $( ".page-header" ).text();
     var main = (text.match(/Main private page/)||[]).length;
 
@@ -116,6 +140,10 @@ $( "#confColapse" ).click(function() {
         $( "p" ).last().delay( 1000 ).fadeIn( "slow" );
       });
 
+      if ( $( "blockquote" ).length ) {
+        $( "blockquote" ).addClass( "text-center ticketPay" );
+      }
+
 
       $( "p" ).last().click(function() {
         $('.changejs').css('overflow', 'hidden');
@@ -124,6 +152,8 @@ $( "#confColapse" ).click(function() {
         $('ul').last().css( "display", "block" );
         $( "p" ).last().fadeOut( "slow" );
       });
+
+
 
       if ($(window).width() <= 710){
         $('ul').last().click(function(){
@@ -140,6 +170,23 @@ $( "#confColapse" ).click(function() {
       });
     }
 
+
+    var invoice = (text.match(/ Please make sure the billing information is correct. /)||[]).length;
+    if ((window.location.href.indexOf("invoice") > -1) && (invoice === 1)) {
+       if ( $( "form" ).length ) {
+        $( "form" ).addClass( "invoicePrint" );
+      }
+    }
+
+    var print= (text.match(/You can print this page: only the invoice below will be printed. /)||[]).length;
+    if ((window.location.href.indexOf("invoice") > -1) && (print === 1)) {
+       if ( $( "table" ).length ) {
+        $( "table" ).addClass( "tableinPrint" );
+      }
+    }
+
+
+
    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
         $(".organizer-wrapper figcaption").click(function() {
           $(this).toggleClass("clickIoSActive");
@@ -152,6 +199,9 @@ $( "#confColapse" ).click(function() {
       $( "#tablist .active a" ).fadeIn( 100 );
       $( "#tablist .active" ).prev().children().fadeIn( 100 );
       $( "#tablist .active" ).next().children().fadeIn( 100 );
+      if ($("#tablist .active").prev("li").length == 0) {
+                  $("#tablist .fa-angle-double-left").css("display", "none");
+      }
   
 
       $("#tablist .fa-angle-double-right").click(function() {
@@ -247,6 +297,35 @@ $(window).resize(function(){
        $('.speaker').css('min-height',$(window).height() - 149);
        $('.sponsors-tab').css('min-height',$(window).height() - 149);
   		 $('.organizers-tab').css('min-height',$(window).height() - 149);
+       $('.ticketsBack').css('min-height',$(window).height() - 149);
+
+
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  var target = $(e.target).attr("href") // activated tab
+  console.log(target);
+  console.log(typeof(target));
+  if (target === "#Schedule") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Schedule .verticalAl").css({'min-height' : current_height});
+  } else if (target === "#Contact") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Contact .verticalAl").css({'min-height' : current_height});
+  }
+});
+
+if($("#homepage-flag").length > 0) {
+   var windows_height = $(window).height();
+  var current_height = windows_height-251;
+  $(".verticalAl").css({'min-height' : current_height});
+}
+
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Schedule .verticalAl").css({'min-height' : current_height});
+    $("#Contact .verticalAl").css({'min-height' : current_height});
+
 
 
    if ($(window).width() <= 848) {
@@ -256,6 +335,9 @@ $(window).resize(function(){
       $( "#tablist .active" ).prev().children().fadeIn( 100 );
       $( "#tablist .active" ).next().children().fadeIn( 100 );
       $('#tablist i').css("display", "inline-block");
+      if ($("#tablist .active").prev("li").length == 0) {
+                  $("#tablist .fa-angle-double-left").css("display", "none");
+      }
 
 
       $(".nav.nav-tabs li ").click(function() {
@@ -288,5 +370,19 @@ $(window).resize(function(){
       });
     }
 
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      var target = $(e.target).attr("href") // activated tab
+      console.log(target);
+      console.log(typeof(target));
+      if (target === "#Schedule") {
+        var windows_height = $(window).height();
+        var current_height = windows_height-331;
+        $("#Schedule .verticalAl").css({'min-height' : current_height});
+      } else if (target === "#Contact") {
+        var windows_height = $(window).height();
+        var current_height = windows_height-331;
+        $("#Contact .verticalAl").css({'min-height' : current_height});
+      }
+    });
 
   });

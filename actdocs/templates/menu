@@ -16,8 +16,8 @@
       <ul class="nav navbar-nav middle">
           <li><a target="_blank" href="/ye2016/img2016/convinceyourbo$$.pdf" >Convince Your Bo$$</a></li>
           <li><a href="/ye2016/conferenceInfo.html" >Conference Info</a></li>
-          <!-- <li><a href="#" >Buy Tickets</a></li>
-          <li><a href="#" >User Info</a></li> -->
+          <li><a href="/ye2016/ticketsInfo.html" >Buy Tickets</a></li>
+          <!-- <li><a href="#" >User Info</a></li> -->
       </ul>
 
     </div>
