@@ -1068,8 +1068,9 @@ a:hover, a:focus {
 }
 
 .venue p {
+  max-width: 800px;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 15px;
   margin: auto;
   font-size: 16px;
   font-weight: 300;
@@ -1098,7 +1099,8 @@ a:hover, a:focus {
 
 .venue iframe {
   height: 347px;
-	margin-top: 30px;
+  max-width: 70%;
+  margin-bottom: 40px;
 }
 
 .fill,
@@ -2532,6 +2534,7 @@ blockquote.text-center.ticketPay {
 .tableinPrint {
   color: #d8ceaf;
   border-color: #bb5053;
+  border: #bb5053;
 }
 
 

@@ -57,6 +57,44 @@ if($("#homepage-flag").length > 0) {
   }
 
 
+//test
+//$.post('/ye2016/search', {name: 'vagrant'}, function(data){console.log('mata'); rezultate = data; console.log(rezultate)})
+
+
+//tab3 : tags
+//    function getTable() {
+//      var searchTerm = $('#user-name').val();
+//      console.log("searchTerm",searchTerm);
+//        $.ajax({
+//            // Assuming an endpoint here that responds to GETs with a response.
+//            url: '/ye2016/search',
+//            type: 'POST',
+//            name: searchTerm
+
+//        })
+//            .done(function (data) {
+
+//                var tags = data;
+//                console.log(tags);
+
+//            })
+//            .fail(function() {
+//               
+//            })
+//            .always(function() {
+//                //close search input
+ //           });
+//    }
+
+//var searchTerm = $('#user-name').val();
+//console.log("searchTerm",searchTerm);
+//search : users
+    $('#searchterm').click(function(e) {
+      e.preventDefault();
+      $.post('/ye2016/search', {name: 'vagrant'}, function(data){console.log('mata'); rezultate = data; console.log(rezultate)})
+    });
+
+//end test
 
 
   $(".navbar-toggle").on("click", function(){
