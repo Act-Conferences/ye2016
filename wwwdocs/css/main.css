@@ -1604,30 +1604,16 @@ a:hover, a:focus {
   top: 32%;
 }
 
-/* test crousel */
-.carousel-inner.onebyone-carosel { margin: auto; width: 90% !important;}
-.onebyone-carosel .active.left { left: -33.33% !important; }
-.onebyone-carosel .active.right { left: 33.33% !important; }
-.onebyone-carosel .next { left: 33.33% !important; }
-.onebyone-carosel .prev { left: -33.33% !important; }
 
-@media not all, (-webkit-transform-3d) {
-  .carousel-inner>.item.prev, .carousel-inner>.item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-33%,0,0);
-    transform: translate3d(-33%,0,0);
-  }
-}
 
-@media not all, (-webkit-transform-3d){
-  .carousel-inner>.item.next, .carousel-inner>.item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(33%,0,0);
-    transform: translate3d(33%,0,0);
-  }
+#carousel-speakers .item img.center-block {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
 }
 
 .moreSpeakers h4 {
+/*   font-size: 24px; */
   text-align: center;
   color: #a71d2f;
   font-weight: 800;
@@ -1636,6 +1622,7 @@ a:hover, a:focus {
 
 .moreSpeakers img {
   width: 200px;
+  height: 200px;
   margin: auto;
   border-radius: 50%;
 }
@@ -1646,10 +1633,24 @@ a:hover, a:focus {
 
 .moreSpeakers .speakersBlock {
   width: 20%;
+  height: 350px;
   float: left;
   padding: 15px;
 }
 
+@media all and (max-width: 1290px) {
+  .onebyone-carosel {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 380px) {
+  #carousel-speakers .item img.center-block {
+    width: 180px;
+    height: 180px;
+  }
+}
 
 /* Main page start*/
 
@@ -2537,5 +2538,11 @@ blockquote.text-center.ticketPay {
   border: #bb5053;
 }
 
-
 /* purchase End */
+
+
+/* font weight for ACT bold type for accepted speaks */
+table a {
+  font-weight: inherit;
+}
+

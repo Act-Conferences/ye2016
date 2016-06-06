@@ -134,22 +134,9 @@ if($("#homepage-flag").length > 0) {
     });
 
  $('#carousel-speakers').carousel({
-        interval: 10000000
+        interval: false
     })
-    $('.fdi-Carousel .item').each(function () {
-        var next = $(this).next();
-        if (!next.length) {
-            next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-
-        if (next.next().length > 0) {
-            next.next().children(':first-child').clone().appendTo($(this));
-        }
-        else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
-    });
+  
 
     var text = $( ".page-header" ).text();
     var main = (text.match(/Main private page/)||[]).length;

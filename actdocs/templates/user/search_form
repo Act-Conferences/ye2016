@@ -48,7 +48,7 @@
     [% IF users %]
       [% FOREACH user = users %]
         myResults.push('[% user_info(user) %]');
-        console.log('userii mei mancatziash', myResults);
+        console.log('users', myResults);
      [% END %]
     [% END %]
     </script>
