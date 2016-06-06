@@ -1,0 +1,542 @@
+[% WRAPPER ui %]
+
+<div class="ticketsInfo">
+
+  <ul class="nav nav-tabs" role="tablist" id="tablist">
+    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+
+      <li role="presentation" class="active"><a href="#ConferenceTickets" aria-controls="ConferenceTickets" role="tab" data-toggle="tab">Conference Tickets</a></li>
+      <li role="presentation"><a href="#TrainingTickets" aria-controls="TrainingTickets" role="tab" data-toggle="tab">Training Tickets</a></li>
+      <li role="presentation"><a href="#WorkshopTickets" aria-controls="WorkshopTickets" role="tab" data-toggle="tab">Workshop Tickets</a></li>
+      <li role="presentation"><a href="#Trips" aria-controls="Trips" role="tab" data-toggle="tab">Trips &amp; Sightseeing</a></li>
+
+    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+
+    <!--ConferenceTickets-tab START-->
+    <div role="tabpanel" class="tab-pane fade in active" id="ConferenceTickets">
+        <div class="container-fluid col-xs-12 ticketsBack">
+            <div class="container">
+        [% WRAPPER ui title = loc('Search for users') %]
+
+<form method="POST" action="[% global.request.r.uri %]" id="user-search">
+  <div class="panel panel-default">
+    <div class="panel-body form-horizontal">
+      <div class="form-group">
+        <label for="user-name" class="col-md-3">{{Name}}</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="name" id="user-name" value="[% global.request.args.name %]" maxlength="60" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="user-city" class="col-md-3">{{City}}</label>
+        <div class="col-md-9">
+          <input type="text" class="form-control" name="city" id="user-city" value="[% global.request.args.city %]" maxlength="60" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="user-country" class="col-md-3">{{Country}}</label>
+        <div class="col-md-9">
+          <select name="country" id="user-country" class="form-control">
+             <option value=""[% ' selected="selected"' UNLESS global.request.args.country %]>{{Any}}</option>
+             [% FOREACH c = countries %]
+                <option value="[% c.iso %]"[% ' selected="selected"' IF global.request.args.country == c.iso %]>[% c.name %]</option>
+             [% END %]
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="user-group" class="col-md-3">{{Monger group}}</label>
+        <div class="col-md-9">
+          <select name="pm_group" id="user-group" class="form-control">
+             <option value=""[% ' selected="selected"' UNLESS global.request.args.pm_group %]>{{Any}}</option>
+             [% FOREACH g = pm_groups %]
+                <option value="[% g %]"[% ' selected="selected"' IF global.request.args.pm_group == g %]>[% g %]</option>
+             [% END %]
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer text-right">
+      <button type="submit" name="search" class="btn btn-primary btn-lg" id="searchterm">{{Search}}</button>
+    </div>
+  </div>
+
+  [% PROCESS user/list IF users %]
+
+  [% IF prev %]
+    <input type="hidden" name="oprev" value="[% oprev %]" />
+    <input class="btn btn-primary" type="submit" name="prev"  value="&lt;&lt;" />
+  [% END %]
+  [% IF next %]
+    [% "&nbsp;&nbsp;&nbsp;" IF oprev %]
+    <input type="hidden" name="onext" value="[% onext %]" />
+    <input class="btn btn-primary" type="submit" name="next"  value="&gt;&gt;" />
+  [% END %]
+</form>
+
+[% END %]
+<!--            <blockquote class="embedly-card" data-card-key="d1290f40384a44268985d260eeb33a4e" data-card-type="article-full"><h4><a href="https://medium.com/life-learning">Life Learning</a></h4><p>Accelerated Learning, Tech, Antifragility, and Definite Optimism</p></blockquote>
+<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script> -->
+                <h1>Tickets &amp; Events</h1>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <p class="ticketInfo oneday">
+                                1-day training
+                                </p>
+                                <p>
+                                with <b>Dave Cross</b>
+                                </p>
+                                <div class="price">
+                                    <span>&euro;</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                              <ul>
+                                <li class="description-item">Access to three days of conference</li>
+                                <li class="description-item">Conference dinner on the 1st conference evening</li>
+                                <li class="description-item">Conference kit (e.g. name tag, t-shirt, event prints)</li>
+                                <li class="description-item">Access to all meals throughout the 3 days (2 x coffee breaks/day, 1 x lunch/day)</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <p class="ticketInfo oneday">
+                                1-day training
+                                </p>
+                                <p>
+                                with <b>Dave Cross</b>
+                                </p>
+                                <div class="price">
+                                    <span>&euro;</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                            <!-- back content -->
+                              <ul>
+                                <li class="description-item">Access to three days of conference</li>
+                                <li class="description-item">Conference dinner on the 1st conference evening</li>
+                                <li class="description-item">Conference kit (e.g. name tag, t-shirt, event prints)</li>
+                                <li class="description-item">Access to all meals throughout the 3 days (2 x coffee breaks/day, 1 x lunch/day)</li>
+                              </ul>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <p class="ticketInfo oneday">
+                                1-day training
+                                </p>
+                                <p>
+                                with <b>Dave Cross</b>
+                                </p>
+                                <div class="price">
+                                    <span>&euro;</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <p class="ticketInfo threeday">
+                                3-day
+                                </p>
+                                <p class="threeday">
+                                  <b>Conference Pass</b>
+                                </p>
+                                <div class="price">
+                                    <span>&euro;</span>
+                                    <span>10</span>
+                                </div>
+                                <div class="priceFor">
+                                    <span>Early Bird</span>
+                                  </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <p class="ticketInfo threeday">
+                                3-day
+                                </p>
+                                <p class="threeday">
+                                  <b>Conference Pass</b>
+                                </p>
+                                <div class="price">
+                                    <span>&euro;</span>
+                                    <span>15</span>
+                                </div>
+                                <div class="priceFor">
+                                    <span>Regular</span>
+                                  </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <p class="ticketInfo threeday">
+                                3-day
+                                </p>
+                                <p class="threeday">
+                                  <b>Conference Pass</b>
+                                </p>
+                                <div class="price">
+                                    <span>&euro;</span>
+                                    <span>20</span>
+                                </div>
+                                <div class="priceFor">
+                                    <span>Student</span>
+                                  </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <a href="/ye2016/purchase" class="linkButton">Purchase your ticket </a>
+                </div>
+                <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ConferenceTickets-tab End-->
+
+    <!--TrainingTickets-tab START-->
+    <div role="tabpanel" class="tab-pane fade clearfix" id="TrainingTickets">
+      <div class="container-fluid col-xs-12 ticketsBack">
+            <div class="container">
+                <h1>Improve your knowledge</h1>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <h4 class="trainingTitle">
+                                Modern Web  Development with Perl and Dancer
+                                </h4>
+                                <p class="trainingWith">
+                                  Dave Cross
+                                </p>
+                                <div class="priceTraining">
+                                    <span>6 h</span>
+                                    <span>/</span>
+                                    <span class="priceT">10<sup>&euro;</sup></span>
+                                </div>
+                                <p class="trainingDetails">
+                                  You are going to learn how to create a mobile-enabled responsive web application using the following pieces of technology: MongoDB, Perl, Dancer2 on the server, AngularJS, HTML5/CSS3/JavaScript, Twitter Bootstrap on te front-end
+                                </p>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <h4 class="trainingTitle">
+                                Modern Web  Development with Perl and Dancer
+                                </h4>
+                                <p class="trainingWith">
+                                  Dave Cross
+                                </p>
+                                <div class="priceTraining">
+                                    <span>6 h</span>
+                                    <span>/</span>
+                                    <span class="priceT">10<sup>&euro;</sup></span>
+                                </div>
+                                <p class="trainingDetails">
+                                  You are going to learn how to create a mobile-enabled responsive web application using the following pieces of technology: MongoDB, Perl, Dancer2 on the server, AngularJS, HTML5/CSS3/JavaScript, Twitter Bootstrap on te front-end
+                                </p>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <h4 class="trainingTitle">
+                                Modern Web  Development with Perl and Dancer
+                                </h4>
+                                <p class="trainingWith">
+                                  Dave Cross
+                                </p>
+                                <div class="priceTraining">
+                                    <span>6 h</span>
+                                    <span>/</span>
+                                    <span class="priceT">10<sup>&euro;</sup></span>
+                                </div>
+                                <p class="trainingDetails">
+                                  You are going to learn how to create a mobile-enabled responsive web application using the following pieces of technology: MongoDB, Perl, Dancer2 on the server, AngularJS, HTML5/CSS3/JavaScript, Twitter Bootstrap on te front-end
+                                </p>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                  <a href="#" class="linkButton">Secure your seat now</a>
+                </div>
+                <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+    </div>
+    <!--TrainingTickets-tab END-->
+
+    <!--WorkshopTickets-tab START-->
+    <div role="tabpanel" class="tab-pane fade clearfix" id="WorkshopTickets">
+      <div class="container-fluid col-xs-12 ticketsBack">
+        <div class="container">
+          <h1>Looking for ideas</h1>
+          <img src="img2016/idea.png" class="img-responsive" alt="light bulb">
+          <p class="workshoptext">We're looking for workshop ideas &amp; facilitators We're looking for workshop ideas &amp; facilitators We're looking for workshop ideas &amp; facilitators</p>
+          <div class="col-sm-12">
+              <a href="mailto:someone@example.com" class="linkButton">Submit your idea</a>
+          </div>
+          <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+    <!--WorkshopTickets-tab END-->
+
+    <!--Trips-tab START-->
+    <div role="tabpanel" class="tab-pane fade clearfix" id="Trips">
+      <div class="container-fluid col-xs-12 ticketsBack">
+        <div class="container">
+          <h1>City tours</h1>
+          <div class="col-sm-12">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <div class="content">
+                                  <p class="tripTitle">
+                                  Half-Day Cluj-Napoca City Tour
+                                  </p>
+                                  <p class="tripLocation">
+                                  Cluj-Napoca, Romania
+                                  </p>
+                                  <div class="priceTrips">
+                                    <span>6 hours</span>
+                                    <span>/</span>
+                                    <span class="priceT">22<sup>&euro;</sup></span>
+                                  </div>
+                                  <p>
+                                    Discover step by step the secrets of Cluj-Napoca, proclaimed city of arts and the European Capital of Youth.
+                                  </p>
+                                </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <div class="content">
+                                  <p class="tripTitle">
+                                  Half-Day Cluj-Napoca City Tour
+                                  </p>
+                                  <p class="tripLocation">
+                                  Cluj-Napoca, Romania
+                                  </p>
+                                  <div class="priceTrips">
+                                    <span>6 hours</span>
+                                    <span>/</span>
+                                    <span class="priceT">22<sup>&euro;</sup></span>
+                                  </div>
+                                  <p>
+                                    Discover step by step the secrets of Cluj-Napoca, proclaimed city of arts and the European Capital of Youth.
+                                  </p>
+                                </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="box">
+                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                          <div class="flipper">
+                            <div class="front">
+                                <div class="content">
+                                  <p class="tripTitle">
+                                  Half-Day Cluj-Napoca City Tour
+                                  </p>
+                                  <p class="tripLocation">
+                                  Cluj-Napoca, Romania
+                                  </p>
+                                  <div class="priceTrips">
+                                    <span>6 hours</span>
+                                    <span>/</span>
+                                    <span class="priceT">22<sup>&euro;</sup></span>
+                                  </div>
+                                  <p>
+                                    Discover step by step the secrets of Cluj-Napoca, proclaimed city of arts and the European Capital of Youth.
+                                  </p>
+                                </div>
+                            </div>
+                            <div class="back">
+                              <!-- back content -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+    <!--Trips-tab END-->
+
+  </div>
+
+</div>
+
+[% END %]

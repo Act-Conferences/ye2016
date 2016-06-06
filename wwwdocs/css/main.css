@@ -236,11 +236,34 @@ body {
   width: 44px;
   height: 44px;
   background-color: #d8ceaf;
-  color: #891826;
+  color: #a71d2f;
   border-radius: 50%;
   line-height: 44px;
   margin-left: 5px;
+  margin-top: 5px;
 }
+
+.social .socialFooter a:hover i {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.social .socialFooter a:hover ~ p#powered {
+  margin: 19px auto;
+}
+
+/* .social .socialFooter a {
+  width: 44px;
+  height: 44px;
+  background-color: #d8ceaf;
+  color: #a71d2f;
+  border-radius: 50%;
+  line-height: 44px;
+  margin-left: 5px;
+} */
 
 .social .socialFooter a:hover,
 .social .socialFooter a:focus {
@@ -248,11 +271,18 @@ body {
 }
 
 .social .socialFooter p {
-  border-top: 1px solid #d8ceaf;
+  border-top: 1px solid #d3ae5b;
   margin: 20px auto;
   padding: 10px;
   max-width: 320px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
+
+.social .socialFooter p a {
+  color: #d3ae5b;
+}
+
 
 /* mailchimp  */
 
@@ -1038,8 +1068,9 @@ a:hover, a:focus {
 }
 
 .venue p {
+  max-width: 800px;
   text-align: center;
-  padding: 0 40px;
+  padding: 0 15px;
   margin: auto;
   font-size: 16px;
   font-weight: 300;
@@ -1068,7 +1099,8 @@ a:hover, a:focus {
 
 .venue iframe {
   height: 347px;
-	margin-top: 30px;
+  max-width: 70%;
+  margin-bottom: 40px;
 }
 
 .fill,
@@ -1168,135 +1200,6 @@ a:hover, a:focus {
 
 /* About End */
 
-/* Tickest and Events Start */
-.tickets h1 {
-  margin: 110px 0 60px;
-  font-size: 39px;
-  font-weight: 900;
-  color: #d8ceaf;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.tickets {
-  background-color: #362f2d;
-  text-align: center;
-}
-
-.tickets .box {
-  margin-bottom: 30px;
-} 
-
-.tickets .box .front,
-.tickets .box .back {
-  border: 1px solid #635b51;
-}
-
-.tickets .box p {
-  font-size: 16px; 
-  color: #1f82f2;
-  margin-bottom: 3px;
-}
-
-.tickets .box .ticketInfo.oneday,
-.tickets .box .ticketInfo.threeday{
-  margin-top: 30px;
-}
-
-.tickets .box .threeday {
-  color: #f2a01f;
-}
-
-.tickets .box .price span {
-  color: #d8ceaf;
-  font-size: 90px;
-  font-weight: 800;
-}
-
-.tickets .box .price span:first-child {
-  font-weight: 300;
-  font-size: 29px;
-  line-height: 158px;
-  vertical-align: top;
-}
-
-.tickets .box .priceFor {
-  margin-top: -40px;
-  padding-bottom: 30px;
-  font-size: 16px; 
-  color: #d8ceaf;
-  font-weight: 500;
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000;
-  transform-style: preserve-3d;
-}
-
-/* flip the pane when hovered */
-.flip-container:hover .back {
-    transform: rotateY(0deg);
-}
-
-.flip-container:hover .front {
-      transform: rotateY(180deg);
-}
-
-.flip-container, .box .front, .box .back {
-  width: 100%;
-  height: 100%;
-  min-height: 240px;
-}
-
-/* flip speed */
-.flipper {
-  transition: 0.7s;
-  transform-style: preserve-3d;
-
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.box .front, .box .back {
-  backface-visibility: hidden;
-  transition: 0.7s;
-  transform-style: preserve-3d;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/*  front pane, placed above back */
-.box .front {
-  z-index: 2;
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.box .back {
-  transform: rotateY(-180deg);
-  background-color: #362f2d;
-}
-
-.box .back ul {
-  padding: 0;
-  list-style-type: none;
-  height: 100%;
-}
-
-.box .back ul li {
-  font-size: 16px;
-  color: #d8ceaf;
-  min-height: 25%;
-}
-
-.box .back ul li:nth-child(odd) {
-  background: #a71d2f;
-}
-
-/* Tickest and Events End */
 
 
 /*TAB Sponsors START*/
@@ -1402,9 +1305,9 @@ a:hover, a:focus {
 .contact-tab p:nth-child(3) {
 	margin-bottom: 25px;
 }
-.contact-tab .social {
-	margin-top: 60px;
-}
+/* .contact-tab .social {
+  margin-top: 60px;
+} */
 /*TAB Contact END*/
 
 /*TAB Organizers START*/
@@ -1440,6 +1343,10 @@ a:hover, a:focus {
 .organizer-wrapper p{
 	width: 80%;
 	margin: 0 auto;
+}
+.organizer-wrapper .organizer-details {
+    font-size: 12px;
+    text-transform: uppercase;
 }
 .organizer-wrapper .organizer-name {
 	margin-top: 10px;
@@ -1697,30 +1604,16 @@ a:hover, a:focus {
   top: 32%;
 }
 
-/* test crousel */
-.carousel-inner.onebyone-carosel { margin: auto; width: 90% !important;}
-.onebyone-carosel .active.left { left: -33.33% !important; }
-.onebyone-carosel .active.right { left: 33.33% !important; }
-.onebyone-carosel .next { left: 33.33% !important; }
-.onebyone-carosel .prev { left: -33.33% !important; }
 
-@media not all, (-webkit-transform-3d) {
-  .carousel-inner>.item.prev, .carousel-inner>.item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-33%,0,0);
-    transform: translate3d(-33%,0,0);
-  }
-}
 
-@media not all, (-webkit-transform-3d){
-  .carousel-inner>.item.next, .carousel-inner>.item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(33%,0,0);
-    transform: translate3d(33%,0,0);
-  }
+#carousel-speakers .item img.center-block {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
 }
 
 .moreSpeakers h4 {
+/*   font-size: 24px; */
   text-align: center;
   color: #a71d2f;
   font-weight: 800;
@@ -1729,6 +1622,7 @@ a:hover, a:focus {
 
 .moreSpeakers img {
   width: 200px;
+  height: 200px;
   margin: auto;
   border-radius: 50%;
 }
@@ -1739,10 +1633,24 @@ a:hover, a:focus {
 
 .moreSpeakers .speakersBlock {
   width: 20%;
+  height: 350px;
   float: left;
   padding: 15px;
 }
 
+@media all and (max-width: 1290px) {
+  .onebyone-carosel {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 380px) {
+  #carousel-speakers .item img.center-block {
+    width: 180px;
+    height: 180px;
+  }
+}
 
 /* Main page start*/
 
@@ -2004,17 +1912,31 @@ a:hover, a:focus {
 }
 
 .tab-pane .social .socialFooter p {
-  border-top: 1px solid #891826;
+  border-top: 1px solid #d3ae5b;
   color: #891826;
   text-align: center;
 }
 
-#Schedule .social .socialFooter p {
-  color: #d8ceaf;
+#About .social .socialFooter p {
+  border-top: 1px solid #891826;
 }
 
-#Contact .social .socialFooter p {
-  color: #d8ceaf;
+#Schedule .social .socialFooter i {
+  background-color: #d8ceaf;
+  color: #a71d2f;
+}
+
+#Schedule .social .socialFooter p a {
+  color: #d3ae5b;
+}
+
+#Contact .social .socialFooter i {
+  background-color: #d8ceaf;
+  color: #a71d2f;
+}
+
+#Contact .social .socialFooter p a {
+  color: #d3ae5b;
 }
 
 .about.filltab .socialFooter p {
@@ -2024,6 +1946,16 @@ a:hover, a:focus {
 .tab-pane .social .socialFooter {
   margin-top: 45px;
 }
+
+.tab-pane .social .socialFooter a:hover ~ p {
+  margin: 19px auto;
+}
+
+.tab-pane .social .socialFooter p a {
+  color: #891826;
+}
+
+
 /* Social footer for tabs */
 
 #Schedule .schedule-title {
@@ -2164,3 +2096,453 @@ a:hover, a:focus {
 }
 
 /* User info End */
+
+/* TicketsInfo  Start*/
+/* ConferenceTickets Start */
+#ConferenceTickets h1,
+#TrainingTickets h1,
+#WorkshopTickets h1,
+#Trips h1 {
+  margin: 60px 15px;
+  font-size: 39px;
+  font-weight: 900;
+  color: #d8ceaf;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.ticketsBack {
+  background-image: url("../img2016/ticketsBack.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#ConferenceTickets .box,
+#TrainingTickets .box
+#Trips .box {
+  margin-bottom: 30px;
+} 
+
+#ConferenceTickets .box .front,
+#ConferenceTickets .box .back,
+#TrainingTickets .box .front,
+#TrainingTickets .box .back,
+#Trips .box .back, 
+#Trips .box .front {
+  border: 1px solid #635b51;
+}
+
+#ConferenceTickets .box p {
+  font-size: 16px; 
+  color: #1f82f2;
+  margin-bottom: 3px;
+}
+
+#ConferenceTickets .box .ticketInfo.oneday,
+#ConferenceTickets .box .ticketInfo.threeday {
+  margin-top: 30px;
+}
+
+#ConferenceTickets .box .threeday {
+  color: #f2a01f;
+}
+
+#ConferenceTickets .box .price span {
+  color: #d8ceaf;
+  font-size: 90px;
+  font-weight: 900;
+}
+
+#ConferenceTickets .box .price span:first-child {
+  font-weight: 300;
+  font-size: 29px;
+  line-height: 158px;
+  vertical-align: top;
+}
+
+#ConferenceTickets .box .priceFor {
+  margin-top: -40px;
+  padding-bottom: 30px;
+  font-size: 16px; 
+  color: #d8ceaf;
+  font-weight: 500;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+  transform-style: preserve-3d;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .back {
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .front {
+      transform: rotateY(180deg);
+}
+
+#ConferenceTickets .flip-container,
+#ConferenceTickets .box .front,
+#ConferenceTickets .box .back {
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+}
+
+
+
+/* flip speed */
+.flipper {
+  transition: 0.7s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.box .front, .box .back {
+  backface-visibility: hidden;
+  transition: 0.7s;
+  transform-style: preserve-3d;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*  front pane, placed above back */
+.box .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.box .back {
+  transform: rotateY(-180deg);
+  background-color: #362f2d;
+}
+
+.box .back ul {
+  padding: 0;
+  list-style-type: none;
+  height: 100%;
+}
+
+.box .back ul li {
+  font-size: 14px;
+  color: #d8ceaf;
+  min-height: 25%;
+  padding-top: 9px;
+}
+
+.box .back ul li:nth-child(even) {
+  background: #3e3734;
+}
+
+#ConferenceTickets .linkButton {
+  max-width: 320px;
+  margin-bottom: 0;
+}
+
+/* ConferenceTickets End */
+
+/* TrainingTickets Start*/
+#TrainingTickets .box {
+  margin-bottom: 40px;
+}
+
+#TrainingTickets .box .front {
+  padding: 20px;
+  text-align: left;
+  background-image: url("../img2016/trainingback.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#TrainingTickets .box .front .trainingTitle {
+  text-transform: uppercase;
+  color: #f2a01f;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+#TrainingTickets .box .front .trainingWith {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+#TrainingTickets .box .front .priceTraining {
+  color: #d8ceaf;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#TrainingTickets .box .front .priceTraining .priceT {
+  color: #69d027;
+}
+
+#TrainingTickets .flip-container,
+#TrainingTickets .box .front,
+#TrainingTickets .box .back {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+#TrainingTickets .linkButton {
+  max-width: 320px;
+  margin-bottom: 0;
+}
+
+/* TrainingTickets End*/
+/* WorkshopTickets Start*/
+
+#WorkshopTickets .linkButton {
+  max-width: 320px;
+  margin-bottom: 0;
+}
+
+#WorkshopTickets .workshoptext {
+  max-width: 320px;
+  display: block;
+  margin: 0 auto 60px auto;
+}
+
+#WorkshopTickets img {
+  margin: 0 auto 30px auto;
+}
+
+/* WorkshopTickets End*/
+
+/* Trips Start*/
+
+#Trips .flip-container,
+#Trips .box .front,
+#Trips .box .back {
+  width: 100%;
+  height: 100%;
+  min-height: 153px;
+}
+
+#Trips .box {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+#Trips .box .front {
+  text-align: left;
+  background-image: url("../img2016/tripsbk.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#Trips .front .content {
+  padding-left: 26%;
+  color: #d8ceaf;
+}
+
+#Trips .front .tripTitle {
+  color: #1f82f2;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#Trips .front .tripLocation {
+  font-weight: 700;
+  margin: 0;
+}
+
+#Trips .front .priceTrips {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#Trips .front .priceTrips .priceT {
+  color: #69d027;
+}
+
+/* flip the pane when hovered */
+#Trips .flip-container:hover .back {
+    transform: rotateX(0deg);
+}
+
+#Trips .flip-container:hover .front {
+      transform: rotateX(180deg);
+}
+
+/*  front pane, placed above back */
+#Trips .box .front {
+  z-index: 2;
+  transform: rotateX(0deg);
+}
+
+/* back, initially hidden pane */
+#Trips .box .back {
+  transform: rotateX(-180deg);
+  background-color: #362f2d;
+}
+
+
+/* Trips End*/
+
+.ticketsInfo .social .socialFooter i {
+  color: #362f2d;
+  background-color: #d8ceaf;
+}
+
+.ticketsInfo .social .socialFooter p {
+  border-top: 1px solid #222222;
+}
+
+.ticketsInfo .social .socialFooter p a {
+  color: #d3ae5b;
+}
+
+@media all and (max-width: 599px) {
+  .ticketsInfo .nav.nav-tabs li a {
+    font-size: 12px;
+    padding: 16px 11px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .ticketsInfo .nav.nav-tabs li a {
+    font-size: 10px;
+    padding: 16px 4px;
+  }
+}
+
+@media all and (max-width: 353px) {
+  .ticketsInfo .nav.nav-tabs li a {
+    font-size: 9px;
+    padding: 16px 3px;
+  }
+}
+
+/* TicketsInfo  End*/
+
+/* purchase Start */
+
+.purchase .form-control {
+    text-align: center;
+    height: 25px;
+    background-color: #d8ceaf;
+    color: #891826;
+    border-radius: 2px;
+}
+
+.purchase .sendLink {
+    margin-bottom: 10%;
+    background-color: #f2a01f;
+    color: #891826;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 12px 35px;
+}
+
+.purchase .act-amount {
+  color: #69d027;
+  font-weight: 900;
+}
+
+.purchase .act-currency {
+  color: #69d027;
+  font-weight: 900;
+}
+
+.purchaseInfo {
+  float: none;
+  display: inline-block;
+}
+
+.purchaseALL {
+  margin-bottom: 10%;
+}
+
+.online .price {
+  color: #69d027;
+  font-weight: 900;
+}
+
+.online form input {
+  padding: 15px 30px;
+  border: 0;
+  background-color: #f2a01f;
+  color: #891826;
+}
+
+blockquote.text-center.ticketPay {
+  background: #d8ceaf;
+  width: 90%;
+  margin: 0 auto;
+  border: 0;
+  line-height: 20px;
+}
+
+.text-center.ticketPay strong {
+  display: block;
+  color: #69d027;
+}
+
+.invoicePrint td input {
+  width: 100%;
+  height: 50px;
+  background-color: #d8ceaf;
+  color: #891826;
+  border-radius: 2px;
+  border: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.invoicePrint td textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  background-color: #d8ceaf;
+  color: #891826;
+  border-radius: 2px;
+}
+
+.invoicePrint td label {
+  color: #d8ceaf;
+}
+
+.invoicePrint input {
+  color: #891826;
+  padding: 12px 56px;
+  background: #f2a01f;
+  border: 0;
+}
+
+.tableinPrint {
+  color: #d8ceaf;
+  border-color: #bb5053;
+  border: #bb5053;
+}
+
+/* purchase End */
+
+
+/* font weight for ACT bold type for accepted speaks */
+table a {
+  font-weight: inherit;
+}
+

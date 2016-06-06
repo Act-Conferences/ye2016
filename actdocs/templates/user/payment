@@ -1,7 +1,7 @@
 [% WRAPPER ui title = loc('Online payment') %]
 <div align="center">
 
-<table class="table table-bordered">
+<table class="table table-bordered online">
 <tr>
    <td align="left">
       {{Name}}
@@ -21,14 +21,14 @@
 [% FOREACH i IN order.items %]
 <tr>
     <td align="left">&nbsp;&nbsp;[% i.name %]</td>
-    <td>[% i.amount %] [% order.currency %]</td>
+    <td class="price">[% i.amount %] [% order.currency %]</td>
 </tr>
 [% END %]
 <tr>
    <td align="left">
       <strong>{{Amount}}</strong>
    </td>
-   <td>
+   <td class="price">
       <strong>[% order.amount %] [% order.currency %]</strong>
    </td>
 </tr>
