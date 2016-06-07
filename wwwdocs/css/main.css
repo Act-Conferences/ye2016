@@ -1563,10 +1563,23 @@ a:hover, a:focus {
   text-shadow: none;
 }
 
+#carousel-speakers .speakerInfo a {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
 #carousel-speakers h4,
 #carousel-speakers p {
   color: #a71d2f;
 }
+
+#carousel-speakers .speakerInfo p a {
+  display: inline;
+  font-size: 16px;
+}
+
 
 #carousel-speakers .glyphicon {
   color: #a71d2f;
