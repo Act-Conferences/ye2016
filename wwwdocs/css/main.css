@@ -1612,10 +1612,11 @@ a:hover, a:focus {
   border-radius: 50%;
 }
 
-.moreSpeakers h4 {
-/*   font-size: 24px; */
+.moreSpeakers .speakersBlock a {
+  display: block;
+  font-size: 18px; 
   text-align: center;
-  color: #a71d2f;
+  /* color: #a71d2f; */
   font-weight: 800;
   margin-top: 25px;
 }
@@ -1634,7 +1635,7 @@ a:hover, a:focus {
 
 .moreSpeakers .speakersBlock {
   width: 20%;
-  height: 350px;
+  height: 300px;
   float: left;
   padding: 15px;
 }
@@ -1670,7 +1671,7 @@ a:hover, a:focus {
     width: 150px;
     height: 150px;
   }
-  .moreSpeakers h4 {
+  .moreSpeakers .speakersBlock a {
     font-size: 18px;
   }
 }
