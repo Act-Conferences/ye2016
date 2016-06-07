@@ -136,7 +136,7 @@ if($("#homepage-flag").length > 0) {
  $('#carousel-speakers').carousel({
         interval: false
     })
-  
+
 
     var text = $( ".page-header" ).text();
     var main = (text.match(/Main private page/)||[]).length;
@@ -195,19 +195,23 @@ if($("#homepage-flag").length > 0) {
       });
     }
 
+
     var textm = $( "form p" ).text();
     var invoice = (textm.match(/ Please make sure the billing information is correct. /)||[]).length;
+
     if ((window.location.href.indexOf("invoice") > -1) && (invoice === 1)) {
        if ( $( "form" ).length ) {
         $( "form" ).addClass( "invoicePrint" );
       }
     }
 
+
     if ((window.location.href.indexOf("invoice") > -1) && ($("#dontprint").length > 0)) {
-       if ( $( "table" ).length ) {
+      if ( $( "table" ).length ) {
         $( "table" ).addClass( "tableinPrint" );
       }
     }
+
 
    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
         $(".organizer-wrapper figcaption").click(function() {
