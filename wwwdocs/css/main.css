@@ -1565,9 +1565,15 @@ a:hover, a:focus {
 
 #carousel-speakers .speakerInfo a {
   display: block;
-  font-size: 18px;
+  text-align: center;
+  font-size: 30px;
   margin-bottom: 20px;
   margin-top: 30px;
+}
+
+#carousel-speakers h4 {
+  font-size: 30px;
+  text-align: center;
 }
 
 #carousel-speakers h4,
