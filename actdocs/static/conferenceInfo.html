@@ -28,9 +28,11 @@
 		//console.log("total talks", total);
 		//console.log("accepted talks", accepted);
 
-		$('.talksJs').text(total);
+		$('.talksJs').text(accepted);
 		$('#aceptedT').text(accepted);
 		$('#submittedT').text(total);
+
+
 
 		var live_str = $('<div>', {
 			html: response
@@ -102,7 +104,7 @@
 					</div>
 					<div class="col-xs-12 aboutInfo">
 						<div class="Speakers col-xs-3">
-							<span class="number">13</span>
+							<span class="number">17</span>
 							<div class="labels">Speakers</div>
 						</div>
 						<div class="Attendees col-xs-3">
@@ -150,32 +152,31 @@
 			<div class="">
 				<div class="">
 					<div class="span12">
-						<!-- <h1 class="speakersTitle">Keynote Speakers</h1> -->
-						<!-- <div id="carousel-speakers" class="carousel fdi-Carousel slide">
+						 <h1 class="speakersTitle">Keynote Speakers</h1>
+						 <div id="carousel-speakers" class="carousel fdi-Carousel slide">
 							<div class="container">
-								Carousel items
+								<!-- Carousel items -->
 								<div class="carousel fdi-Carousel slide" id="eventCarousel" data-interval="0">
 									<div class="carousel-inner onebyone-carosel">
 										<div class="item active">
-										  <div class="col-sm-4">
+										  <div class="col-md-4">
 												<img src="img2016/speakers/curtis.jpg" alt="Speaker" class="img-responsive center-block">
 												<div class="carousel-caption">
 													
-													<p>Perl Master</p>
+												<!-- 	<p>Perl Master</p> -->
 												</div>
 											</div>
-											<div class="col-sm-8">
+											<div class="col-md-8">
 													<div class="speakerInfo">
-															<h4>Curtis Poe</h4>
-															<p>Dev @ Facebook</p>
+															<a href="/ye2016/user/1427">Curtis Poe</a>
 															<p>
 																	Curtis "Ovid" Poe is a well-known Perl expert, author of the popular book "Beginning Perl", and sits on the board of directors of the Perl Foundation. He's one of the principals with <a target="_blank" href="http://www.allaroundtheworld.fr/"> All Around The World </a>, a consulting firm specializing in Perl training and development. AATW refactors legacy systems, adds features to existing systems, and builds new systems.
 						 
 															</p>
-															<h4>"Keynote Title"</h4>
-															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
+														<!-- 	<h4>"Keynote Title"</h4>
+														<p>
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
+														</p> -->
 													</div>
 											</div>
 										</div>
@@ -184,89 +185,44 @@
 												<img src="img2016/speakers/larry.jpg" alt="Speaker" class="img-responsive center-block">
 												<div class="carousel-caption">
 													
-													<p>Perl Master</p>
+													<!-- <p>Perl Master</p> -->
 												</div>
 											</div>
 											<div class="col-md-8">
 													<div class="speakerInfo">
 															<h4>Larry Wall</h4>
-															<p>Dev @ Facebook</p>
 															<p>
 																	It used to be all his fault, but now it's a lot of people's fault, and that's also his fault.
 															</p>
-															<h4>"Keynote Title"</h4>
+															<!-- <h4>"Keynote Title"</h4>
 															<p>
 																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
+															</p> -->
 													</div>
 											</div>
 										</div>
 										<div class="item">
-											<div class="col-sm-4">
-												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
+											<div class="col-md-4">
+												<img src="img2016/speakers/Sawer_X.jpg" alt="Speaker" class="img-responsive center-block">
 												<div class="carousel-caption">
 													
-													<p>Perl Master</p>
+											<!-- 		<p>Perl Master</p> -->
 												</div>
 											</div>
-											<div class="col-sm-8">
+											<div class="col-md-8">
 													<div class="speakerInfo">
-															<h4>You</h4>
-															<p>Dev @ Facebook</p>
+															<a href="/ye2016/user/6730">Sawyer X</a>
 															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
+																	Writer of code, yeller of words, Sawyer X has been working in and with Perl for longer than he can remember, mostly because his memory is terrible. He is a CPAN author, web framework maintainer, frequent conference speaker, organizer of Perl Mongers events, and the current Perl 5 Pumpking.
 															</p>
-															<h4>"Keynote Title"</h4>
-															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
+														<!-- 	<h4>"Keynote Title"</h4>
+														<p>
+																Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
+														</p> -->
 													</div>
 											</div>
 										</div>
-										<div class="item">
-											<div class="col-sm-4">
-												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
-												<div class="carousel-caption">
-													
-													<p>Perl Master</p>
-												</div>
-											</div>
-											<div class="col-sm-8">
-													<div class="speakerInfo">
-															<h4>You</h4>
-															<p>Dev @ Facebook</p>
-															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
-															<h4>"Keynote Title"</h4>
-															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
-													</div>
-											</div>
-										</div>
-										<div class="item">
-											<div class="col-sm-4">
-												<img src="img2016/male-user-light.png" alt="Speaker" class="img-responsive center-block">
-												<div class="carousel-caption">
-													
-													<p>Perl Master</p>
-												</div>
-											</div>
-											<div class="col-sm-8">
-													<div class="speakerInfo">
-															<h4>You</h4>
-															<p>Dev @ Facebook</p>
-															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
-															<h4>"Keynote Title"</h4>
-															<p>
-																	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. nec vulputate justo hendrerit. Vivamus varius pretium ligula,
-															</p>
-													</div>
-											</div>
-										</div>
+
 									</div>
 								</div>
 						
@@ -279,11 +235,10 @@
 									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 									<span class="sr-only">Next</span>
 								</a>
-						
 							</div>
-							/carousel-inner
+							<!-- /carousel-inner -->
 						</div>
-						/myCarousel -->
+						<!-- /myCarousel -->
 					</div>
 				</div>
 			</div>
@@ -292,68 +247,83 @@
 				<div class="moreSpeakers clearfix">
 					<div class="speakersBlock">
 						<img src="img2016/speakers/ANDREW_YATES_(‎ANDY‎).jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Andrew Yates</h4>
-						<h4>(‎ANDY‎)</h4>
+						<a href="/ye2016/user/11863">Andrew Yates</a>
+						<!-- <h4>(‎ANDY‎)</h4> -->
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/speakers/curtis.jpg" alt="Speaker" class="img-responsive center-block">
+						<a href="/ye2016/user/1427">Curtis Poe</a>
+						<!-- <h4></h4> -->
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/DAVE_CROSS_(‎DAVORG‎).jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Dave Cross</h4>
-						<h4>(DAVORG)</h4>
+						<a href="/ye2016/user/259">Dave Cross</a>
+						<!-- <h4>(DAVORG)</h4> -->
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/speakers/drforr.jpg" alt="Speaker" class="img-responsive center-block">
+						<a href="/ye2016/user/1819">Drforr</a>
+						<!-- <h4>(DAVORG)</h4> -->
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/JOB_VAN_ACHTERBERG_(‎JKVA‎).jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Job Van Achterberg</h4>
-						<h4>(JKVA)</h4>
+						<a href="/ye2016/user/4061">Job Van Achterberg</a>
+						<!-- <h4>(JKVA)</h4> -->
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/male-user-light.png" alt="Speaker" class="img-responsive center-block">
-						<h4>John Napiorkowski</h4>
-						<h4>(‎JNAP‎)</h4>
+						<a href="/ye2016/user/5491">John Napiorkowski</a>
+						<!-- <h4>(‎JNAP‎)</h4> -->
 					</div>
 					<div class="speakersBlock">
-						<img src="img2016/speakers/male-user-light.png" alt="Speaker" class="img-responsive center-block">
-						<h4>Jose Luis Martinez Torres</h4>
+						<img src="img2016/speakers/jose.jpg" alt="Speaker" class="img-responsive center-block">
+						<a href="/ye2016/user/10773">Jose Luis Martinez Torres</a>
 						<h4></h4>
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/LEE_JOHNSON.PNG" alt="Speaker" class="img-responsive center-block">
-						<h4>Lee Johnson</h4>
+						<a href="/ye2016/user/10652">Lee Johnson</a>
 						<h4></h4>
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/male-user-light.png" alt="Speaker" class="img-responsive center-block">
-						<h4>Matt S Trout</h4>
+						<a href="/ye2016/user/1846">Matt S Trout</a>
 						<h4></h4>
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/MICKEY_NASRIACHI_(‎MICKEY‎).jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Mickey Nasriachi</h4>
-						<h4>(MICKEY)</h4>
+						<a href="/ye2016/user/2303">Mickey Nasriachi</a>
+						<!-- <h4>(MICKEY)</h4> -->
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/r_geoffrey_avery.jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>R Geoffrey Avery</h4>
+						<a href="/ye2016/user/232">R Geoffrey Avery</a>
 						<h4></h4>
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/male-user-light.png" alt="Speaker" class="img-responsive center-block">
-						<h4>Sawyer X</h4>
+						<a href="/ye2016/user/10635">Richard Elberger</a>
+						<h4></h4>
+					</div>
+					<div class="speakersBlock">
+						<img src="img2016/speakers/Sawer_X.jpg" alt="Speaker" class="img-responsive center-block">
+						<a href="/ye2016/user/6730">Sawyer X</a>
 						<h4></h4>
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/THEO_VAN_HOESEL_(‎VANHOESEL‎).jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Theo Van Hoesel</h4>
-						<h4>(‎VANHOESEL‎)</h4>
+						<a href="/ye2016/user/9566">Theo Van Hoesel</a>
+						<!-- <h4>(‎VANHOESEL‎)</h4> -->
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/tina_muller.jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Tina Muller</h4>
+						<a href="/ye2016/user/461">Tina Muller</a>
 						<h4></h4>
 					</div>
 					<div class="speakersBlock">
 						<img src="img2016/speakers/WILL_BRASWELL_(‎WILL THE CHILL‎).jpg" alt="Speaker" class="img-responsive center-block">
-						<h4>Will Braswell</h4>
-						<h4>(‎WILL THE CHILL‎)</h4>
+						<a href="/ye2016/user/9494">Will Braswell</a>
+						<!-- <h4>(‎WILL THE CHILL‎)</h4> -->
 					</div>
 				</div>
 			</div>
