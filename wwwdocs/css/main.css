@@ -1586,7 +1586,6 @@ a:hover, a:focus {
   font-size: 16px;
 }
 
-
 #carousel-speakers .glyphicon {
   color: #a71d2f;
 }
@@ -1666,13 +1665,6 @@ a:hover, a:focus {
   }
 }
 
-@media all and (max-width: 380px) {
-  #carousel-speakers .item img.center-block {
-    width: 180px;
-    height: 180px;
-  }
-}
-
 @media all and (max-width: 1210px) {
   .moreSpeakers .speakersBlock {
     width: 25%;
@@ -1693,6 +1685,12 @@ a:hover, a:focus {
   .moreSpeakers .speakersBlock a {
     font-size: 18px;
   }
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next,
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    top: 118px;
+  }
 }
 
 @media all and (max-width: 596px) {
@@ -1706,6 +1704,20 @@ a:hover, a:focus {
     width: 100%;
   }
 }
+
+@media all and (max-width: 380px) {
+  #carousel-speakers .item img.center-block {
+    width: 180px;
+    height: 180px;
+  }
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next,
+  .carousel-control .glyphicon-chevron-left,
+  .carousel-control .glyphicon-chevron-right {
+    top: 81px;
+  }
+}
+
 
 
 /* Main page start*/
@@ -2087,6 +2099,7 @@ a:hover, a:focus {
 
 .userView .panel-body .labelUser a {
   color: #d8ceaf;
+  word-break: break-all;
 }
 
 .otherActConf {
@@ -2148,6 +2161,14 @@ a:hover, a:focus {
 
   .UserTitle h1 {
     font-size: 31px
+  }
+
+  .userView .panel-body .labelUser {
+    color: #d8ceaf;
+    float: none;
+    width: 100%;
+    margin-bottom: 13px;
+    padding: 0;
   }
 }
 
@@ -2601,5 +2622,45 @@ blockquote.text-center.ticketPay {
 table a {
   font-weight: inherit;
 }
+/* End */
 
+/* Search ui Start */
+
+#user-search .form-group label {
+  color: #cc8a7b;
+  font-weight: 500;
+}
+
+
+#user-search .form-group input,
+#user-search .form-group select {
+  text-align: left;
+  height: 50px;
+  background-color: #d8ceaf;
+  color: #891826;
+  border-radius: 2px;
+}
+
+#user-search .sendLink {
+  margin-bottom: 20px;
+  background-color: #f2a01f;
+  color: #891826;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 12px 35px;
+}
+
+
+.stats-options h3 {
+  color: #d8ceaf;
+}
+
+.stats-options .stats {
+  color: #d8ceaf;
+}
+
+
+/* End Search ui */
 

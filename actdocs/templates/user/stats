@@ -21,15 +21,16 @@
 
 <br /><br />
 
+<div class="stats-options">
 [% SWITCH global.request.args.show %]
   [% CASE [ 'cities', 'towns' ] %]
     <center><h3>{{Cities}}</h3></center>
     <br />
     <!-- cities within countries -->
     [% IF stats.towns.size == 0 %]
-      <div class="alert alert-error">{{No city information entered}}</div>
+      <div class="stats alert alert-error">{{No city information entered}}</div>
     [% ELSE %]
-      <div class="alert alert-warning">{{Note: the country total is not always equal to the city total.}}</div>
+      <div class="stats alert alert-warning">{{Note: the country total is not always equal to the city total.}}</div>
     [% END %]
 
     [% FOREACH c = stats.countries %]

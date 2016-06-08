@@ -1,7 +1,7 @@
 [% WRAPPER ui title = loc('Search for users') %]
 
 <form method="POST" action="[% global.request.r.uri %]" id="user-search">
-  <div class="panel panel-default">
+  <div class="panel-default">
     <div class="panel-body form-horizontal">
       <div class="form-group">
         <label for="user-name" class="col-md-3">{{Name}}</label>
@@ -38,8 +38,8 @@
         </div>
       </div>
     </div>
-    <div class="panel-footer text-right">
-      <button type="submit" name="search" class="btn btn-primary btn-lg">{{Search}}</button>
+    <div class="text-right">
+      <button type="submit" name="search" class="btn btn-primary btn-lg sendLink">{{Search}}</button>
     </div>
   </div>
 
