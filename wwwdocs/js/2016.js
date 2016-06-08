@@ -1,5 +1,7 @@
 
 $(document).ready(function() {
+
+// height for this pages background
   $('div:has(a)').removeClass('hidden');
   $('.position').css('height',$(".wrapper").outerHeight(true) - $(".comming-soon").outerHeight(true));
   $('.fill').css('height',$(".wrapper").outerHeight(true) - 94);
@@ -14,6 +16,17 @@ $(document).ready(function() {
   $('.ticketsBack').css('min-height',$(window).height() - 149);
   $('.ticketsBack').css('min-height',$(window).height() - 149);
 
+// Redirect if wiki
+
+if ((window.location.href.indexOf("wiki")) > -1) {
+  window.location = window.location.protocol + "//" + window.location.host + "/ye2016/";
+  return false;
+}
+
+//end
+
+
+// read hash from url
 // cache the id
 var navbox = $('#tablist');
 // activate tab on click
@@ -25,15 +38,17 @@ navbox.on('click', 'a', function (e) {
   window.location.hash = $this.attr('href');
   // activate the clicked tab
   $this.tab('show');
+  $(window).scrollTop(0);
 })
 
 // if we have a hash in the address bar
 if(window.location.hash){
   // show right tab on load (read hash from address bar)
   navbox.find('a[href="'+window.location.hash+'"]').tab('show');
+  $(window).scrollTop(0);
 }
 
-
+//end
 
 
 // user info colapse toggle 
@@ -43,6 +58,10 @@ $( "#confColapse" ).click(function() {
   $("i", this).toggleClass("fa fa-chevron-up fa fa-chevron-down");
 });
 
+//end
+
+
+//sticky footer on certain pages
 
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
@@ -66,6 +85,10 @@ if($("#homepage-flag").length > 0) {
   $(".verticalAl").css({'min-height' : current_height});
 }
 
+//end
+
+// full width container without changing layout
+
   if (window.location.href.indexOf("about") > -1 ||
        window.location.href.indexOf("venue") > -1 ||
        window.location.href.indexOf("Tickets&Events") > -1 ||
@@ -77,6 +100,7 @@ if($("#homepage-flag").length > 0) {
     $('.changesjs').css('padding', '0');
   }
 
+//end
 
 //test
 //$.post('/ye2016/search', {name: 'vagrant'}, function(data){console.log('mata'); rezultate = data; console.log(rezultate)})
@@ -118,6 +142,8 @@ if($("#homepage-flag").length > 0) {
 //end test
 
 
+//mobile navbar open 
+
   $(".navbar-toggle").on("click", function(){
     var menu = $('.collapse');
     if (menu.is(":visible")) {
@@ -136,6 +162,9 @@ if($("#homepage-flag").length > 0) {
     }
   });
 
+
+// fade in/out hompage days left/logo 
+
   var i=0;
    setInterval(function(){
      if(i%2 == 0)
@@ -149,15 +178,22 @@ if($("#homepage-flag").length > 0) {
      i++;
    }, 3000)
 
+//end
+
+//tabs
     $('.nav-tabs a').click(function (e) {
       e.preventDefault()
       $(this).tab('show')
     });
+//end
 
+// init carousel
  $('#carousel-speakers').carousel({
         interval: false
     })
+//end
 
+// if main (kinda user dashbord) trigger code for that, without changing layout 
 
     var text = $( ".page-header" ).text();
     var main = (text.match(/Main private page/)||[]).length;
@@ -216,6 +252,9 @@ if($("#homepage-flag").length > 0) {
       });
     }
 
+//end
+
+// style for invoice pages
 
     var textm = $( "form p" ).text();
     var invoice = (textm.match(/ Please make sure the billing information is correct. /)||[]).length;
@@ -233,12 +272,19 @@ if($("#homepage-flag").length > 0) {
       }
     }
 
+//end
+
+
+// organizers tab , for apple , clik/show figcaption
 
    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
         $(".organizer-wrapper figcaption").click(function() {
           $(this).toggleClass("clickIoSActive");
          });
    }
+//end
+
+//tabs for mobile
 
     if ($(window).width() <= 848) {
 
@@ -251,6 +297,7 @@ if($("#homepage-flag").length > 0) {
       }
   
 
+// arrows for tabs mobile
       $("#tablist .fa-angle-double-right").unbind('click').click(function(e) {
           e.preventDefault();
           $('#tablist li a').css("display", "none");
@@ -283,6 +330,7 @@ if($("#homepage-flag").length > 0) {
               }
               return false;
       });
+//end
 
       $(".nav.nav-tabs li ").click(function() {
               $(".nav.nav-tabs").css("transition", "all 0.4s ease-in-out")
@@ -313,6 +361,9 @@ if($("#homepage-flag").length > 0) {
       });
     }
 
+//end
+
+// style for photo input file
   $(document).on('change', '.btn-file :file', function() {
       var input = $(this),
           numFiles = input.get(0).files ? input.get(0).files.length : 1,
@@ -332,13 +383,23 @@ if($("#homepage-flag").length > 0) {
       }
   });
 
+//end
 
-  $(".nav a").on("click", function(){
-   $(".nav").find(".active").removeClass("active");
-   $(this).parent().addClass("active");
-  });
+// navbar active 
 
-}); 
+var url = window.location;
+// Will only work if string in href matches with location
+$('ul.nav a[href="'+ url +'"]').parent().addClass('active');
+
+//relative and absolute hrefs
+$('ul.nav a').filter(function() {
+    return this.href == url;
+}).parent().addClass('active');
+
+//end
+
+
+});
 
 
 $(window).resize(function(){
