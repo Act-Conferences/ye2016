@@ -18,10 +18,10 @@ $(document).ready(function() {
 
 // Redirect if wiki
 
-if ((window.location.href.indexOf("wiki")) > -1) {
-  window.location = window.location.protocol + "//" + window.location.host + "/ye2016/";
-  return false;
-}
+//if ((window.location.href.indexOf("wiki")) > -1) {
+//  window.location = window.location.protocol + "//" + window.location.host + "/ye2016/";
+//  return false;
+//}
 
 //end
 
