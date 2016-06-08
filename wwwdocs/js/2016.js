@@ -14,6 +14,27 @@ $(document).ready(function() {
   $('.ticketsBack').css('min-height',$(window).height() - 149);
   $('.ticketsBack').css('min-height',$(window).height() - 149);
 
+// cache the id
+var navbox = $('#tablist');
+// activate tab on click
+navbox.on('click', 'a', function (e) {
+  var $this = $(this);
+  // prevent the Default behavior
+  e.preventDefault();
+  // set the hash to the address bar
+  window.location.hash = $this.attr('href');
+  // activate the clicked tab
+  $this.tab('show');
+})
+
+// if we have a hash in the address bar
+if(window.location.hash){
+  // show right tab on load (read hash from address bar)
+  navbox.find('a[href="'+window.location.hash+'"]').tab('show');
+}
+
+
+
 
 // user info colapse toggle 
 
