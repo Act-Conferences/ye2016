@@ -2664,3 +2664,30 @@ table a {
 
 /* End Search ui */
 
+
+/* volunteers  start*/
+
+.volunteer {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.vol {
+  display: inline;
+  float: left;
+  margin: 0 17px;
+}
+
+.vol .organizer-name {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+@media all and (max-width: 530px){
+  .vol img {
+    width: 275px;
+  }
+}
+
+
+/* volunteers  end*/
