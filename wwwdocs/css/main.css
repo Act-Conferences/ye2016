@@ -2242,7 +2242,7 @@ a:hover, a:focus {
 }
 
 #ConferenceTickets .box .priceFor {
-  margin-top: -40px;
+  margin-top: -20px;
   padding-bottom: 30px;
   font-size: 16px; 
   color: #d8ceaf;
@@ -2688,6 +2688,5 @@ table a {
     width: 275px;
   }
 }
-
 
 /* volunteers  end*/
