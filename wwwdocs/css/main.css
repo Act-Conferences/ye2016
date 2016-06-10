@@ -2386,9 +2386,20 @@ a:hover, a:focus {
   position: relative;
 }
 
+#TrainingTickets .front .linkButton {
+  max-width: 146px;
+  padding: 5px 20px;
+}
+
+#TrainingTickets .box .trainingDetails {
+  margin-bottom: 20px;
+}
+
+
 #TrainingTickets .linkButton {
   max-width: 320px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 #TrainingTickets .trainingVenue {
@@ -2639,6 +2650,8 @@ blockquote.text-center.ticketPay {
 table a {
   font-weight: inherit;
 }
+
+
 /* End */
 
 /* Search ui Start */
