@@ -50,6 +50,29 @@ if(window.location.hash){
 
 //end
 
+// read hash from url
+// cache the id
+var tickets = $('#ConferenceTickets');
+// activate tab on click
+tickets.on('click', 'a', function (e) {
+  var $this = $(this);
+  // prevent the Default behavior
+  e.preventDefault();
+  // set the hash to the address bar
+  window.location.hash = $this.attr('href');
+  // activate the clicked tab
+  $this.tab('show');
+  $(window).scrollTop(0);
+})
+
+// if we have a hash in the address bar
+if(window.location.hash){
+  // show right tab on load (read hash from address bar)
+  tickets.find('a[href="'+window.location.hash+'"]').tab('show');
+  $(window).scrollTop(0);
+}
+
+
 
 // user info colapse toggle 
 

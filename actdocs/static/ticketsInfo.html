@@ -21,68 +21,7 @@
         <div class="container-fluid col-xs-12 ticketsBack">
             <div class="container">
 
-        [% WRAPPER ui title = loc('Search for users') %]
-
-<form method="POST" action="[% global.request.r.uri %]" id="user-search">
-  <div class="panel panel-default">
-    <div class="panel-body form-horizontal">
-      <div class="form-group">
-        <label for="user-name" class="col-md-3">{{Name}}</label>
-        <div class="col-md-9">
-          <input type="text" class="form-control" name="name" id="user-name" value="[% global.request.args.name %]" maxlength="60" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="user-city" class="col-md-3">{{City}}</label>
-        <div class="col-md-9">
-          <input type="text" class="form-control" name="city" id="user-city" value="[% global.request.args.city %]" maxlength="60" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="user-country" class="col-md-3">{{Country}}</label>
-        <div class="col-md-9">
-          <select name="country" id="user-country" class="form-control">
-             <option value=""[% ' selected="selected"' UNLESS global.request.args.country %]>{{Any}}</option>
-             [% FOREACH c = countries %]
-                <option value="[% c.iso %]"[% ' selected="selected"' IF global.request.args.country == c.iso %]>[% c.name %]</option>
-             [% END %]
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="user-group" class="col-md-3">{{Monger group}}</label>
-        <div class="col-md-9">
-          <select name="pm_group" id="user-group" class="form-control">
-             <option value=""[% ' selected="selected"' UNLESS global.request.args.pm_group %]>{{Any}}</option>
-             [% FOREACH g = pm_groups %]
-                <option value="[% g %]"[% ' selected="selected"' IF global.request.args.pm_group == g %]>[% g %]</option>
-             [% END %]
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="panel-footer text-right">
-      <button type="submit" name="search" class="btn btn-primary btn-lg" id="searchterm">{{Search}}</button>
-    </div>
-  </div>
-
-  [% PROCESS user/list IF users %]
-
-  [% IF prev %]
-    <input type="hidden" name="oprev" value="[% oprev %]" />
-    <input class="btn btn-primary" type="submit" name="prev"  value="&lt;&lt;" />
-  [% END %]
-  [% IF next %]
-    [% "&nbsp;&nbsp;&nbsp;" IF oprev %]
-    <input type="hidden" name="onext" value="[% onext %]" />
-    <input class="btn btn-primary" type="submit" name="next"  value="&gt;&gt;" />
-  [% END %]
-</form>
-
-[% END %]
-<!--            <blockquote class="embedly-card" data-card-key="d1290f40384a44268985d260eeb33a4e" data-card-type="article-full"><h4><a href="https://medium.com/life-learning">Life Learning</a></h4><p>Accelerated Learning, Tech, Antifragility, and Definite Optimism</p></blockquote>
-<script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script> -->
-
+      
                 <h1>Tickets &amp; Events</h1>
                 <div class="col-sm-4">
                   <div class="box">
@@ -90,14 +29,17 @@
                           <div class="flipper">
                             <div class="front">
                                 <p class="ticketInfo oneday">
-                                1-day training
+                                <b>3-day conference pass</b>
                                 </p>
-                                <p>
-                                with <b>Dave Cross</b>
-                                </p>
+                                <!-- <p>
+                                  <b>early bird</b>
+                                </p> -->
                                 <div class="price">
                                     <span>&euro;</span>
-                                    <span>15</span>
+                                    <span>100</span>
+                                </div>
+                                <div class="priceFor">
+                                  <span>Early Bird</span>
                                 </div>
                             </div>
                             <div class="back">
@@ -118,14 +60,17 @@
                           <div class="flipper">
                             <div class="front">
                                 <p class="ticketInfo oneday">
-                                1-day training
+                                <b>3-day conference pass</b>
                                 </p>
-                                <p>
-                                with <b>Dave Cross</b>
-                                </p>
+                                <!-- <p>
+                                  <b>regular</b>
+                                </p> -->
                                 <div class="price">
                                     <span>&euro;</span>
-                                    <span>15</span>
+                                    <span>120</span>
+                                </div>
+                                <div class="priceFor">
+                                  <span>Regular</span>
                                 </div>
                             </div>
                             <div class="back">
@@ -147,18 +92,27 @@
                           <div class="flipper">
                             <div class="front">
                                 <p class="ticketInfo oneday">
-                                1-day training
+                                <b>3-day conference pass</b>
                                 </p>
-                                <p>
-                                with <b>Dave Cross</b>
-                                </p>
+                                <!-- <p>
+                                with <b>student</b>
+                                </p> -->
                                 <div class="price">
                                     <span>&euro;</span>
-                                    <span>15</span>
+                                    <span>80</span>
+                                </div>
+                                <div class="priceFor">
+                                  <span>Student</span>
                                 </div>
                             </div>
                             <div class="back">
                               <!-- back content -->
+                              <ul>
+                                <li class="description-item">Access to three days of conference</li>
+                                <li class="description-item">Conference dinner on the 1st conference evening</li>
+                                <li class="description-item">Conference kit (e.g. name tag, t-shirt, event prints)</li>
+                                <li class="description-item">Access to all meals throughout the 3 days (2 x coffee breaks/day, 1 x lunch/day)</li>
+                              </ul>
                             </div>
                           </div>
                       </div>
@@ -170,17 +124,17 @@
                           <div class="flipper">
                             <div class="front">
                                 <p class="ticketInfo threeday">
-                                3-day
+                                
                                 </p>
                                 <p class="threeday">
-                                  <b>Conference Pass</b>
+                                  <b>Conference Dinner +1</b>
                                 </p>
                                 <div class="price">
                                     <span>&euro;</span>
-                                    <span>10</span>
+                                    <span>15</span>
                                 </div>
                                 <div class="priceFor">
-                                    <span>Early Bird</span>
+                                    <span>Children aged 7 -18</span>
                                   </div>
                             </div>
                             <div class="back">
@@ -196,17 +150,16 @@
                           <div class="flipper">
                             <div class="front">
                                 <p class="ticketInfo threeday">
-                                3-day
                                 </p>
                                 <p class="threeday">
-                                  <b>Conference Pass</b>
+                                  <b>Conference Dinner +1</b>
                                 </p>
                                 <div class="price">
                                     <span>&euro;</span>
-                                    <span>15</span>
+                                    <span>25</span>
                                 </div>
                                 <div class="priceFor">
-                                    <span>Regular</span>
+                                    <span>Adult</span>
                                   </div>
                             </div>
                             <div class="back">
@@ -222,17 +175,16 @@
                           <div class="flipper">
                             <div class="front">
                                 <p class="ticketInfo threeday">
-                                3-day
                                 </p>
                                 <p class="threeday">
-                                  <b>Conference Pass</b>
+                                  <b>Conference Dinner +1</b>
                                 </p>
                                 <div class="price">
-                                    <span>&euro;</span>
-                                    <span>20</span>
+                                    <span></span> 
+                                    <span>Free</span>
                                 </div>
                                 <div class="priceFor">
-                                    <span>Student</span>
+                                    <span>Children aged 0-7 yrs</span>
                                   </div>
                             </div>
                             <div class="back">
@@ -277,9 +229,9 @@
       <div class="container-fluid col-xs-12 ticketsBack">
             <div class="container">
                 <h1>Improve your knowledge</h1>
-                <div class="col-sm-4">
+                <div class="col-sm-4 col-md-offset-2">
                   <div class="box">
-                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                      <div>
                           <div class="flipper">
                             <div class="front">
                                 <h4 class="trainingTitle">
@@ -289,12 +241,16 @@
                                   Dave Cross
                                 </p>
                                 <div class="priceTraining">
-                                    <span>6 h</span>
+                                    <span>Full-Day</span>
                                     <span>/</span>
-                                    <span class="priceT">10<sup>&euro;</sup></span>
+                                    <span class="priceT">100<sup>&euro;</sup></span>
                                 </div>
+                                <p class="trainingWith">August 23rd</p>
+                                <p class="trainingVenue">
+                                  Venue: <a target="_blank" href="http://clujhub.ro/">Cluj HUB</a>
+                                </p>
                                 <p class="trainingDetails">
-                                  You are going to learn how to create a mobile-enabled responsive web application using the following pieces of technology: MongoDB, Perl, Dancer2 on the server, AngularJS, HTML5/CSS3/JavaScript, Twitter Bootstrap on te front-end
+                                  Abstract:   You are going to learn how to create a mobile-enabled, responsive web application using the following pieces of technology: MongoDB, Perl Dancer 2 on the server AngularJS, HTML5/CSS3/JavaScript, Twitter Bootstrap on the front-end.
                                 </p>
                             </div>
                             <div class="back">
@@ -306,34 +262,7 @@
                 </div>
                 <div class="col-sm-4">
                   <div class="box">
-                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-                          <div class="flipper">
-                            <div class="front">
-                                <h4 class="trainingTitle">
-                                Modern Web  Development with Perl and Dancer
-                                </h4>
-                                <p class="trainingWith">
-                                  Dave Cross
-                                </p>
-                                <div class="priceTraining">
-                                    <span>6 h</span>
-                                    <span>/</span>
-                                    <span class="priceT">10<sup>&euro;</sup></span>
-                                </div>
-                                <p class="trainingDetails">
-                                  You are going to learn how to create a mobile-enabled responsive web application using the following pieces of technology: MongoDB, Perl, Dancer2 on the server, AngularJS, HTML5/CSS3/JavaScript, Twitter Bootstrap on te front-end
-                                </p>
-                            </div>
-                            <div class="back">
-                              <!-- back content -->
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="box">
-                      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                      <div>
                           <div class="flipper">
                             <div class="front">
                                 <h4 class="trainingTitle">
