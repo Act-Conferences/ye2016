@@ -72,6 +72,12 @@ if(window.location.hash){
   $(window).scrollTop(0);
 }
 
+$("#buyTicket").on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.location = window.location.protocol + "//" + window.location.host + "\/ye2016\/purchase";
+  });
+
 
 
 // user info colapse toggle 
@@ -233,7 +239,7 @@ if($("#homepage-flag").length > 0) {
       $( "p" ).last().addClass( "otherAct" );
       $('.changesjs').addClass( "transition" );
       $('.col-xs-12.changesjs.transition').css('min-height',$('ul').last().outerHeight(true) + 120 );
-
+      $( ".changesjs .jsUl li a" ).css( "font-weight", "inherit" );
 
       $( "ul" ).last().addClass( "otherActUl" );
       $('ul').last().prepend( "<h1 class=\"page-header\">act conferences</h1>" );
@@ -295,6 +301,32 @@ if($("#homepage-flag").length > 0) {
       }
     }
 
+    var head = $( ".changejs .page-header" ).text();
+    var bill = (head.match(/Billing/)||[]).length;
+    if ((window.location.href.indexOf("payments") > -1) && (bill === 1)) {
+       if ( $("table").length ) {
+        $("table").addClass("billing");
+      }
+    }
+
+    var head = $( ".changejs .page-header" ).text();
+    var bill = (head.match(/Billing/)||[]).length;
+    if ((window.location.href.indexOf("payments") > -1) && (bill === 1)) {
+       if ( $("table").length ) {
+        $("table").addClass("billing");
+      }
+    }
+
+    var txt = $( ".changejs .page-header" ).text();
+    var adminpay = (txt.match(/Payment/)||[]).length;
+     if ((window.location.href.indexOf("payment?user_id=") > -1) && (adminpay === 1)) {
+       if ( $("table").length ) {
+        $("table").addClass("adminpay");
+      }
+      if ( $("input[type=\"submit\"]").length ) {
+        $("input[type=\"submit\"]").addClass("sendLink adminPay");
+      }
+    }
 //end
 
 
@@ -310,7 +342,6 @@ if($("#homepage-flag").length > 0) {
 //tabs for mobile
 
     if ($(window).width() <= 848) {
-
       $('#tablist li a').css("display", "none");
       $( "#tablist .active a" ).fadeIn( 100 );
       $( "#tablist .active" ).prev().children().fadeIn( 100 );

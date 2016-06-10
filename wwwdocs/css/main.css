@@ -2720,3 +2720,39 @@ table a {
 }
 
 /* volunteers  end*/
+
+/* billing start */
+
+.billing {
+  width: 100%;
+  color: #d8ceaf;
+  border: 1px solid #bb5053;
+}
+
+.adminpay {
+  color: #d8ceaf;
+  width: 100%;
+}
+
+.adminpay select,
+.adminpay input {
+  color: #891826;
+}
+
+.adminpay tr td{
+  padding: 10px;
+}
+
+.sendLink.adminPay {
+    width: auto;
+    margin-bottom: 50px;
+    background-color: #f2a01f;
+    color: #891826;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 12px 35px;
+}
+
+/* billing end */
