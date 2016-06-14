@@ -4,6 +4,7 @@
  [%  stats.users %]
 </p>
 
+<div class="StatisticsForTabs">
 <p>
  [% loc('There are n registered people', stats.users, stats.countries.size, stats.pm.size, stats.committed) %]
 </p>
@@ -15,9 +16,11 @@
 <p>
  {{The number of committed users is listed between parentheses}}
 </p>
+</div>
 <p>
  {{Click on the various links to find the corresponding users!}}
 </p>
+
 
 <br /><br />
 

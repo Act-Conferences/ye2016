@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="text-right">
-      <button type="submit" name="search" class="btn btn-primary btn-lg sendLink">{{Search}}</button>
+      <button type="submit" name="search" class="btn btn-primary btn-lg sendLink" id="sea">{{Search}}</button>
     </div>
   </div>
 
@@ -48,7 +48,6 @@
     [% IF users %]
       [% FOREACH user = users %]
         myResults.push('[% user_info(user) %]');
-        console.log('users', myResults);
      [% END %]
     [% END %]
     </script>
