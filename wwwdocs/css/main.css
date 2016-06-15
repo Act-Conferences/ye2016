@@ -2246,7 +2246,9 @@ a:hover, a:focus {
   padding-bottom: 30px;
   font-size: 16px; 
   color: #d8ceaf;
-  font-weight: 500;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 /* entire container, keeps perspective */
@@ -2344,7 +2346,25 @@ a:hover, a:focus {
 #TrainingTickets .box .front {
   padding: 20px;
   text-align: left;
-  background-image: url("../img2016/trainingback.jpg");
+  background-image: url("../img2016/trainer-dave.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#TrainingTickets .box .front.public {
+  background-image: url("../img2016/trainer-liana.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#TrainingTickets .box .front.perl6 {
+  background-image: url("../img2016/trainer-jeff.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -2386,9 +2406,23 @@ a:hover, a:focus {
   position: relative;
 }
 
+#TrainingTickets .front .linkButton {
+  margin: 0;
+  max-width: 146px;
+  padding: 5px 20px;
+  background-color: #d8ceaf;
+  color: #635b51;
+}
+
+#TrainingTickets .box .trainingDetails {
+  margin-bottom: 20px;
+}
+
+
 #TrainingTickets .linkButton {
   max-width: 320px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 #TrainingTickets .trainingVenue {
@@ -2639,6 +2673,8 @@ blockquote.text-center.ticketPay {
 table a {
   font-weight: inherit;
 }
+
+
 /* End */
 
 /* Search ui Start */
@@ -2707,3 +2743,207 @@ table a {
 }
 
 /* volunteers  end*/
+
+/* billing start */
+
+.billing {
+  width: 100%;
+  color: #d8ceaf;
+  border: 1px solid #bb5053;
+}
+
+.adminpay {
+  color: #d8ceaf;
+  width: 100%;
+}
+
+.adminpay select,
+.adminpay input {
+  color: #891826;
+}
+
+.adminpay tr td{
+  padding: 10px;
+}
+
+.sendLink.adminPay {
+    width: auto;
+    margin-bottom: 50px;
+    background-color: #f2a01f;
+    color: #891826;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 12px 35px;
+}
+
+/* billing end */
+
+
+/* User Info Start */
+
+/* Search Start */
+
+.userInfo .title {
+  margin: 60px 0;
+  font-size: 39px;
+  font-weight: 900;
+  color: #a71d2f;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.userInfo .userBackground {
+  background-image: url("../img2016/background-user-info.jpg");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.userInfo #Search form label {
+  margin-top: 15px;
+  color: #891826;
+}
+
+.userInfo #Search .sendLink {
+  background-color: #a71d2f;
+  color: #f2a01f;
+  margin-right: 15px;
+  width: 71%;
+}
+
+#showresults table a {
+  word-break: break-all;
+}
+
+#showresults p {
+  margin-top: 20px;
+  text-align: center;
+  color: #891826;
+}
+
+.userInfo #Search .infoSearch {
+  margin-top: 20px;
+  text-align: center;
+  color: #891826;
+}
+
+.userInfo #Search #showresults {
+  margin-top: 45px;
+}
+
+#showresults .table>thead>tr>th, 
+#showresults .table>thead>tr>th,  
+#showresults .table>thead>tr>td {
+  color: #891826;
+}
+
+#showresults .table>tbody>tr>th, 
+#showresults .table>tfoot>tr>th, 
+#showresults .table>tbody>tr>td, 
+#showresults .table>tfoot>tr>td {
+  color: #891826;
+}
+
+#showresults .table-striped>tbody>tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#showresults .table-striped>tbody>tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Search End */
+
+
+/* Statistics Start */
+
+#Statistics .userInfoStatistics p {
+  color: #891826;
+}
+
+#Statistics .userInfoStatistics p a {
+  color: #891826;
+}
+
+#Statistics span {
+  color: blue !important;
+}
+
+#Statistics img {
+  margin: 0 auto 60px auto;
+}
+
+/* Statistics End */
+
+/* Footer */
+
+.userInfo .social .socialFooter i {
+  color: #f2a01f;
+}
+
+/* User Info end */
+
+/* Training Pages Start */
+
+.trainingPage {
+  background-image: url("../img2016/ticketsBack.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.trainingPage .page-header {
+    margin: 60px 15px;
+    font-size: 39px;
+    font-weight: 900;
+    color: #d8ceaf;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.trainingPage .training-info {
+  text-align: left;
+  color: #d8ceaf;
+}
+
+.trainingPage h2 {
+  color: #f2a01f;
+}
+
+.trainingPage .training-info span {
+  color: rgba(216, 206, 175, 0.4);
+}
+
+.trainingPage .training-info span.price {
+  color: #69d027;
+  font-weight: 800;
+}
+
+.trainingPage .col-sm-6 {
+  float: none;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Training Pages End */

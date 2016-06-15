@@ -15,6 +15,8 @@ $(document).ready(function() {
   $('.talks-tab').css('min-height',$(window).height() - 149);
   $('.ticketsBack').css('min-height',$(window).height() - 149);
   $('.ticketsBack').css('min-height',$(window).height() - 149);
+  $('.userBackground').css('min-height',$(window).height() - 149);
+  $('.trainingPage').css('min-height', $(window).height() - 94);
 
 // Redirect if wiki
 
@@ -72,6 +74,12 @@ if(window.location.hash){
   $(window).scrollTop(0);
 }
 
+$("#buyTicket").on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.location = window.location.protocol + "//" + window.location.host + "\/ye2016\/purchase";
+  });
+
 
 
 // user info colapse toggle 
@@ -86,10 +94,17 @@ $( "#confColapse" ).click(function() {
 
 //sticky footer on certain pages
 
+var windows_height = $(window).height();
+var current_height = windows_height-331;
+  $("#Statistics .verticalAl").css({'min-height' : current_height});
+  $("#Schedule .verticalAl").css({'min-height' : current_height});
+  $("#Statistics .verticalAl").css({'min-height' : current_height});
+  $("#Search .verticalAl").css({'min-height' : current_height});
+
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
-  console.log(target);
-  console.log(typeof(target));
+  //console.log(target);
+  //console.log(typeof(target));
   if (target === "#Schedule") {
     var windows_height = $(window).height();
     var current_height = windows_height-331;
@@ -98,7 +113,15 @@ $( "#confColapse" ).click(function() {
     var windows_height = $(window).height();
     var current_height = windows_height-331;
     $("#Contact .verticalAl").css({'min-height' : current_height});
-  }
+  } else if (target === "#Statistics") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Statistics .verticalAl").css({'min-height' : current_height});
+  } else if (target === "#Search") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Search .verticalAl").css({'min-height' : current_height});
+  } 
 });
 
 
@@ -117,6 +140,10 @@ if($("#homepage-flag").length > 0) {
        window.location.href.indexOf("Tickets&Events") > -1 ||
        window.location.href.indexOf("our_sponsors") > -1 || 
        window.location.href.indexOf("conferenceInfo") > -1 ||
+       window.location.href.indexOf("userInfo") > -1 ||
+       window.location.href.indexOf("training-dave") > -1 ||
+       window.location.href.indexOf("training-liana") > -1 ||
+       window.location.href.indexOf("training-jeff") > -1 ||
        window.location.href.indexOf("ticketsInfo") > -1 ) {
     $('.changejs').css('width', '100%');
     $('.changejs').css('padding', '0');
@@ -125,44 +152,51 @@ if($("#homepage-flag").length > 0) {
 
 //end
 
-//test
-//$.post('/ye2016/search', {name: 'vagrant'}, function(data){console.log('mata'); rezultate = data; console.log(rezultate)})
 
 
-//tab3 : tags
-//    function getTable() {
-//      var searchTerm = $('#user-name').val();
-//      console.log("searchTerm",searchTerm);
-//        $.ajax({
-//            // Assuming an endpoint here that responds to GETs with a response.
-//            url: '/ye2016/search',
-//            type: 'POST',
-//            name: searchTerm
+// user info search
 
-//        })
-//            .done(function (data) {
-
-//                var tags = data;
-//                console.log(tags);
-
-//            })
-//            .fail(function() {
-//               
-//            })
-//            .always(function() {
-//                //close search input
- //           });
-//    }
-
-//var searchTerm = $('#user-name').val();
-//console.log("searchTerm",searchTerm);
-//search : users
-    $('#searchterm').click(function(e) {
+    $('#sea2').unbind("click").click(function(e) {
       e.preventDefault();
-      $.post('/ye2016/search', {name: 'vagrant'}, function(data){console.log('mata'); rezultate = data; console.log(rezultate)})
-    });
+      var searchTerm = $("#user-name2").val();
+      //console.log(searchTerm);
+      var searchCity = $("#user-city2").val();
+     //console.log(searchCity); 
+      //$("<div></div>").attr('id','newSearch').appendTo('#showresults');
+      $.post('/ye2016/search', {name: searchTerm}, function(data)
+        {
+          $( "#showresults" ).empty();
+          $(".infoSearch").css("display", "none");
+          $("<div></div>").attr('id','newSearch').appendTo('#showresults');
+          var parsed = $('<div/>').append(data);
 
-//end test
+
+          //console.log(parsed.find('#user-list'));
+         
+          if (parsed.find('#user-list') == 'undefined') {
+            //console.log("True1");
+          } else {
+            //console.log("False2");
+          }
+
+          $('#newSearch').replaceWith($('#newSearch').html(data).find('#user-list'));
+        //$('#showresults').replaceWith($('#showresults').parsed.find('#user-list'));
+
+         // rezultate = data; 
+          //console.log(parsed);
+          
+          if ($( "#showresults" ).children().length < 1) {
+            //console.log("true");
+            $( "#showresults" ).append( "<p>We're sorry, no results were found for your search criteria</p>" );
+          } 
+
+          return false;
+        })
+    
+  });
+
+
+//end search
 
 
 //mobile navbar open 
@@ -233,7 +267,7 @@ if($("#homepage-flag").length > 0) {
       $( "p" ).last().addClass( "otherAct" );
       $('.changesjs').addClass( "transition" );
       $('.col-xs-12.changesjs.transition').css('min-height',$('ul').last().outerHeight(true) + 120 );
-
+      $( ".changesjs .jsUl li a" ).css( "font-weight", "inherit" );
 
       $( "ul" ).last().addClass( "otherActUl" );
       $('ul').last().prepend( "<h1 class=\"page-header\">act conferences</h1>" );
@@ -295,6 +329,32 @@ if($("#homepage-flag").length > 0) {
       }
     }
 
+    var head = $( ".changejs .page-header" ).text();
+    var bill = (head.match(/Billing/)||[]).length;
+    if ((window.location.href.indexOf("payments") > -1) && (bill === 1)) {
+       if ( $("table").length ) {
+        $("table").addClass("billing");
+      }
+    }
+
+    var head = $( ".changejs .page-header" ).text();
+    var bill = (head.match(/Billing/)||[]).length;
+    if ((window.location.href.indexOf("payments") > -1) && (bill === 1)) {
+       if ( $("table").length ) {
+        $("table").addClass("billing");
+      }
+    }
+
+    var txt = $( ".changejs .page-header" ).text();
+    var adminpay = (txt.match(/Payment/)||[]).length;
+     if ((window.location.href.indexOf("payment?user_id=") > -1) && (adminpay === 1)) {
+       if ( $("table").length ) {
+        $("table").addClass("adminpay");
+      }
+      if ( $("input[type=\"submit\"]").length ) {
+        $("input[type=\"submit\"]").addClass("sendLink adminPay");
+      }
+    }
 //end
 
 
@@ -310,7 +370,6 @@ if($("#homepage-flag").length > 0) {
 //tabs for mobile
 
     if ($(window).width() <= 848) {
-
       $('#tablist li a').css("display", "none");
       $( "#tablist .active a" ).fadeIn( 100 );
       $( "#tablist .active" ).prev().children().fadeIn( 100 );
@@ -435,12 +494,18 @@ $(window).resize(function(){
        $('.sponsors-tab').css('min-height',$(window).height() - 149);
   		 $('.organizers-tab').css('min-height',$(window).height() - 149);
        $('.ticketsBack').css('min-height',$(window).height() - 149);
+       $('.userBackground').css('min-height',$(window).height() - 149);
+
+var windows_height = $(window).height();
+var current_height = windows_height-331;
+  $("#Statistics .verticalAl").css({'min-height' : current_height});
+  $("#Schedule .verticalAl").css({'min-height' : current_height});
+  $("#Statistics .verticalAl").css({'min-height' : current_height});
+  $("#Search .verticalAl").css({'min-height' : current_height});
 
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
-  console.log(target);
-  console.log(typeof(target));
   if (target === "#Schedule") {
     var windows_height = $(window).height();
     var current_height = windows_height-331;
@@ -449,6 +514,14 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var windows_height = $(window).height();
     var current_height = windows_height-331;
     $("#Contact .verticalAl").css({'min-height' : current_height});
+  } else if (target === "#Statistics") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Statistics .verticalAl").css({'min-height' : current_height});
+  } else if (target === "#Search") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Search .verticalAl").css({'min-height' : current_height});
   }
 });
 

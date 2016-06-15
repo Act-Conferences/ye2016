@@ -1,0 +1,210 @@
+[% WRAPPER ui %]
+
+<div class="userInfo">
+
+  <ul class="nav nav-tabs" role="tablist" id="tablist">
+    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+
+      <li role="presentation" class="active"><a href="#Search" aria-controls="Search" role="tab" data-toggle="tab">Search</a></li>
+      <li role="presentation"><a href="#Statistics" aria-controls="Statistics" role="tab" data-toggle="tab">Statistics</a></li>
+      <li role="presentation"><a href="#Favorite_Talks" aria-controls="Favorite_Talks" role="tab" data-toggle="tab">Favorite Talks</a></li>
+      <li role="presentation"><a href="#Personal_Schedule" aria-controls="Personal_Schedule" role="tab" data-toggle="tab">Personal Schedule</a></li>
+      <li role="presentation"><a href="#Travel" aria-controls="Travel" role="tab" data-toggle="tab">Travel</a></li>
+      <li role="presentation"><a href="#Meals" aria-controls="Meals" role="tab" data-toggle="tab">Meals</a></li>
+      <li role="presentation"><a href="#News" aria-controls="News" role="tab" data-toggle="tab">News</a></li>
+      <li role="presentation"><a href="#Wiki" aria-controls="Wiki" role="tab" data-toggle="tab">Wiki</a></li>
+
+    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+
+    <!--UserInfo-tab START-->
+    <div role="tabpanel" class="tab-pane fade in active" id="Search">
+        <div class="container-fluid col-xs-12 userBackground">
+        <div class="verticalAl clearfix">
+         <div class="container">
+          <h1 class="col-xs-12 title">looking for someone ?</h1>
+          <div class="col-sm-8 col-sm-offset-2">
+
+            <form method="POST" action="[% global.request.r.uri %]" id="user-search">
+              <div class="panel-default">
+                <div class="panel-body form-horizontal">
+                  <div class="form-group">
+                    <label for="user-name" class="col-md-3">{{Name}}</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="name" id="user-name2" value="[% global.request.args.name %]" maxlength="60" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="user-city2" class="col-md-3">{{City}}</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="city" id="user-city2" value="[% global.request.args.city %]" maxlength="60" />
+                    </div>
+                  </div>
+                  <!-- <div class="form-group">
+                    <label for="user-country" class="col-md-3">{{Country}}</label>
+                    <div class="col-md-9">
+                      <select name="country" id="user-country" class="form-control">
+                         <option value=""[% ' selected="selected"' UNLESS global.request.args.country %]>{{Any}}</option>
+                         [% FOREACH c = countries %]
+                            <option value="[% c.iso %]"[% ' selected="selected"' IF global.request.args.country == c.iso %]>[% c.name %]</option>
+                         [% END %]
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="user-group" class="col-md-3">{{Monger group}}</label>
+                    <div class="col-md-9">
+                      <select name="pm_group" id="user-group" class="form-control">
+                         <option value=""[% ' selected="selected"' UNLESS global.request.args.pm_group %]>{{Any}}</option>
+                         [% FOREACH g = pm_groups %]
+                            <option value="[% g %]"[% ' selected="selected"' IF global.request.args.pm_group == g %]>[% g %]</option>
+                         [% END %]
+                      </select>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="text-right">
+                  <button type="submit" name="search" class="btn btn-primary btn-lg sendLink" id="sea2">{{Search}}</button>
+                </div>
+              </div>
+
+                <script type="text/javascript">
+                var myResults = [];
+                [% IF users %]
+                  [% FOREACH user = users %]
+                    myResults.push('[% user_info(user) %]');
+                    
+                 [% END %]
+                [% END %]
+                </script>
+
+
+              [% PROCESS user/list IF users %]
+
+              [% IF prev %]
+                <input type="hidden" name="oprev" value="[% oprev %]" />
+                <input class="btn btn-primary" type="submit" name="prev"  value="&lt;&lt;" />
+              [% END %]
+              [% IF next %]
+                [% "&nbsp;&nbsp;&nbsp;" IF oprev %]
+                <input type="hidden" name="onext" value="[% onext %]" />
+                <input class="btn btn-primary" type="submit" name="next"  value="&gt;&gt;" />
+              [% END %]
+            </form>
+
+            <p class="infoSearch">After hitting search button, a user list matching criteria will be loaded below</p>
+
+            <div id="showresults" ></div>
+          </div>
+          </div>
+          </div>
+          <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade in" id="Statistics">
+      <div class="container-fluid col-xs-12 userBackground">
+      <div class="verticalAl clearfix">
+         <div class="container">
+            <h1 class="col-xs-12 title">2016 stats</h1>
+            <div class="col-sm-8 col-sm-offset-2">
+              <script type="text/javascript">
+
+                $.get("/ye2016/stats", function (stats) {
+                  var findInfoStats = $('<div>', {
+                    html: stats
+                  });
+            
+                  
+                  var infoStats = findInfoStats.find('.StatisticsForTabs').html();
+                  $('.userInfoStatistics').html(infoStats);
+                 
+                 var result = $('.userInfoStatistics').html();
+
+                });
+              </script>
+
+              <img class="img-responsive" src="img2016/stats.png">
+              <div class="userInfoStatistics">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+            </div>
+         </div>
+
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade in" id="Favorite_Talks">
+    3333333333333333333333
+    </div>
+    <div role="tabpanel" class="tab-pane fade in" id="Personal_Schedule">
+    4444444444444444444444
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade in" id="Travel">
+    555555555555555555555555555
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade in" id="Meals">
+    666666666666666666666666666
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade in" id="News">
+    777777777777777777777777777777
+    </div>
+
+    <div role="tabpanel" class="tab-pane fade in" id="Wiki">
+    88888888888888888888888888888
+    </div>
+
+  </div>
+
+
+</div>
+
+[% END %]
