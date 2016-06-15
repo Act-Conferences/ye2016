@@ -102,7 +102,7 @@ var current_height = windows_height-331;
 
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
-  console.log(target);
+  //console.log(target);
   //console.log(typeof(target));
   if (target === "#Schedule") {
     var windows_height = $(window).height();
@@ -504,8 +504,6 @@ var current_height = windows_height-331;
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
-  console.log(target);
-  console.log(typeof(target));
   if (target === "#Schedule") {
     var windows_height = $(window).height();
     var current_height = windows_height-331;
@@ -515,12 +513,10 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var current_height = windows_height-331;
     $("#Contact .verticalAl").css({'min-height' : current_height});
   } else if (target === "#Statistics") {
-    console.log("hit");
     var windows_height = $(window).height();
     var current_height = windows_height-331;
     $("#Statistics .verticalAl").css({'min-height' : current_height});
   } else if (target === "#Search") {
-    console.log("hit");
     var windows_height = $(window).height();
     var current_height = windows_height-331;
     $("#Search .verticalAl").css({'min-height' : current_height});
