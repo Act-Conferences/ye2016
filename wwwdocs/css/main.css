@@ -2870,6 +2870,12 @@ table a {
 
 /* Statistics End */
 
+/* Footer */
+
+.userInfo .social .socialFooter i {
+  color: #f2a01f;
+}
+
 /* User Info end */
 
 /* Training Pages Start */
@@ -2916,6 +2922,8 @@ table a {
   margin: 0 auto 40px auto;
   text-align: left;
 }
+
+
 
 
 
