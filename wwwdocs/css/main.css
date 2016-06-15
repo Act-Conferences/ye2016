@@ -2246,7 +2246,9 @@ a:hover, a:focus {
   padding-bottom: 30px;
   font-size: 16px; 
   color: #d8ceaf;
-  font-weight: 500;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
 }
 
 /* entire container, keeps perspective */

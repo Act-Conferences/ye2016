@@ -16,6 +16,7 @@ $(document).ready(function() {
   $('.ticketsBack').css('min-height',$(window).height() - 149);
   $('.ticketsBack').css('min-height',$(window).height() - 149);
   $('.userBackground').css('min-height',$(window).height() - 149);
+  $('.trainingPage').css('min-height', $(window).height() - 94);
 
 // Redirect if wiki
 
