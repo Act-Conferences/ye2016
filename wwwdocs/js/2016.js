@@ -142,6 +142,7 @@ if($("#homepage-flag").length > 0) {
        window.location.href.indexOf("userInfo") > -1 ||
        window.location.href.indexOf("training-dave") > -1 ||
        window.location.href.indexOf("training-liana") > -1 ||
+       window.location.href.indexOf("training-jeff") > -1 ||
        window.location.href.indexOf("ticketsInfo") > -1 ) {
     $('.changejs').css('width', '100%');
     $('.changejs').css('padding', '0');

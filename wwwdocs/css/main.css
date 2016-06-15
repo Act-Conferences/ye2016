@@ -2361,6 +2361,15 @@ a:hover, a:focus {
   -o-background-size: cover;
 }
 
+#TrainingTickets .box .front.perl6 {
+  background-image: url("../img2016/trainer-jeff.jpg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 #TrainingTickets .box .front .trainingTitle {
   text-transform: uppercase;
   color: #f2a01f;
