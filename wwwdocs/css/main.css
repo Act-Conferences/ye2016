@@ -2404,6 +2404,7 @@ a:hover, a:focus {
 
 #TrainingTickets .box .front {
   position: relative;
+  min-height: 474px;
 }
 
 #TrainingTickets .front .linkButton {
@@ -2412,6 +2413,8 @@ a:hover, a:focus {
   padding: 5px 20px;
   background-color: #d8ceaf;
   color: #635b51;
+  position: absolute;
+  bottom: 26px;
 }
 
 #TrainingTickets .box .trainingDetails {
@@ -2540,6 +2543,16 @@ a:hover, a:focus {
 
 .ticketsInfo .social .socialFooter p a {
   color: #d3ae5b;
+}
+
+@media all and (max-width: 1199px){
+  #TrainingTickets .front .linkButton {
+    position: relative;
+    bottom: 0;
+  }
+  #TrainingTickets .box .front {
+    min-height: auto;
+  }
 }
 
 @media all and (max-width: 599px) {
