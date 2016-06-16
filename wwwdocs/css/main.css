@@ -3269,3 +3269,9 @@ div.card-container {
   letter-spacing: 4px;
 }
 
+@media all and (max-width: 382px) {
+  .card-container .back li {
+    font-size: 12px;
+  }
+}
+
