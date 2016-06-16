@@ -2289,6 +2289,11 @@ a:hover, a:focus {
   backface-visibility: hidden;
   transition: 0.7s;
   transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+     backface-visibility: hidden;
 
   position: absolute;
   top: 0;
@@ -2947,16 +2952,7 @@ table a {
   text-align: left;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Training Pages End */
+
+
+/* test */
