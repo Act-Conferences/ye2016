@@ -2973,11 +2973,10 @@ div.fc_card-container img{
 /* === CARD CONTAINER === */
 div.card-container {
   position: relative;
-  height: 180px;
-
+  min-height: 240px;
   display: block;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
   
   -webkit-perspective: 1000px;
      -moz-perspective: 1000px;
@@ -2999,7 +2998,7 @@ div.card-container {
   display: inline-block;
   padding: 0;
   margin: 0;
-  border: 1px solid red;
+  border: 1px solid #635b51;
   -webkit-transition: -webkit-transform .7s;
    -moz-transition: -moz-transform .7s;
      -o-transition: -o-transform .7s;
@@ -3199,3 +3198,74 @@ div.card-container {
         -ms-transform: none !important;
             transform: none !important;
   }
+
+.card-container .back ul {
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.card-container .back ul li:nth-child(even) {
+  background: #3e3734;
+}
+
+.card-container .back li {
+  font-size: 14px;
+  color: #d8ceaf;
+  min-height: 25%;
+  padding-top: 9px;
+}
+
+#ConferenceTickets .box,
+#TrainingTickets .box
+#Trips .box {
+  margin-bottom: 30px;
+} 
+
+#ConferenceTickets .box .front,
+#ConferenceTickets .box .back,
+#TrainingTickets .box .front,
+#TrainingTickets .box .back,
+#Trips .box .back, 
+#Trips .box .front {
+  border: 1px solid #635b51;
+}
+
+#ConferenceTickets .card-container p {
+  font-size: 16px; 
+  color: #1f82f2;
+  margin-bottom: 3px;
+}
+
+#ConferenceTickets .card-container .ticketInfo.oneday,
+#ConferenceTickets .card-container .ticketInfo.threeday {
+  margin-top: 30px;
+}
+
+#ConferenceTickets .card-container .threeday {
+  color: #f2a01f;
+}
+
+#ConferenceTickets .card-container .price span {
+  color: #d8ceaf;
+  font-size: 90px;
+  font-weight: 900;
+}
+
+#ConferenceTickets .card-container .price span:first-child {
+  font-weight: 300;
+  font-size: 29px;
+  line-height: 158px;
+  vertical-align: top;
+}
+
+#ConferenceTickets .card-container .priceFor {
+  margin-top: -20px;
+  padding-bottom: 30px;
+  font-size: 16px; 
+  color: #d8ceaf;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
