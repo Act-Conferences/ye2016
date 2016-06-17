@@ -27,6 +27,14 @@ $(document).ready(function() {
 
 //end
 
+//$( ".card-container" )
+//  .mouseenter(function() {
+//    $(this).children().addClass("flipping-right");
+//  })
+//  .mouseleave(function() {
+//    $(this).children().removeClass("flipping-right");
+//  });
+
 
 // read hash from url
 // cache the id
