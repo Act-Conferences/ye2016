@@ -3045,6 +3045,11 @@ div.card-container {
        -o-transform: rotateX(180deg);
       -ms-transform: rotateX(180deg);
           transform: rotateX(180deg);
+          -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 .card-container .card[data-direction="right"] .back, .card-container .card[data-direction="left"] .back{
   -webkit-transform: rotateY(180deg);
@@ -3052,6 +3057,19 @@ div.card-container {
      -o-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
         transform: rotateY(180deg);
+        -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden; 
+}
+
+.card-container .card .back {
+  -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /* === EFFECT DIRECTIONS === */
@@ -3206,7 +3224,7 @@ div.card-container {
 }
 
 .card-container .back ul li:nth-child(even) {
-  background: #3e3734;
+  background: #2D2D2D;
 }
 
 .card-container .back li {
@@ -3274,4 +3292,111 @@ div.card-container {
     font-size: 12px;
   }
 }
+
+
+/* Sponsor flip */
+
+.our-sponsors .card-container .back p {
+  color: #a71d2f;
+  line-height: normal;
+  text-align: left;
+  padding: 8px;
+}
+
+.our-sponsors .card-container .card {
+  border: 0;
+}
+
+.our-sponsors .card-container {
+  min-height: 150px;
+}
+
+#rockstar_sponsors,
+#deal_maker_sponsors {
+  display: block;
+  line-height: 150px;
+}
+
+#rockstar_sponsors div.card-container,
+#deal_maker_sponsors div.card-container {
+    margin: 0 0 50px 0;
+}
+
+#rockstar_sponsors div.card-container .card,
+#deal_maker_sponsors div.card-container .card {
+  /* border: 3px solid rgba(99, 91, 81, 0.2); */
+  box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+}
+
+#rockstar_sponsors .oneSponsor {
+  width: 400px;
+}
+
+#deal_maker_sponsors div.card-container {
+  width: 260px;
+}
+
+#deal_maker_sponsors,
+#deal_maker_sponsors .col-xs-6,
+#deal_maker_sponsors .col-sm-9,
+#deal_maker_sponsors .col-sm-3 {
+  width: auto;
+}
+
+#rockstar_sponsors .back p {
+  font-size: 14px;
+}
+
+#ConferenceTickets .card-container .card>div {
+  background-color: #3e3734;
+}
+
+#rockstar_sponsors .back ,
+#deal_maker_sponsors .back {
+  background-color: #D8CDAF;
+}
+
+
+
+@media all and (max-width: 767px) {
+  #rockstar_sponsors {
+    width: 100%;
+  }
+  #rockstar_sponsors .oneSponsor {
+    width: 100%;
+  }
+  #deal_maker_sponsors,
+  #deal_maker_sponsors .col-xs-6,
+  #deal_maker_sponsors .col-sm-9,
+  #deal_maker_sponsors .col-sm-3 {
+    width: 100%;
+  }
+  #deal_maker_sponsors div.card-container {
+    width: 100%
+  }
+}
+
+@media all and (max-width: 480px) {
+  .our-sponsors .col-xs-12 {
+    padding: 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  #rockstar_sponsors .back p,
+  #deal_maker_sponsors .back p {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 380px) {
+  #rockstar_sponsors .sponsors-list img {
+    width: 100%;
+  }
+}
+
+
+
+
+
 
