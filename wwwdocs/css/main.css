@@ -3247,7 +3247,7 @@ div.card-container {
 #Trips .box .back, 
 #Trips .box .front {
   border: 1px solid #635b51;
-}
+}  
 
 #ConferenceTickets .card-container p {
   font-size: 16px; 
@@ -3328,20 +3328,22 @@ div.card-container {
   box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
 }
 
-#rockstar_sponsors .oneSponsor {
+#rockstar_sponsors .oneSponsor .card-container {
   width: 400px;
+  margin: 35px auto;
 }
 
 #deal_maker_sponsors div.card-container {
   width: 260px;
+  margin: 35px auto;
 }
 
-#deal_maker_sponsors,
+/* #deal_maker_sponsors,
 #deal_maker_sponsors .col-xs-6,
 #deal_maker_sponsors .col-sm-9,
 #deal_maker_sponsors .col-sm-3 {
   width: auto;
-}
+} */
 
 #rockstar_sponsors .back p {
   font-size: 14px;
@@ -3362,15 +3364,15 @@ div.card-container {
   #rockstar_sponsors {
     width: 100%;
   }
-  #rockstar_sponsors .oneSponsor {
+  #rockstar_sponsors .oneSponsor .card-container {
     width: 100%;
   }
-  #deal_maker_sponsors,
-  #deal_maker_sponsors .col-xs-6,
-  #deal_maker_sponsors .col-sm-9,
-  #deal_maker_sponsors .col-sm-3 {
-    width: 100%;
-  }
+/*   #deal_maker_sponsors,
+#deal_maker_sponsors .col-xs-6,
+#deal_maker_sponsors .col-sm-9,
+#deal_maker_sponsors .col-sm-3 {
+  width: 100%;
+} */
   #deal_maker_sponsors div.card-container {
     width: 100%
   }
@@ -3392,8 +3394,16 @@ div.card-container {
 @media all and (max-width: 380px) {
   #rockstar_sponsors .sponsors-list img {
     width: 100%;
+    padding: 10px;
   }
 }
+
+
+.sponsors .sponsors-list {
+  margin-left: 0;
+  margin-top: 35px;
+}
+
 
 
 
