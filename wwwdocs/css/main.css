@@ -3404,7 +3404,10 @@ div.card-container {
   margin-top: 35px;
 }
 
-
+.sponsors .sponsors-list.v21 {
+  width: 85%;
+  float: none;
+}
 
 
 
