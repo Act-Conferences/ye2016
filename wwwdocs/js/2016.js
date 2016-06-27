@@ -89,6 +89,11 @@ $("#buyTicket").on('click', function (e) {
   });
 
 
+$(".speakerPass").on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    window.location = window.location.protocol + "//" + window.location.host + "\/ye2016\/newtalk";
+  });
 
 // user info colapse toggle 
 
