@@ -3334,9 +3334,13 @@ div.card-container {
 }
 
 #deal_maker_sponsors div.card-container {
-  width: 260px;
+  width: 315px;
   margin: 35px auto;
 }
+
+#deal_maker_sponsors .eligo .back p {
+  font-size: 13px;
+} 
 
 /* #deal_maker_sponsors,
 #deal_maker_sponsors .col-xs-6,
@@ -3356,6 +3360,18 @@ div.card-container {
 #rockstar_sponsors .back ,
 #deal_maker_sponsors .back {
   background-color: #D8CDAF;
+}
+
+@media (min-width: 1625px) {
+  .sponsors-offset {
+    margin-left: 16.66666667%;
+  }
+}
+
+@media (max-width: 1625px) {
+  .sponsors-offset {
+    width: 100%;
+  }
 }
 
 
@@ -3389,6 +3405,12 @@ div.card-container {
   #deal_maker_sponsors .back p {
     font-size: 12px;
   }
+}
+
+@media all and (max-width: 480px) {
+  #deal_maker_sponsors .eligo .back p {
+    font-size: 11px;
+  } 
 }
 
 @media all and (max-width: 380px) {
