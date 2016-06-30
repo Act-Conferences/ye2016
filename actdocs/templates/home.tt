@@ -1,4 +1,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script src="[% make_uri_info('js', 'jssor.slider.min.js') %]"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 
@@ -82,6 +84,103 @@ $(document).ready(function() {
               </form>
             </div>
             <hr align="center" width="30%" style="display:none;">
+
+
+           <script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 0,
+              $AutoPlaySteps: 4,
+              $SlideDuration: 1600,
+              $SlideEasing: $Jease$.$Linear,
+              $PauseOnHover: 4,
+              $SlideWidth: 140,
+              $Cols: 7,
+              $SlideSpacing: 60
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+              function ScaleSlider() {
+                      var parentWidth = $('#jssor_1').parent().width();
+                      if (parentWidth) {
+                          jssor_1_slider.$ScaleWidth(parentWidth);
+                      }
+
+                      else
+                          $JssorUtils$.$Delay(ScaleSlider, 30);
+                  }
+
+                  ScaleSlider();
+                  $(window).bind("load", ScaleSlider);
+                  $(window).bind("resize", ScaleSlider);
+                  $(window).bind("orientationchange", ScaleSlider);
+
+              });
+
+
+
+    </script>
+
+
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img2016/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden;">
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/Logo_Booking.png"   />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/perl-careers.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/capside.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/eligo.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/Camelia.png"    />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/perl_academy.png"    />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/easyname.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/meon-logo.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/active-state.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/yef.png"     />
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/oetiker.png"     />
+            </div>
+            
+            
+        
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
     </div>
             <div class="social">

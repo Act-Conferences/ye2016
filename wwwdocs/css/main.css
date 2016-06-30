@@ -3431,7 +3431,130 @@ div.card-container {
   float: none;
 }
 
+/* Photobaner */
+
+.photobannerwrapper {
+ overflow: hidden;
+ margin: 50px auto;
+ width: 100%;
+}
+
+.photobanner {
+ width: 1750px;
+ margin-bottom: 80px;
+ /* -webkit-transition: -webkit-transform 30s ease-in-out;  */
+}
+
+.photobanner img {
+ -webkit-transition: all 0.5s ease;
+ -moz-transition: all 0.5s ease;
+ -o-transition: all 0.5s ease;
+ -ms-transition: all 0.5s ease;
+ transition: all 0.5s ease;
+}
+ 
+.photobanner img:hover {
+ -webkit-transform: scale(1.1);
+ -moz-transform: scale(1.1);
+ -o-transform: scale(1.1);
+ -ms-transform: scale(1.1);
+ transform: scale(1.1);
+ cursor: pointer;
+ 
+ -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+ -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+ box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
 
 
+/*  .anim {
+   -webkit-transform:translate(-1630px,0px);
+   -webkit-animation-iteration-count: infinite;
+}  */
+
+ .photobanner img {
+ -webkit-animation: bannermove 10s linear infinite;
+    -moz-animation: bannermove 10s linear infinite;
+     -ms-animation: bannermove 10s linear infinite;
+      -o-animation: bannermove 10s linear infinite;
+         animation: bannermove 10s linear infinite;
+}
+ 
+@keyframes "bannermove" {
+ 0% {
+    -webkit-transform:translate(0px,0px);
+ }
+ 100% {
+    -webkit-transform:translate(-1750px,0px);
+ }
+ 
+}
+/*  
+@-moz-keyframes bannermove {
+0% {
+  margin-left: 0px;
+}
+100% {
+  margin-left: -2125px;
+}
+
+} */
+ 
+@-webkit-keyframes "bannermove" {
+ 0% {
+  -webkit-transform:translate(0px,0px);
+ }
+ 100% {
+   -webkit-transform:translate(-1750px,0px);
+ }
+ 
+}
+ /* 
+ @-ms-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+ }
+ 
+ @-o-keyframes "bannermove" {
+ 0% {
+   margin-left: 0px;
+ }
+ 100% {
+   margin-left: -2125px;
+ }
+ 
+ } 
+ 
+ */
+/* End Photobaner */
 
 
+#jssor_1 img {
+  height: auto !important;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+#jssor_1 {
+  margin: 40px auto !important;
+}
+
+#jssor_1 div {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d
+}
+
+@media all and (max-width: 768px) {
+  #jssor_1{
+    display: none;
+  }
+}
