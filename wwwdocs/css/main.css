@@ -3552,3 +3552,9 @@ div.card-container {
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d
 }
+
+@media all and (max-width: 768px) {
+  #jssor_1{
+    display: none;
+  }
+}
