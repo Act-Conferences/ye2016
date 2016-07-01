@@ -529,8 +529,14 @@ body {
 
 @media all and (max-width: 390px) {
   .navbar-brand>img {
-    width: 115px;
+    max-width: 38%;
     margin-top: 5px;
+  }
+
+  .navbar-brand {
+    width: 100%;
+    display: block;
+    float: none;
   }
 }
 
@@ -3558,3 +3564,174 @@ div.card-container {
     display: none;
   }
 }
+
+
+
+/* Start Wiki Home page nav */
+
+.wikiBar .bar a {
+  display: inline-block; 
+  color: #d8ceaf;
+  padding: 16px 25px;
+}
+
+/* .wikiBar .bar a:nth-child(even) {
+  padding: 16px 25px; 
+} */
+
+.wikiBar {
+    min-height: 56px;
+    background-color: #9a1b29;
+    border: 0;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    z-index: 10;
+    width: 100%;
+    position: fixed;
+}
+
+.wiki h2 ,
+.wiki h3 ,
+.wiki h4 ,
+.wiki h5 ,
+.wiki h6 {
+  color: #d8ceaf;
+}
+
+.wiki ul li {
+  color: #d8ceaf;
+}
+
+.homeBar {
+  font-size: 16px;
+}
+
+/* .wiki .fixedOptions {
+  position: fixed;
+  height: 219px;
+}  */
+ 
+.wiki .fixedOptions li {
+  display: block;
+  float: none;
+}
+
+.wiki .fixedOptions li a {
+  color: #ee9a20;
+}
+
+.wikiFooter {
+  font-size: 16px;
+}
+
+.wikiFooter label {
+    color: #cc8a7b;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.wikiFooter input {
+    text-align: center;
+    height: 50px;
+    background-color: #d8ceaf;
+    color: #891826;
+    border-radius: 2px;
+}
+
+.wikiFooter .input-group-btn {
+  height: 50px;
+}
+
+.wikiFooter .input-group-btn button {
+  height: inherit;
+  background-color: #891826;
+  color: #d8ceaf;
+}
+
+.wiki .bottomLine hr {
+  margin-top: 30px;
+}
+
+.wiki .label-default {
+  background-color: #891826;
+  color: #ee9a20;
+}
+
+.wiki .label-default[href]:hover,
+.wiki .label-default[href]:focus {
+  background-color: #cc8a7b;
+}
+
+.wiki .nav-pills>li.active>a {
+  background-color: transparent;
+}
+
+.wiki .page-header {
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+.wikiHelp {
+  color: #d8ceaf;
+}
+
+.wikiTags {
+  margin-top: 30px;
+}
+
+.wiki .tagsWiki li,
+.wiki .recent .recentTab li {
+  float: none;
+  width: 100%;
+}
+
+.tagsWiki .nav-pills>li.active>a, .nav-pills>li.active>a:hover,
+.tagsWiki .nav-pills>li.active>a:focus {
+  color: #ee9a20;
+}
+
+.wiki .recent .last {
+  display: block;
+  background-color: #d8ceaf;
+  color: #891826;
+}
+
+.wiki .edit .wiki-options li a input {
+  background-color: #f2a01f;;
+  margin: 0;
+  color: #891826; 
+  border: 0;
+}
+
+.wiki .edit hr {
+  margin-top: 30px;
+}
+
+.wiki .edit {
+  padding-bottom: 40px;
+}
+
+.wiki .edit .edit-footer label {
+    color: #cc8a7b;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.wiki .edit .edit-footer input {
+    text-align: center;
+    height: 50px;
+    background-color: #d8ceaf;
+    color: #891826;
+    border-radius: 2px;
+}
+
+@media all and (max-width: 820px) {
+  .wikiBar .bar a {
+    font-size: 13px;
+    padding: 16px 12px;
+  }
+}
+
+
+/* End Wiki Home page nav */

@@ -1,11 +1,12 @@
 [% WRAPPER ui title = loc('Wiki - editing <node>', node) %]
+<div class="container">
   <form method="POST" action="[% global.request.r.uri %]">
     <input type="hidden" name="action" value="commit" />
     <input type="hidden" name="node" value="[% node %]" />
     <input type="hidden" name="checksum" value="[% checksum %]" />
     <div class="wiki">
-    <div class="panel panel-default">
-      <div class="wiki-options-top">
+    <div class="edit">
+      <div class="wiki-options">
         <ul class="nav nav-pills" role="tablist">
           <li><a href="[% make_uri('wiki', 'action', 'help') %]">{{Help}}</a></li>
           <li><a><input class="input-link" type="submit" name="preview" value="{{Preview}}" /></a></li>
@@ -38,7 +39,7 @@
         [% END %]
       </div>
 
-<div class="wiki-options-bottom">
+<div class="wiki-options">
 <ul class="nav nav-pills" role="tablist">
 <li><a href="[% make_uri('wiki', 'action', 'help') %]">{{Help}}</a></li>
 <li><a><input class="input-link" type="submit" name="preview" value="{{Preview}}" /></a></li>
@@ -48,12 +49,14 @@ onclick="history.back()"/></a></li>
 
 </ul>
 </div>
+      <hr />
+      <div class="edit-footer form-inline">
 
-      <div class="panel-footer form-inline">
-        <b>{{Tags:}}</b>
+        <label><b>{{Tags:}}</b></label>
         <input type="text" class="form-control" name="tags" value="[% tags %]" size="51" maxlength="100" />
       </div>
     </div>
     </div>
   </form>
+</div>
 [% END %]

@@ -1,9 +1,10 @@
 [% WRAPPER ui title = loc("Wiki - Recent changes") %]
+<div class="container">
   <form method="GET" action="[% make_uri('wiki') %]">
     <input type="hidden" name="action" value="recent" />
     <div class="wiki">
-    <div class="panel panel-default">
-      <div class="panel-heading">
+    <div class="recent">
+      <div class="panel-heading col-sm-3 recentTab">
         <ul class="nav nav-pills" role="tablist">
           <li><a href="[% make_uri('wiki') %]">{{Home}}</a></li>
 
@@ -11,10 +12,10 @@
             <li><a href="[% make_uri('wiki', 'action', 'tags') %]">{{Tags}}</a></li>
           [% END %]
 
-          <li class="navbar-right form-inline">
+          <li class="form-inline">
             <a>
               {{Changes in last}}
-              <select class="form-control" name="period" size="1" onChange="submit();">
+              <select class="form-control last" name="period" size="1" onChange="submit();">
                 [% periods = [
                   [ "1days",   loc("<n> day(s)",   1) ],
                   [ "2days",   loc("<n> day(s)",   2) ],
@@ -33,10 +34,11 @@
         </ul>
       </div>
 
-      <div class="panel-body">
+      <div class="panel-body col-sm-9">
         [% PROCESS wiki/list %]
       </div>
     </div>
     </div>
   </form>
+</div>
 [% END %]

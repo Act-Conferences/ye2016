@@ -1,7 +1,61 @@
-[% WRAPPER ui title = loc('Wiki - <node>', node) %]
+[% WRAPPER ui %]
+<script>
+$.get("/ye2016/wiki?node=HomePage", function (stats) {
+
+    var live_str = $('<div>', {
+      html: stats
+    });
+    var content = live_str.find('.homeBar').html();
+
+
+    $('.bar').html(content); 
+
+    $('.bar').find('br').remove();
+    console.log(content);
+
+    $('.bar').find('a:nth-child(odd)').remove();
+    $('.wikiBar .bar p a:first-child').addClass("active");
+
+    $(".wikiBar .bar p a").click(function() {
+     // $(this).css("color", "blue");
+     // var last =  $(this);
+     // console.log(last);
+    });
+
+
+    //navigation for wiki mobile
+
+    if ($(window).width() <= 3000) {
+     //$('.wikiBar .bar p a').css("display", "none");
+
+
+      
+    }
+
+    //end
+
+  });
+
+</script>
+
+<div class="wikiBar">
+  <div class="bar">
+       
+  </div>
+</div>
+
 <div class="wiki">
-  <div class="panel panel-default">
-    <div class="wiki-options-top">
+
+<h1 class="page-header"> Wiki - [% node %] </h1>
+
+[% IF global.request.user.is_wiki_admin %]
+  <div class="admin" style="display: none;">1</div>
+[% END %]
+  <div class="container">
+    <div class="node" style="display: none;">[% node %]</div>
+    
+    <div class="wiki-options-left col-sm-3">
+      <div class="fixedOptions">
       <ul class="nav nav-pills" role="tablist">
         <li><a href="[% make_uri('wiki') %]">{{Home}}</a></li>
 
@@ -10,7 +64,7 @@
             <li><a href="[% make_uri('wikiedit', 'action', 'revert', 'node', node, 'version', version) %]">{{Revert to this version}}</a></li>
            [% END %]
         [% ELSE %]
-          <li><a href="[% make_uri('wikiedit', 'action', 'edit', 'node', node) %]">{{Edit this page}}</a></li>
+          <li class="editPage"><a href="[% make_uri('wikiedit', 'action', 'edit', 'node', node) %]">{{Edit this page}}</a></li>
         [% END %]
 
         [% IF alltags.size %]
@@ -23,41 +77,21 @@
           <li><a href="[% make_uri('wiki', 'action', 'history', 'node', node) %]">{{History}}</a></li>
         [% END %]
       </ul>
+      </div>
     </div>
 
-    <div class="panel-body">
+    <div class="panel-body homeBar col-sm-9">
       [% content %]
     </div>
+    <div class="col-sm-12 bottomLine">
+    <hr />
+    </div>
+    <div class="wikiFooter col-sm-12">
 
-<div class="wiki-options-bottom">
-<ul class="nav nav-pills" role="tablist">
-<li><a href="[% make_uri('wiki') %]">{{Home}}</a></li>
-
-[% IF version %]
-[% IF global.request.user.is_wiki_admin %]
-<li><a href="[% make_uri('wikiedit', 'action', 'revert', 'node', node, 'version', version) %]">{{Revert to this version}}</a></li>
-[% END %]
-[% ELSE %]
-<li><a href="[% make_uri('wikiedit', 'action', 'edit', 'node', node) %]">{{Edit this page}}</a></li>
-[% END %]
-
-[% IF alltags.size %]
-<li><a href="[% make_uri('wiki', 'action', 'tags') %]">{{Tags}}</a></li>
-[% END %]
-
-<li><a href="[% make_uri('wiki', 'action', 'recent') %]">{{Recent changes}}</a></li>
-
-[% IF data.version %]
-<li><a href="[% make_uri('wiki', 'action', 'history', 'node', node) %]">{{History}}</a></li>
-[% END %]
-</ul>
-</div>
-
-    <div class="panel-footer">
       <p>
         [% UNLESS version OR NOT data.last_modified %]
           <form class="form-inline" method="POST" action="[% global.request.r.uri %]">
-            <b>{{Tags:}}</b>
+            <label><b>{{Tags:}}</b></label>
             [% showtags(tags, 'wiki', [ [ 'node', node ] ] ) %]
             <input type="hidden" name="node" value=[% node %] />
             <div class="input-group">
@@ -95,3 +129,4 @@
   </div>
 </div>
 [% END %]
+
