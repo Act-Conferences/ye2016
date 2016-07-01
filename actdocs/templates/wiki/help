@@ -1,3 +1,5 @@
 [% WRAPPER ui title = loc("Wiki help") %]
+<div class="container wikiHelp"
   {{<wiki help text>}}
+</div>
 [% END %]

@@ -18,16 +18,24 @@ $(document).ready(function() {
   $('.userBackground').css('min-height',$(window).height() - 149);
   $('.trainingPage').css('min-height', $(window).height() - 94);
 
-// Redirect if wiki
+// if wiki block edit on homepage
 
-$('.photobanner').addClass('anim');
+if((window.location.href.indexOf("wiki")) > -1) {
+  $(".nav.navbar-nav.middle li:last-child a").css("color", "#ee9a20");
+}
 
+var wikiA = $('.admin').text();
+var homeWiki = $('.node').text();
+//console.log(homeWiki);
 
+if (homeWiki == "HomePage") {
+  $(".editPage").css("display", "none"); //.remove();
+} 
 
-//if ((window.location.href.indexOf("wiki")) > -1) {
-//  window.location = window.location.protocol + "//" + window.location.host + "/ye2016/";
-//  return false;
-//}
+if (homeWiki == "HomePage" && wikiA == 1) {
+  $(".editPage").css("display", "block");
+} 
+
 
 //end
 
@@ -166,6 +174,7 @@ if($("#homepage-flag").length > 0) {
        window.location.href.indexOf("training-dave") > -1 ||
        window.location.href.indexOf("training-liana") > -1 ||
        window.location.href.indexOf("training-jeff") > -1 ||
+       window.location.href.indexOf("wiki") > -1 ||
        window.location.href.indexOf("ticketsInfo") > -1 ) {
     $('.changejs').css('width', '100%');
     $('.changejs').css('padding', '0');
@@ -387,6 +396,12 @@ if($("#homepage-flag").length > 0) {
           $(this).toggleClass("clickIoSActive");
          });
    }
+//end
+
+//nav for wiki mobile
+
+
+  
 //end
 
 //tabs for mobile
