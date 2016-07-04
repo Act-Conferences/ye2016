@@ -5,44 +5,74 @@ $.get("/ye2016/wiki?node=HomePage", function (stats) {
     var live_str = $('<div>', {
       html: stats
     });
-    var content = live_str.find('.homeBar').html();
+   // var content = live_str.find('.homeBar').html();
+    var contentDropDown = live_str.find('.homeBar').html();
 
 
-    $('.bar').html(content); 
-
+    console.log("drop=",contentDropDown);
+    $('.bar').html(contentDropDown);
     $('.bar').find('br').remove();
-    console.log(content);
-
     $('.bar').find('a:nth-child(odd)').remove();
-    $('.wikiBar .bar p a:first-child').addClass("active");
+    var totalItems = $(".bar a").length;
+  //  console.log("number of items:", totalItems);
 
-    $(".wikiBar .bar p a").click(function() {
-     // $(this).css("color", "blue");
-     // var last =  $(this);
-     // console.log(last);
-    });
+ 
+    function calculateItems() {
+      var totalWidths = $('.bar').width();
+     // console.log("totalWidths", totalWidths);
+      var remain = Math.floor(totalWidths / 224);
+      var cut = totalItems - remain;
+    //  console.log("remain", remain);
+    //  console.log("cut", cut);
 
+      if (totalWidths > remain) {      
+        $('.bar a').slice(0, remain).removeClass('cutEl').addClass('remainEl');
+        $('.bar a').slice(-cut).removeClass('remainEl').addClass('cutEl');
+      }
 
-    //navigation for wiki mobile
+       $(".dropDown").html("");
+       $( ".bar a" ).clone().appendTo( ".dropDown" );
 
-    if ($(window).width() <= 3000) {
-     //$('.wikiBar .bar p a').css("display", "none");
-
-
-      
     }
 
-    //end
+    calculateItems();
+
+    $( ".wikiDrop" ).click(function() {
+      $( ".dropDown" ).toggle();
+    });
+
+  
+    $(window).resize(function(){
+      calculateItems();
+    })
+
+    // end drop 
+
+  //  $('.bar').html(content); 
+
+  //  $('.bar').find('br').remove();
+   // console.log(content);
+
+   // $('.bar').find('a:nth-child(odd)').remove();
+   
+
 
   });
 
 </script>
-
 <div class="wikiBar">
+  <div class="bar"></div> 
+  <div class="wikiDrop">
+    <b class="caret"></b>
+    <div class="dropDown"></div>
+  </div>
+</div>
+
+<!-- <div class="wikiBar">
   <div class="bar">
        
   </div>
-</div>
+</div> -->
 
 <div class="wiki">
 
