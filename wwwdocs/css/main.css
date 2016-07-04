@@ -3572,7 +3572,7 @@ div.card-container {
 .wikiBar .bar a {
   display: inline-block; 
   color: #d8ceaf;
-  padding: 16px 25px;
+  padding: 16px 0;
 }
 
 /* .wikiBar .bar a:nth-child(even) {
@@ -3726,12 +3726,88 @@ div.card-container {
     border-radius: 2px;
 }
 
+.wiki .homeBar h1 {
+  color: #d8ceaf;
+}   
+
 @media all and (max-width: 820px) {
   .wikiBar .bar a {
-    font-size: 13px;
-    padding: 16px 12px;
+    font-size: 14px;
+    padding: 16px 29px;
   }
+
+  .wikiDrop {
+     right: 15px;
+  }
+
+
+}
+
+/* End Wiki Home page nav */
+
+/* test drop */
+
+.bar {
+  text-align: center;
+}
+
+.bar a {
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  
+}
+
+.remainEl {
+  display: inline-block !important;
+}
+
+.cutEl {
+  display: none !important;
+}
+
+.dropDown .cutEl {
+  display: block !important;
+}
+
+.dropDown .remainEl {
+  display: none !important;
+}
+
+.dropDown a {
+  padding: 10px;
+  color: #d8ceaf;
+}
+
+.wikiDrop {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  padding: 0;
+}
+
+.wikiDrop .dropDown {
+  position: absolute;
+  background-color: #C02334;
+  top: 32px;
+  right: 0;
+  width: 220px;
+  display: none;
+}
+
+.wikiBar .bar p {
+  margin: 0;
+}
+
+.wikiDrop .caret {
+  border-top: 7px solid;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  color: #d8ceaf;
 }
 
 
-/* End Wiki Home page nav */
+
+
+
+
