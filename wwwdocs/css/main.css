@@ -3329,7 +3329,8 @@ div.card-container {
 }
 
 #rockstar_sponsors div.card-container .card,
-#deal_maker_sponsors div.card-container .card {
+#deal_maker_sponsors div.card-container .card,
+#all_star_sponsors div.card-container .card {
   /* border: 3px solid rgba(99, 91, 81, 0.2); */
   box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
 }
@@ -3368,6 +3369,19 @@ div.card-container {
   background-color: #D8CDAF;
 }
 
+/* AllStar */
+
+#all_star_sponsors .oneSponsor .card-container {
+    width: 520px;
+    margin: 0px auto;
+}
+
+#all_star_sponsors .oneSponsor .card-container .back p {
+  font-size: 15px;
+}
+
+
+
 @media (min-width: 1625px) {
   .sponsors-offset {
     margin-left: 16.66666667%;
@@ -3389,6 +3403,11 @@ div.card-container {
   #rockstar_sponsors .oneSponsor .card-container {
     width: 100%;
   }
+
+  #all_star_sponsors {
+    display: block;
+  }
+
 /*   #deal_maker_sponsors,
 #deal_maker_sponsors .col-xs-6,
 #deal_maker_sponsors .col-sm-9,
@@ -3400,9 +3419,32 @@ div.card-container {
   }
 }
 
+@media all and (max-width: 664px) {
+  #all_star_sponsors .oneSponsor .card-container {
+    width: 100%;
+  }
+
+  #all_star_sponsors .oneSponsor .card-container .back p {
+  font-size: 14px;
+  }
+
+}
+
+@media all and (max-width: 539px) {
+  #all_star_sponsors .oneSponsor .card-container .back p {
+  font-size: 13px;
+  }
+
+}
+
 @media all and (max-width: 480px) {
   .our-sponsors .col-xs-12 {
     padding: 0;
+  }
+  #all_star_sponsors .sponsors-list img {
+    width: 100%;
+    padding: 18px;
+    margin: 0;
   }
 }
 
@@ -3424,6 +3466,10 @@ div.card-container {
     width: 100%;
     padding: 10px;
   }
+  #all_star_sponsors .oneSponsor .card-container .back p {
+    font-size: 12px;
+  }
+
 }
 
 
@@ -4033,6 +4079,7 @@ div.card-container {
     padding: 6px;
   }
 }
+
 
 
 
