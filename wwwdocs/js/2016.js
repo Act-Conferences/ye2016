@@ -344,6 +344,7 @@ if($("#homepage-flag").length > 0) {
 
 // style for invoice pages
 
+
     var textm = $( "form p" ).text();
     var invoice = (textm.match(/ Please make sure the billing information is correct. /)||[]).length;
 
@@ -397,6 +398,7 @@ if($("#homepage-flag").length > 0) {
          });
    }
 //end
+
 
 //nav for wiki mobile
 
@@ -517,7 +519,33 @@ $('ul.nav a').filter(function() {
 
 //end
 
+//news
 
+var homeNews = $(".newsHome").text();
+if ((window.location.href.indexOf("news")) > -1 && homeNews == 1) {
+    console.log('news');
+    $('.changejs').css('width', '100%');
+    $('.changejs').css('padding', '0');
+    $('.changesjs').css('padding', '0');
+
+  $( ".news-entry" ).each(function() {
+    if ($(this).find(".contentText img").length) {
+      console.log("exists");
+      $($(this).find(".contentText img")).clone().insertAfter($(this).find(".imageNews .exists"));
+      $($(this).find(".contentText img")).remove(); 
+    } else {
+      console.log('not exists')
+    }
+  })
+}
+
+if ($(window).width() <= 646 && (window.location.href.indexOf("news"))) {
+  console.log("font");
+  $(".page-header").css("fontSize", "20px");
+  $('.changejs').css('padding', '0');
+  $('.changesjs').css('padding', '0');
+}
+//end
 });
 
 
@@ -532,6 +560,15 @@ $(window).resize(function(){
   		 $('.organizers-tab').css('min-height',$(window).height() - 149);
        $('.ticketsBack').css('min-height',$(window).height() - 149);
        $('.userBackground').css('min-height',$(window).height() - 149);
+
+if ($(window).width() <= 646 && (window.location.href.indexOf("news"))) {
+  console.log("font");
+  $(".page-header").css("fontSize", "20px");
+  $('.changejs').css('padding', '0');
+  $('.changesjs').css('padding', '0');
+} else {
+  $(".page-header").css("fontSize", "34px");
+}
 
 var windows_height = $(window).height();
 var current_height = windows_height-331;
