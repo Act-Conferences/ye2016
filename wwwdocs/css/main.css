@@ -3925,6 +3925,12 @@ div.card-container {
   margin-top: 29px !important;
 }
 
+.news-entry .news-content iframe {
+  max-width: 100% !important;
+  height: auto !important;
+  margin-top: 20px !important;
+}
+
 .news ul {
   color: #d8ceaf;
 }
@@ -4064,6 +4070,8 @@ div.card-container {
 .news-entry .news-head .timeline p {
   margin-bottom: 20px;
 }
+
+
 
 @media all and (max-width: 1200px){
   .news-entry .news-head .bubble {
