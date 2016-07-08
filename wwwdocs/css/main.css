@@ -490,6 +490,11 @@ body {
   color: #d8ceaf;
 }
 
+@media all and (max-width: 945px) {
+  .navbar-nav>li>a {
+    font-size: 13px;
+  }
+}
 @media all and (max-width: 864px) {
   .navbar-nav>li>a {
     font-size: 13px;
