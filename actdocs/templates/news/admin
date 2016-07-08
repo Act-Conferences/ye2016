@@ -1,6 +1,6 @@
 [% WRAPPER ui %]
 <h1 class="page-header">
-  <a class="btn btn-primary pull-right" href="[% make_uri('newsedit') %]">{{Create a new item}}</a>
+  <a class="btn pull-right newsButton" href="[% make_uri('newsedit') %]">{{Create a new item}}</a>
   [% loc("News Administration") %]
 </h1>
   [% IF news.size %]

@@ -111,6 +111,9 @@ $(document).ready(function() {
         </div>
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden;">
             <div class="nn" style="display: none;">
+                <img data-u="image" src="img2016/banner/cpanel.png"   />
+            </div>
+            <div style="display: none;">
                 <img data-u="image" src="img2016/banner/Logo_Booking.png"   />
             </div>
             <div style="display: none;">
