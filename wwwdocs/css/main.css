@@ -4158,8 +4158,17 @@ div.card-container {
   }
 }
 
-
-
-
-
 /* End News */
+
+/* Favorite Talks */
+
+.userInfo .tableFav tr th {
+  text-align: center;
+}
+
+.userInfo .tableFav {
+  background-color: #a71d2f;
+}
+
+
+/* End Favorite Talks */

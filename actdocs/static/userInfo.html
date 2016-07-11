@@ -7,6 +7,7 @@
 
       <li role="presentation" class="active"><a href="#Search" aria-controls="Search" role="tab" data-toggle="tab">Search</a></li>
       <li role="presentation"><a href="#Statistics" aria-controls="Statistics" role="tab" data-toggle="tab">Statistics</a></li>
+      <li role="presentation"><a href="#Favorite" aria-controls="Favorite" role="tab" data-toggle="tab">Favorite Talks</a></li>
 
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </ul>
@@ -180,7 +181,60 @@
 
 
     </div>
+    <div role="tabpanel" class="tab-pane fade in" id="Favorite">
+      <div class="container-fluid col-xs-12 userBackground">
+        <div class="verticalAl clearfix">
+           <div class="container">
+              <div class="col-xs-12">
+                <div class="row">
 
+                  <script type="text/javascript">
+
+                    $.get("/ye2016/favtalks", function (stats) {
+                      var findInfoFav = $('<div>', {
+                        html: stats
+                      });
+                       
+                      var fav = findInfoFav.find('table').html();
+                      $('.tableFav').html(fav);
+                     
+                     //var result = $('.userInfoStatistics').html();
+
+                    });
+                  </script>
+
+                    <h1 class="title">Favorite Talks</h1>
+
+                    <table class="tableFav table table-striped">
+                      
+                    </table>
+
+                </div>
+              </div>
+           </div>
+        </div>
+           <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+            </div>
+        </div>
+      </div>
 
   </div>
 
