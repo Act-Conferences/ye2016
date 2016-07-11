@@ -490,19 +490,18 @@ body {
   color: #d8ceaf;
 }
 
-@media all and (max-width: 945px) {
+@media all and (max-width: 1045px) {
   .navbar-nav>li>a {
     font-size: 13px;
+    padding: 16px 11px;
   }
 }
 @media all and (max-width: 864px) {
-  .navbar-nav>li>a {
-    font-size: 13px;
-  }
   .navbar-fixed-top {
     padding: 15px 0 0;
   }
   .nav>li>a {
+    font-size: 11px;
     padding: 16px 11px;
   }
  }
@@ -2921,6 +2920,17 @@ table a {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.userInfo #Search .advanced {
+  display: block;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+
+.userInfo #Search .advanced a {
+  color: #891826;
+}
+
+
 /* Search End */
 
 
@@ -2942,6 +2952,22 @@ table a {
   margin: 0 auto 60px auto;
 }
 
+#Statistics .userInfoStatistics p {
+  display: none;
+}
+
+#Statistics .userInfoStatistics p:first-child {
+  display: block;
+}
+
+#Statistics .go {
+   text-align: center;
+    color: #f2a01f;
+    background-color: #891826;
+    max-width: 245px;
+    padding: 15px;
+    margin: 40px auto;
+}
 /* Statistics End */
 
 /* Footer */
@@ -4132,8 +4158,17 @@ div.card-container {
   }
 }
 
-
-
-
-
 /* End News */
+
+/* Favorite Talks */
+
+.userInfo .tableFav tr th {
+  text-align: center;
+}
+
+.userInfo .tableFav {
+  background-color: #a71d2f;
+}
+
+
+/* End Favorite Talks */

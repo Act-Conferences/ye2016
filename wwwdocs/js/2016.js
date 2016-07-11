@@ -126,6 +126,7 @@ var current_height = windows_height-331;
   $("#Statistics .verticalAl").css({'min-height' : current_height});
   $("#Search .verticalAl").css({'min-height' : current_height});
   $("#WorkshopTickets .verticalAl").css({'min-height' : current_height});
+  $("#Favorite .verticalAl").css({'min-height' : current_height});
 
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") // activated tab
@@ -151,6 +152,10 @@ var current_height = windows_height-331;
     var windows_height = $(window).height();
     var current_height = windows_height-331;
     $("#WorkshopTickets .verticalAl").css({'min-height' : current_height});
+  } else if (target === "#Favorite") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Favorite .verticalAl").css({'min-height' : current_height});
   } 
 });
 
@@ -579,6 +584,7 @@ var current_height = windows_height-331;
   $("#Schedule .verticalAl").css({'min-height' : current_height});
   $("#Statistics .verticalAl").css({'min-height' : current_height});
   $("#Search .verticalAl").css({'min-height' : current_height});
+  $("#Favorite .verticalAl").css({'min-height' : current_height});
 
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
@@ -603,7 +609,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     var windows_height = $(window).height();
     var current_height = windows_height-331;
     $("#WorkshopTickets .verticalAl").css({'min-height' : current_height});
-  } 
+  } else if (target === "#Favorite") {
+    var windows_height = $(window).height();
+    var current_height = windows_height-331;
+    $("#Favorite .verticalAl").css({'min-height' : current_height});
+  }
 });
 
 if($("#homepage-flag").length > 0) {
