@@ -533,10 +533,13 @@ if ((window.location.href.indexOf("news")) > -1 && homeNews == 1) {
       console.log("exists");
       $($(this).find(".contentText img")).clone().insertAfter($(this).find(".imageNews .exists"));
       $($(this).find(".contentText img")).remove(); 
+     
     } else {
       console.log('not exists')
     }
+
   })
+
 }
 
 if ($(window).width() <= 646 && (window.location.href.indexOf("news"))) {
