@@ -2353,13 +2353,29 @@ a:hover, a:focus {
 }
 
 /* ConferenceTickets End */
+#Courses h1 {
+    margin: 60px 0;
+    font-size: 39px;
+    font-weight: 900;
+    color: #a71d2f;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-align: center;
+}
+
+#Courses .linkButton {
+  text-align: center;
+  margin: 0 auto 20px auto;
+}
 
 /* TrainingTickets Start*/
-#TrainingTickets .box {
+#TrainingTickets .box, 
+#Courses .box {
   margin-bottom: 40px;
 }
 
-#TrainingTickets .box .front {
+#TrainingTickets .box .front ,
+#Courses .box .front {
   padding: 20px;
   text-align: left;
   background-image: url("../img2016/trainer-dave.jpg");
@@ -2370,7 +2386,8 @@ a:hover, a:focus {
   -o-background-size: cover;
 }
 
-#TrainingTickets .box .front.public {
+#TrainingTickets .box .front.public,
+#Courses .box .front.public {
   background-image: url("../img2016/trainer-liana.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -2379,7 +2396,8 @@ a:hover, a:focus {
   -o-background-size: cover;
 }
 
-#TrainingTickets .box .front.perl6 {
+#TrainingTickets .box .front.perl6,
+#Courses .box .front.perl6 {
   background-image: url("../img2016/trainer-jeff.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -2388,37 +2406,45 @@ a:hover, a:focus {
   -o-background-size: cover;
 }
 
-#TrainingTickets .box .front .trainingTitle {
+#TrainingTickets .box .front .trainingTitle,
+#Courses .box .front .trainingTitle {
   text-transform: uppercase;
   color: #f2a01f;
   font-weight: 700;
   margin: 0 0 20px 0;
 }
 
-#TrainingTickets .box .front .trainingWith {
+#TrainingTickets .box .front .trainingWith,
+#Courses .box .front .trainingWith {
   font-weight: 700;
   margin-bottom: 0;
 }
 
-#TrainingTickets .box .front .priceTraining {
+#TrainingTickets .box .front .priceTraining, 
+#Courses .box .front .priceTraining {
   color: #d8ceaf;
   font-weight: 700;
   font-size: 16px;
 }
 
-#TrainingTickets .box .front .priceTraining .priceT {
+#TrainingTickets .box .front .priceTraining .priceT,
+#Courses .box .front .priceTraining .priceT {
   color: #69d027;
 }
 
 #TrainingTickets .flip-container,
 #TrainingTickets .box .front,
-#TrainingTickets .box .back {
+#TrainingTickets .box .back,
+#Courses .flip-container,
+#Courses .box .front,
+#Courses .box .back {
   width: 100%;
   height: 100%;
   height: auto;
 }
 
-#TrainingTickets .box .front {
+#TrainingTickets .box .front,
+#Courses .box .front {
   position: relative;
   min-height: 474px;
 }
@@ -2433,7 +2459,8 @@ a:hover, a:focus {
   bottom: 26px;
 }
 
-#TrainingTickets .box .trainingDetails {
+#TrainingTickets .box .trainingDetails,
+#Courses .box .trainingDetails {
   margin-bottom: 20px;
 }
 
@@ -2449,6 +2476,13 @@ a:hover, a:focus {
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+#Courses .trainingVenue {
+   color: #d8ceaf;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 88px;
 }
 
 /* TrainingTickets End*/
@@ -2961,6 +2995,11 @@ table a {
   float: none;
   margin: 0 auto 40px auto;
   text-align: left;
+}
+
+.trainingPage li {
+  color: #d8ceaf;
+  font-size: 16px;
 }
 
 /* Training Pages End */
