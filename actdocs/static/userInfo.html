@@ -21,7 +21,7 @@
         <div class="verticalAl clearfix">
          <div class="container">
           <h1 class="col-xs-12 title">looking for someone ?</h1>
-          <div class="col-sm-8 col-sm-offset-2">
+          <div class="col-sm-8 col-sm-offset-1">
 
             <form method="POST" action="[% global.request.r.uri %]" id="user-search">
               <div class="panel-default">
@@ -62,9 +62,11 @@
                   </div> -->
                 </div>
                 <div class="text-right">
+                <div class="col-md-9 col-md-offset-3">
                   <div class="advanced">
                     <a href="/ye2016/search">Advanced Search</a>
                   </div>
+                </div>
                   <button type="submit" name="search" class="btn btn-primary btn-lg sendLink" id="sea2">{{Search}}</button>
                 </div>
               </div>
@@ -95,8 +97,9 @@
 
             <p class="infoSearch">After hitting search button, a user list matching criteria will be loaded below</p>
 
-            <div id="showresults" ></div>
+            
           </div>
+          <div id="showresults" ></div>
           </div>
           </div>
           <div class="social col-xs-12">

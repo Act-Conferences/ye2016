@@ -2891,7 +2891,7 @@ table a {
 
 .userInfo #Search .infoSearch {
   margin-top: 20px;
-  text-align: center;
+  text-align: right;
   color: #891826;
 }
 
@@ -2903,6 +2903,7 @@ table a {
 #showresults .table>thead>tr>th,  
 #showresults .table>thead>tr>td {
   color: #891826;
+  text-align: center;
 }
 
 #showresults .table>tbody>tr>th, 
@@ -2922,12 +2923,13 @@ table a {
 
 .userInfo #Search .advanced {
   display: block;
-  margin-right: 15px;
   margin-bottom: 20px;
 }
 
 .userInfo #Search .advanced a {
   color: #891826;
+  display: block;
+  text-align: left;
 }
 
 
