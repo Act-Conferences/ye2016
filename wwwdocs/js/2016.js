@@ -7,7 +7,7 @@ $(document).ready(function() {
   $('.fill').css('height',$(".wrapper").outerHeight(true) - 94);
   $('.filltab').css('min-height',$(".wrapper").outerHeight(true) - 149);
   $('.tickets').css('height',$(".wrapper").outerHeight(true) - 94);
-  $('.our-sponsors').css('height', $(".wrapper").height() - 94);
+  $('.our-sponsors').css('min-height', $(".wrapper").height() );
   $('.sponsors-cat').css('height', $(".sponsors-list").height());
   $('.speaker').css('min-height',$(window).height() - 149);
   $('.sponsors-tab').css('min-height',$(window).height() - 149);
