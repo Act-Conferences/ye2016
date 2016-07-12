@@ -1,5 +1,5 @@
 [% WRAPPER ui title = loc("Favorite Talks") %]
-  <table class="table table-striped">
+  <table class="table table-striped table-mobile">
     <thead>
       <tr>
        <th>{{Stars}}</th>
@@ -16,24 +16,67 @@
     <tbody>
       [% FOREACH f = favs %]
         <tr>
-          <td>[% f.count %]</td>
-          <td><a href="[% make_uri_info('user', f.user.user_id) %]">
-              [% user_info(f.user) %]
-          </a></td>
-          <td>[% talk_link(f.talk);
-                 IF f.talk.track_id %] [<a href="[% make_uri('talks') %]#[% f.talk.track_id %]">[%
-                     tracks.${f.talk.track_id}.title.split('\W').0 %]</a>][% END %]
-
+          <td>
+          <div class="row">
+              <div class="col-xs-4 visible-xs">
+                <b>{{Stars}}:</b>
+              </div>
+              <div class="col-xs-8 col-sm-12">
+                [% f.count %]
+              </div>
+          </div>
           </td>
-          <td nowrap="nowrap">[% IF f.talk.lightning %]
-                {{lightning}}
-              [% ELSE %]
-               [% f.talk.duration %] {{minutes}}
-              [% END %]
+          <td>
+            <div class="row">
+              <div class="col-xs-4 visible-xs">
+                <b>{{Speaker}}:</b>
+              </div>
+              <div class="col-xs-8 col-sm-12">
+                <a href="[% make_uri_info('user', f.user.user_id) %]">
+                    [% user_info(f.user) %]
+                </a>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="row">
+              <div class="col-xs-4 visible-xs">
+                <b>{{Talk title}}:</b>
+              </div>
+              <div class="col-xs-8 col-sm-12">
+                [% talk_link(f.talk);
+                       IF f.talk.track_id %] [<a href="[% make_uri('talks') %]#[% f.talk.track_id %]">[%
+                           tracks.${f.talk.track_id}.title.split('\W').0 %]</a>]
+                [% END %]
+              </div>
+            </div>
+          </td>
+          <td nowrap="nowrap">
+            <div class="row">
+              <div class="col-xs-4 visible-xs">
+                <b>{{Duration}}:</b>
+              </div>
+              <div class="col-xs-8 col-sm-12">
+                [% IF f.talk.lightning %]
+                  {{lightning}}
+                [% ELSE %]
+                 [% f.talk.duration %] {{minutes}}
+                [% END %]
+              </div>
+            </div>
           </td>
           [% IF global.request.user.is_talks_admin OR global.config.talks_show_schedule %]
-          <td align="center" nowrap="nowrap">[% IF f.talk.datetime; date_format(f.talk.datetime, 'datetime_short');
-                                                ELSE; '&nbsp;'; END %]</td>
+          <td align="center" nowrap="nowrap">
+            <div class="row">
+              <div class="col-xs-4 visible-xs">
+                <b>{{Date}}:</b>
+              </div>
+              <div class="col-xs-8 col-sm-12">
+                [% IF f.talk.datetime; date_format(f.talk.datetime, 'datetime_short');
+                                                      ELSE; '&nbsp;'; END %]
+              </div>
+            </div>
+          </td>
           [% END %]
         </tr>
       [% END %]
