@@ -5,8 +5,8 @@
   <ul class="nav nav-tabs" role="tablist" id="tablist">
     <i class="fa fa-angle-double-left" aria-hidden="true"></i>
 
-      <li role="presentation" class="active"><a href="#Search" aria-controls="Search" role="tab" data-toggle="tab">Search</a></li>
       <li role="presentation"><a href="#Statistics" aria-controls="Statistics" role="tab" data-toggle="tab">Statistics</a></li>
+      <li role="presentation" class="active"><a href="#Search" aria-controls="Search" role="tab" data-toggle="tab">Search</a></li>
       <li role="presentation"><a href="#Favorite" aria-controls="Favorite" role="tab" data-toggle="tab">Favorite Talks</a></li>
 
     <i class="fa fa-angle-double-right" aria-hidden="true"></i>
@@ -16,6 +16,67 @@
   <div class="tab-content">
 
     <!--UserInfo-tab START-->
+    
+
+    <div role="tabpanel" class="tab-pane fade in" id="Statistics">
+      <div class="container-fluid col-xs-12 userBackground">
+      <div class="verticalAl clearfix">
+         <div class="container">
+            <h1 class="col-xs-12 title">2016 stats</h1>
+            <div class="col-sm-8 col-sm-offset-2">
+              <script type="text/javascript">
+
+                $.get("/ye2016/stats", function (stats) {
+                  var findInfoStats = $('<div>', {
+                    html: stats
+                  });
+            
+                  
+                  var infoStats = findInfoStats.find('.StatisticsForTabs').html();
+                  $('.userInfoStatistics').html(infoStats);
+                 
+                 var result = $('.userInfoStatistics').html();
+
+                });
+              </script>
+
+              <img class="img-responsive" src="img2016/stats.png">
+              <div class="userInfoStatistics">
+                
+              </div>
+              <div class="go">
+                <a href="/ye2016/stats">Go to full stats</a>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+            <div class="social col-xs-12">
+                  <div class="socialFooter">
+                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
+                      <i class="fa fa-facebook circle"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/yapceu">
+                      <i class="fa fa-twitter circle"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
+                      <i class="fa fa-linkedin circle"></i>
+                    </a>
+                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
+                      <i class="fa fa-medium circle" aria-hidden="true"></i>
+                    </a>
+                    <a target="_blank" href="mailto:yapc@cluj.pm">
+                      <i class="fa fa-envelope-o circle"></i>
+                    </a>
+                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
+                  </div>
+            </div>
+         </div>
+
+
+    </div>
+
     <div role="tabpanel" class="tab-pane fade in active" id="Search">
         <div class="container-fluid col-xs-12 userBackground">
         <div class="verticalAl clearfix">
@@ -126,64 +187,6 @@
 
     </div>
 
-    <div role="tabpanel" class="tab-pane fade in" id="Statistics">
-      <div class="container-fluid col-xs-12 userBackground">
-      <div class="verticalAl clearfix">
-         <div class="container">
-            <h1 class="col-xs-12 title">2016 stats</h1>
-            <div class="col-sm-8 col-sm-offset-2">
-              <script type="text/javascript">
-
-                $.get("/ye2016/stats", function (stats) {
-                  var findInfoStats = $('<div>', {
-                    html: stats
-                  });
-            
-                  
-                  var infoStats = findInfoStats.find('.StatisticsForTabs').html();
-                  $('.userInfoStatistics').html(infoStats);
-                 
-                 var result = $('.userInfoStatistics').html();
-
-                });
-              </script>
-
-              <img class="img-responsive" src="img2016/stats.png">
-              <div class="userInfoStatistics">
-                
-              </div>
-              <div class="go">
-                <a href="/ye2016/stats">Go to full stats</a>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-            <div class="social col-xs-12">
-                  <div class="socialFooter">
-                    <a target="_blank" href="https://www.facebook.com/yapceu2016">
-                      <i class="fa fa-facebook circle"></i>
-                    </a>
-                    <a target="_blank" href="https://twitter.com/yapceu">
-                      <i class="fa fa-twitter circle"></i>
-                    </a>
-                    <a target="_blank" href="https://www.linkedin.com/company/yapc-europe-2016-cluj">
-                      <i class="fa fa-linkedin circle"></i>
-                    </a>
-                    <a target="_blank" href="https://medium.com/yapc-europe-2016">
-                      <i class="fa fa-medium circle" aria-hidden="true"></i>
-                    </a>
-                    <a target="_blank" href="mailto:yapc@cluj.pm">
-                      <i class="fa fa-envelope-o circle"></i>
-                    </a>
-                    <p id="powered"><a target="_blank" href="http://act.mongueurs.net/">Powered by Act</a></p>
-                  </div>
-            </div>
-         </div>
-
-
-    </div>
     <div role="tabpanel" class="tab-pane fade in" id="Favorite">
       <div class="container-fluid col-xs-12 userBackground">
         <div class="verticalAl clearfix">
