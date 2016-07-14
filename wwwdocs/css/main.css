@@ -1504,6 +1504,13 @@ a:hover, a:focus {
   }
 }
 
+@media all and (max-width: 1054px) {
+  .nav-tabs>li>a {
+     font-size: 12px;
+     padding: 16px 16px;
+  }
+}
+
 @media all and (min-width: 848px) {
   .nav.nav-tabs li a {
     opacity: 1 !important;
