@@ -299,6 +299,9 @@ if($("#homepage-flag").length > 0) {
       $( ".changesjs ul" ).each(function() {
         $( this ).addClass( "jsUl" );
       });
+
+      $( ".changesjs" ).css( "text-align", "center" ); 
+      $( ".changesjs" ).css( "color", "#d8ceaf" );
       $( ".changesjs ul" ).first().css( "paddingTop", "30px" );
       $( "p" ).last().addClass( "otherAct" );
       $('.changesjs').addClass( "transition" );
