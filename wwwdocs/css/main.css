@@ -4209,22 +4209,22 @@ div.card-container {
 	background-color: #ee9a20;
 }
 .coffe-break,
-.scheduleForTabs .table-schedule tr td:nth-child(2) a {
+.scheduleForTabs .table-schedule tr td.coffe-break a {
 	background-color: #dfffdd;
 	color: #33bc4e !important;
 }
 .room-one,
-.scheduleForTabs .table-schedule tr td:nth-child(3) a {
+.scheduleForTabs .table-schedule tr td.room-one a {
 	background-color: #ffe6e8;
 	color: #d93b49 !important;
 }
 .room-two,
-.scheduleForTabs .table-schedule tr td:nth-child(4) a {
+.scheduleForTabs .table-schedule tr td.room-two a {
 	background-color: #e6f2ff;
 	color: #3c8ddc !important;
 }
 .room-three,
-.scheduleForTabs .table-schedule tr td:nth-child(5) a {
+.scheduleForTabs .table-schedule tr td.room-three a {
 	background-color: #fff3e6;
 	color: #e08e3f !important;
 }
