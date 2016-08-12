@@ -495,7 +495,7 @@
 						<img src="img2016/speakers/male-user-light.png" alt="Speaker" class="img-responsive center-block">
 						<a href="/ye2016/user/10635">Richard Elberger</a>
 						<h4></h4>
-					</div>
+					</div>f
 					<div class="speakersBlock">
 						<img src="img2016/speakers/Rick_Deller.jpg" alt="Speaker" class="img-responsive center-block">
 						<a href="/ye2016/user/9408">Rick Deller</a>
@@ -800,12 +800,42 @@
 		<!--Schedule-tab START-->
 		<div role="tabpanel" class="tab-pane fade" id="Schedule">
 			<div class="verticalAl clearfix">
-				<h1 class="schedule-title">Coming soon</h1>
+				<h1 class="schedule-title">It’s ON!</h1>
 				<br>
 				<br>
 				<br>
-				<p class="anounced">To be anounced by end of July 2016</p>
+				<p class="anounced">Learn about YAPC::Europe 2016's talks and tutorials on the full conference schedule.</p>
+				<p class="anounced">Find the topics that matter most to you & join your favorite talks.</p>
+				<div class="goto-schedule">
+        	<a href="/ye2016/schedule">Explore the agenda</a>
+        </div>
 				<div class="push"></div>
+<!--
+				<script type="text/javascript">
+					$.get("/ye2016/schedule", function (schedule) {
+						var findSchedule = $('<div>', {
+							html: schedule
+						});
+
+
+						var infoSchedule = findSchedule.find('.scheduleForTabs').html();
+						$('.scheduleAdded').html(infoSchedule);
+
+						var result = $('.scheduleAdded').html();
+//						console.log(infoSchedule);
+						console.log(findSchedule);
+//						console.log(result);
+						var paul = schedule.search(".scheduleForTabs");
+						console.log(paul);
+					});
+					
+				</script>
+-->
+				<div class="container scheduleAdded">
+					
+					
+				</div>
+				
 			</div>
 				<div class="social col-xs-12 bottomAl">
 					<div class="socialFooter">

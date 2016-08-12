@@ -2052,7 +2052,16 @@ a:hover, a:focus {
     letter-spacing: 6px;
     text-align: center;
 }
-
+#Schedule .goto-schedule {
+	text-align: center;
+  background-color: #f2a01f;
+  max-width: 245px;
+  padding: 15px;
+  margin: 40px auto;
+}
+#Schedule .goto-schedule a {
+  color: #891826 !important;
+}
 @media (min-width: 1200px) {
   .container .v2 {
     width: 850px;
@@ -4186,5 +4195,64 @@ div.card-container {
   background-color: #a71d2f;
 }
 
-
 /* End Favorite Talks */
+
+
+
+/*schedule table*/
+.scheduleForTabs .table-schedule tr td:nth-child(1),
+.scheduleForTabs .table-schedule tr th:nth-child(1),
+.scheduleForTabs .panel-heading .nav.nav-pills li a {
+	color: #771B28;
+}
+.scheduleForTabs .panel-heading .nav.nav-pills li.active a {
+	background-color: #ee9a20;
+}
+.coffe-break,
+.scheduleForTabs .table-schedule tr td:nth-child(2) a {
+	background-color: #dfffdd;
+	color: #33bc4e !important;
+}
+.room-one,
+.scheduleForTabs .table-schedule tr td:nth-child(3) a {
+	background-color: #ffe6e8;
+	color: #d93b49 !important;
+}
+.room-two,
+.scheduleForTabs .table-schedule tr td:nth-child(4) a {
+	background-color: #e6f2ff;
+	color: #3c8ddc !important;
+}
+.room-three,
+.scheduleForTabs .table-schedule tr td:nth-child(5) a {
+	background-color: #fff3e6;
+	color: #e08e3f !important;
+}
+.scheduleForTabs .table-schedule tr th {
+	text-align: center;
+}
+.scheduleForTabs .table-schedule tr th:nth-child(2) {
+	color: #33bc4e;
+}
+.scheduleForTabs .table-schedule tr th:nth-child(3) {
+	color: #d93b49;
+}
+.scheduleForTabs .table-schedule tr th:nth-child(4) {
+	color: #3c8ddc;
+}
+.scheduleForTabs .table-schedule tr th:nth-child(5) {
+	color: #e08e3f;
+}
+.scheduleForTabs .nav>li.active a {
+	background-color: initial;
+}
+.scheduleForTabs .table-schedule thead tr th {
+	border-bottom: 0 !important;
+}
+.scheduleForTabs .table-schedule tr td.r1 {
+/*	display: none;*/
+}
+.display-col {
+	display: block;
+}
+/*end schedule table*/
