@@ -556,12 +556,11 @@ if ($(window).width() <= 646 && (window.location.href.indexOf("news"))) {
   $('.changejs').css('padding', '0');
   $('.changesjs').css('padding', '0');
 }
-	
-if($('td.r1').hasClass('coffe-break')){
-	$('td.r1').addClass('display-col');
-}
+
+
 $('.scheduleForTabs').find('td.r1').addClass('coffe-break');
-//$('.scheduleForTabs').find('td.r1').attr('colspan', '4');
+$('.scheduleForTabs').find('td.r1').attr('colspan', '4');
+$('.scheduleForTabs').find('td.r1').nextAll().css({"display": "none"});
 $('.scheduleForTabs').find('td.r2').addClass('room-one');
 $('.scheduleForTabs').find('td.r3').addClass('room-two');
 $('.scheduleForTabs').find('td.r4').addClass('room-three');

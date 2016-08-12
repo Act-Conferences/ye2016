@@ -4249,10 +4249,10 @@ div.card-container {
 .scheduleForTabs .table-schedule thead tr th {
 	border-bottom: 0 !important;
 }
-.scheduleForTabs .table-schedule tr td.r1 {
-/*	display: none;*/
-}
-.display-col {
-	display: block;
+
+@media all and (min-width: 992px){
+	.scheduleForTabs .table-schedule tr th:nth-child(2) {
+		min-width: 130px;
+	}
 }
 /*end schedule table*/
