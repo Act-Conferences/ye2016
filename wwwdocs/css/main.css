@@ -885,7 +885,7 @@ a:hover, a:focus {
 
 .position p {
   font-size: 16px;
-  color: #d8ceaf;
+  color: #891826; 
 }
 
 
@@ -3690,7 +3690,9 @@ div.card-container {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-
+#jssor_1 #good-data {
+	width: 70px !important;
+}
 #jssor_1 {
   margin: 40px auto !important;
 }

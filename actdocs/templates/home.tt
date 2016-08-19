@@ -117,6 +117,9 @@ $(document).ready(function() {
                 <img data-u="image" src="img2016/banner/Logo_Booking.png"   />
             </div>
             <div style="display: none;">
+                <img data-u="image" src="img2016/banner/evo.png"     />
+            </div>
+            <div style="display: none;">
                 <img data-u="image" src="img2016/banner/perl-careers.png"     />
             </div>
             <div style="display: none;">
@@ -146,7 +149,9 @@ $(document).ready(function() {
             <div style="display: none;">
                 <img data-u="image" src="img2016/banner/oetiker.png"     />
             </div>
-            
+            <div style="display: none;">
+                <img data-u="image" src="img2016/banner/good-data.png" id="good-data"/>
+            </div>
             
         
         </div>
