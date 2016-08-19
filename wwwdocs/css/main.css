@@ -885,10 +885,12 @@ a:hover, a:focus {
 
 .position p {
   font-size: 16px;
-  color: #891826; 
+  color: #d8ceaf; 
 }
 
-
+.position .container.changejs .col-xs-12.changesjs .panel.panel-default .panel-body .form-horizontal .form-group .control-label.col-sm-2 {
+	color: #891826;
+}
 /* CHANGE PASSWORD */
 
 .register.password label {
@@ -1263,7 +1265,7 @@ a:hover, a:focus {
 .sponsors-tab .levels-details .levels-text {
 	color: #A71D2F;
 	font-weight: 500;
-  text-align: left;
+  text-align: center;
 /*   width: 39% */;
 /*   margin: 40px auto; */
 }
@@ -1975,7 +1977,7 @@ a:hover, a:focus {
 .talks-tab .talksText {
   color: #A71D2F;
   font-weight: 500;
-  text-align: left;
+  text-align: center;
 }
 
 .talks-tab .centerText {
