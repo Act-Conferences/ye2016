@@ -1,5 +1,5 @@
 [% WRAPPER ui title = title %]
-  <div class="panel panel-default">
+  <div class="panel panel-default event-details">
     <div class="panel-body">
       <div class="form-horizontal">
         <div class="form-group">

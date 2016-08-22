@@ -888,9 +888,14 @@ a:hover, a:focus {
   color: #d8ceaf; 
 }
 
-.position .container.changejs .col-xs-12.changesjs .panel.panel-default .panel-body .form-horizontal .form-group p {
-	color: #891826;
+/*START Event details*/
+.position .event-details {
+	border: 0;
+	background-color: transparent;
+	box-shadow: none;
 }
+/*END Event details*/
+
 /* CHANGE PASSWORD */
 
 .register.password label {
