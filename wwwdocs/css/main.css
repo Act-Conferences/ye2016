@@ -3476,7 +3476,11 @@ div.card-container {
   font-size: 15px;
 }
 
+/*Media Partners*/
 
+#media_partner .sponsors-list img {
+	margin: 0 20px;
+}
 
 @media (min-width: 1625px) {
   .sponsors-offset {
