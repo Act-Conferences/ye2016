@@ -41,7 +41,7 @@ $(document).ready(function() {
   <section class="logo">
           <div class="row">
             <div class="col-sm-3 clearfix">
-              <a href="[% make_uri('newtalk') %]" class="pull-right linkButtons">Submit a Talk</a>
+              <a href="/ye2016/schedule" class="pull-right linkButtons">Schedule</a>
             </div>
             <div class="col-sm-6">
               <div class="logos">
