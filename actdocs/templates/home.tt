@@ -49,8 +49,9 @@ $(document).ready(function() {
                 <img src="[% make_uri_info('img2016', '22_logo_rotate_left.png') %]" alt="rotate-logo-img" class="img-responsive second">
                 <img src="[% make_uri_info('img2016', '33_logo_rotate_right.png') %]" alt="rotate-logo-img" class="img-responsive third">
                 <div class="toggleDays" style="display:none">
-                  <div class="daysRemain" id="counter">50</div>
-                  <div class="daysText">days remaining</div>
+<!--                  <div class="daysRemain" id="counter">50</div>-->
+                  <div class="daysRemain">It's on</div>
+<!--                  <div class="daysText">days remaining</div>-->
                 </div>
               </div>
             </div>
