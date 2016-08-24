@@ -55,7 +55,7 @@ $(document).ready(function() {
               </div>
             </div>
             <div class="col-sm-3 clearfix">
-              <a target="_blank" href="/ye2016/img2016/sponsorUS.pdf" class="pull-left linkButtons">Sponsor us</a>
+              <a target="_blank" href="https://www.youtube.com/watch?v=A3ZSt5QKEAg&app=desktop" class="pull-left linkButtons">Live Streaming</a>
             </div>
           </div>
   </section>
